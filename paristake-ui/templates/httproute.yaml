@@ -1,0 +1,33 @@
+
+{{- $svcName := include "app.fullname" . -}}
+{{- if and (not .Values.ingresses) .Values.gatewayRoute.enabled }}
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: {{ include "app.fullname" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ include "app.fullname" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+  {{- if .Values.gatewayApi.ingressAnnotations }}
+  annotations:
+{{ toYaml .Values.gatewayApi.ingressAnnotations | indent 4 }}
+  {{- end }}
+spec:
+  parentRefs:
+    - name: {{ include "app.fullname" . }}
+      {{- if .Values.gatewayRoute.gatewayNamespace }}
+      namespace: {{ .Values.gatewayRoute.gatewayNamespace }}
+      {{- end }}
+      sectionName: {{ .Values.gatewayRoute.sectionName | default "default" }}
+  hostnames:
+    - {{ include "gateway.hostname" . | quote }}
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: {{ include "app.fullname" . }}
+          port: 80
+{{- end }}

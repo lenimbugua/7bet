@@ -1,0 +1,22 @@
+{
+  "name": "7bet - Online Sports Betting & Casino",
+  "short_name": "7bet",
+  "description": "Kenya's trusted online sports betting and casino platform. Live sports, virtuals, and instant M-Pesa payouts.",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1a1a2e",
+  "background_color": "#1a1a2e",
+  "display": "standalone"
+}

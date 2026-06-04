@@ -1,0 +1,100 @@
+image: docker:26.1.1
+
+stages:
+  - build-and-push
+  - deploy
+
+services:
+  - docker:26.1.1-dind
+
+# K8 variables
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_TLS_CERTDIR: ""
+  PROJECT_NAME: lenstech
+  APP_NAME: paristake-ui
+  CLUSTER_NAME: tf-prod-cluster
+  CLUSTER_ZONE: europe-west1-b
+  IMAGE_ROOT: europe-west1-docker.pkg.dev
+  IMAGE_REPO: $IMAGE_ROOT/${PROJECT_NAME}/${APP_NAME}/${APP_NAME}
+  IMAGE_TAG: "$CI_COMMIT_REF_SLUG.$CI_COMMIT_SHA"
+  NODE_OPTIONS: "--max-old-space-size=4096"
+  KUBE_NAMESPACE: "paristake-ui"
+  ARTIFACTS_LOCATION: europe-west1
+
+# Anchor setup of K8 access
+.setup-builder: &builder_setup
+  image: devopscalvine/infrastructure-helm3
+  before_script:
+    # Write our GCP service account private key into a file.
+    - echo "$GCLOUD_SERVICE_KEY" | base64 -d > /gcloud-service-key.json
+    - gcloud config set project lenstech
+    - gcloud auth activate-service-account --key-file /gcloud-service-key.json
+    - gcloud auth configure-docker europe-west1-docker.pkg.dev
+    - cat /gcloud-service-key.json | docker login -u _json_key --password-stdin https://$IMAGE_ROOT
+    - gcloud artifacts repositories list|grep $APP_NAME || gcloud artifacts repositories create $APP_NAME --repository-format=docker --location=$ARTIFACTS_LOCATION
+    - gcloud container clusters get-credentials "$CLUSTER_NAME" --zone "$CLUSTER_ZONE" --project "$PROJECT_NAME"
+    - export NODE_OPTIONS="$NODE_OPTIONS"
+
+# Publish image
+publish:
+  <<: *builder_setup
+  stage: build-and-push
+  script:
+    - docker build -f docker/Dockerfile --build-arg APP_VERSION="$(date +%Y.%m.%d.%H%M)" --pull --cache-from "$IMAGE_REPO":latest -t "$IMAGE_REPO":latest -t "$IMAGE_REPO:$IMAGE_TAG" .
+    - docker push "$IMAGE_REPO:$IMAGE_TAG"
+    - |
+      if [ "$CI_COMMIT_REF_SLUG" == "main" ]; then
+        docker push "$IMAGE_REPO":latest 
+      fi
+
+# Deploy production branch
+deploy-prod:
+  <<: *builder_setup
+  stage: deploy
+  image: devopscalvine/infrastructure-helm3
+  only:
+    - main
+  environment:
+    name: production
+  variables:
+    RELEASE_NAME: $APP_NAME-prod
+  script:
+    - set -x
+    - kubectl create namespace "$KUBE_NAMESPACE" || echo "namespace already exists"
+    - |
+      helm upgrade --install --namespace "$KUBE_NAMESPACE" --debug $RELEASE_NAME \
+        --set replicaCount=1 \
+        --set image.repository="$IMAGE_REPO" \
+        --set image.tag="$IMAGE_TAG" \
+        --set namespace="$KUBE_NAMESPACE" \
+        --set environmentSuffix="prod" \
+        ./paristake-ui/
+    - time kubectl rollout status --namespace "$KUBE_NAMESPACE" deployment/$RELEASE_NAME
+
+deploy-dev:
+  <<: *builder_setup
+  stage: deploy
+  image: devopscalvine/infrastructure-helm3
+  only:
+    - devel
+    - feat/paristake
+  variables:
+    RELEASE_NAME: $APP_NAME-dev
+  environment:
+    name: development
+    url: https://dev.paristake.com
+  script:
+    - set -x
+    - kubectl create namespace "$KUBE_NAMESPACE" || echo "namespace already exists"
+    - |
+      helm upgrade --install --namespace "$KUBE_NAMESPACE" --debug $RELEASE_NAME \
+        --set replicaCount=1 \
+        --set image.repository="$IMAGE_REPO" \
+        --set image.tag="$IMAGE_TAG" \
+        --set namespace="$KUBE_NAMESPACE" \
+        --set environmentSuffix="dev" \
+        --set gatewayApi.enabled="false" \
+        ./paristake-ui/
+    - time kubectl rollout status --namespace "$KUBE_NAMESPACE" deployment/$RELEASE_NAME
