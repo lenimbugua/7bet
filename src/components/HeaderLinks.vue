@@ -126,7 +126,7 @@ const { openSupportModal } = useSupport();
           </RouterLink>
           <RouterLink
             :to="{ name: 'signup' }"
-            class="text-sm font-semibold text-white bg-brand-bright hover:bg-brand-bright/90 rounded-lg px-4 py-1.5 transition-colors duration-150"
+            class="text-sm font-semibold text-brand-forest bg-brand-bright hover:bg-brand-bright/90 rounded-lg px-4 py-1.5 transition-colors duration-150"
           >
             Join
           </RouterLink>
