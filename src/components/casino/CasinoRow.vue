@@ -98,7 +98,7 @@ function viewAll() {
         v-for="game in games"
         :key="game.id"
         type="button"
-        class="shrink-0 w-28 rounded-lg overflow-hidden bg-surface-deepest border border-border-subtle text-left hover:shadow-md transition-shadow"
+        class="shrink-0 w-14 rounded-lg overflow-hidden bg-surface-deepest border border-border-subtle text-left hover:shadow-md transition-shadow"
         @click="play(game)"
       >
         <div class="relative aspect-square overflow-hidden">

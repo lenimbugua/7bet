@@ -16,16 +16,16 @@ defineProps({
   },
 });
 
-// Casino row inserted after every two match rows, cycling through these
+// Casino row inserted after every four match rows, cycling through these
 const CASINO_CYCLE = ["crash", "slots", "virtuals", "top"];
 
-// Interleaved feed: match rows + a casino row after every 2 matches
+// Interleaved feed: match rows + a casino row after every 4 matches
 const feed = computed(() => {
   const items = [];
   let casinoIdx = 0;
   (matches.value || []).forEach((match, i) => {
     items.push({ type: "match", id: match.parentMatchId, match });
-    if ((i + 1) % 2 === 0) {
+    if ((i + 1) % 4 === 0) {
       items.push({
         type: "casino",
         id: `casino-${i}`,

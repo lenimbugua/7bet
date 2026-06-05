@@ -80,9 +80,6 @@ function viewAll() {
             <span aria-hidden="true">🔥</span>
             <span>{{ heading }}</span>
           </h2>
-          <p class="mt-1 text-[11px] font-bold text-gold-bright tracking-wide">
-            MOST PLAYED IN THE LAST 24 HOURS
-          </p>
         </div>
         <button
           type="button"
@@ -101,7 +98,7 @@ function viewAll() {
           v-for="game in topGames"
           :key="game.id"
           type="button"
-          class="shrink-0 w-32 rounded-lg overflow-hidden bg-surface-deepest border border-border-subtle text-left hover:shadow-md transition-shadow"
+          class="shrink-0 w-14 rounded-lg overflow-hidden bg-surface-deepest border border-border-subtle text-left hover:shadow-md transition-shadow"
           @click="play(game)"
         >
           <div class="relative aspect-square overflow-hidden">
@@ -111,7 +108,7 @@ function viewAll() {
               class="w-full h-full object-cover"
               loading="lazy"
             />
-            <span class="absolute top-1.5 left-1.5 inline-flex items-center justify-center w-6 h-6 rounded-md bg-background/70 text-sm" aria-hidden="true">🔥</span>
+            <span class="absolute top-1 left-1 inline-flex items-center justify-center w-4 h-4 rounded bg-background/70 text-[10px]" aria-hidden="true">🔥</span>
           </div>
         </button>
       </div>
