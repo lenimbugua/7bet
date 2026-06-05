@@ -289,9 +289,6 @@ function playGame(game) {
       <HeaderLinks hide-nav-links />
     </div>
 
-    <!-- Category pills -->
-    <CategoryPills />
-
     <!-- 2. Full-width Search Input -->
     <!--
     <div class="relative z-30 mt-3">
@@ -390,9 +387,20 @@ function playGame(game) {
     </div>
     -->
 
-    <div class="w-full bg-gray-50 dark:bg-background">
-      <div class="max-w-[1680px] mx-auto px-3 md:px-5 pt-3 pb-20">
-        <!-- Banner -->
+    <div class="w-full live-page-bg">
+      <div
+        class="max-w-[1680px] mx-auto px-3 md:px-5 pt-3 pb-20 flex items-start gap-5"
+      >
+        <!-- Left sidebar: Providers -->
+        <aside class="hidden xl:block w-60 shrink-0 sticky top-16">
+          <ProvidersSidebar />
+        </aside>
+
+        <div class="flex-1 min-w-0">
+          <!-- Category pills (middle section, like landing) -->
+          <CategoryPills class="mb-3" />
+
+          <!-- Banner -->
         <div class="rounded-xl overflow-hidden mb-3">
           <TheBanner />
         </div>
@@ -548,6 +556,12 @@ function playGame(game) {
             </div>
           </div>
         </template>
+        </div>
+
+        <!-- Right sidebar: High Rollers -->
+        <aside class="hidden lg:block w-72 shrink-0 sticky top-16">
+          <HighRollers />
+        </aside>
       </div>
     </div>
   </div>
@@ -556,6 +570,13 @@ function playGame(game) {
 </template>
 
 <style scoped>
+.live-page-bg {
+  background: oklch(98% 0.003 258);
+}
+[data-theme="dark"] .live-page-bg {
+  background: oklch(14% 0.03 258); /* #030915 */
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
