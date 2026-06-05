@@ -28,7 +28,7 @@ const { isLargeScreen } = useScreenSizes();
 <template>
   <LazyInfinityScroll
     v-if="isLargeScreen"
-    class="bg-gray-50 dark:bg-background"
+    class="live-page-bg"
   >
     <DesktopSportsLayout
       seo-title="Sports Betting - Live Odds & Matches | 7bet Kenya"
@@ -72,7 +72,16 @@ const { isLargeScreen } = useScreenSizes();
     </DesktopSportsLayout>
   </LazyInfinityScroll>
 
-  <div v-else class="block">
+  <div v-else class="block live-page-bg">
     <MobileTest />
   </div>
 </template>
+
+<style scoped>
+.live-page-bg {
+  background: oklch(98% 0.003 258);
+}
+[data-theme="dark"] .live-page-bg {
+  background: oklch(14% 0.03 258); /* #030915 */
+}
+</style>

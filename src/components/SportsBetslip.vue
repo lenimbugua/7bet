@@ -27,7 +27,7 @@ function getDeviationCssClass(prevOddValue, currentOddValue) {
   <EmptyBetslip v-if="betslipLength === 0" />
   <div v-else class="w-full flex flex-col min-h-0 flex-1">
     <!-- Multibet boost -->
-    <div class="shrink-0 p-1.5">
+    <div class="shrink-0 p-1.5 bg-accent/30">
       <MultibetBoost />
     </div>
 

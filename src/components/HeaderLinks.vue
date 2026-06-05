@@ -4,6 +4,7 @@ import { useLoginStore } from "../stores/login";
 import HeaderProfile from "./HeaderProfile.vue";
 import NavLinks from "./NavLinks.vue";
 import Search from "./icons/svgs/Search.vue";
+import Support from "./icons/svgs/Support.vue";
 import { useModalStore } from "@/stores/modal";
 import { useModalTypes } from "@/composables/useModalTypes";
 import { useSupport } from "@/composables/useSupport";
@@ -44,13 +45,10 @@ const { openSupportModal } = useSupport();
           <span
             role="button"
             aria-label="Support"
-            class="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+            class="hover:opacity-80 transition-opacity cursor-pointer"
             @click="openSupportModal"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/>
-              <path d="M21 16v2a4 4 0 0 1-4 4h-5"/>
-            </svg>
+            <Support class="w-6 h-6 object-contain" />
           </span>
 
           <!-- Search -->
@@ -60,7 +58,7 @@ const { openSupportModal } = useSupport();
             class="cursor-pointer"
             @click="openSearchModal"
           >
-            <Search class="w-5 h-5 object-contain" />
+            <Search class="w-6 h-6 object-contain" />
           </span>
         </div>
 

@@ -54,7 +54,7 @@ function openBetslip() {
         <!-- Left: count + odds -->
         <div class="flex items-center gap-2.5">
           <span
-            class="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-bright text-white text-[0.8rem] font-extrabold tabular-nums shadow-md shadow-brand-bright/40"
+            class="flex items-center justify-center w-7 h-7 rounded-lg bg-brand-bright text-brand-forest text-[0.8rem] font-extrabold tabular-nums shadow-md shadow-brand-bright/40"
           >
             {{ betslipLength }}
           </span>

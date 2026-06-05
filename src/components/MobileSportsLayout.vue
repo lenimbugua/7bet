@@ -19,7 +19,7 @@ defineProps({
     <HeaderLinks />
 
     <!-- Scrollable content -->
-    <div class="bg-gray-50 dark:bg-background">
+    <div class="">
       <!-- Category pills -->
       <CategoryPills class="px-3 pt-2"/>
 
@@ -45,6 +45,13 @@ defineProps({
 </template>
 
 <style scoped>
+.live-page-bg {
+  background: oklch(98% 0.003 258);
+}
+[data-theme="dark"] .live-page-bg {
+  background: oklch(14% 0.03 258); /* #030915 */
+}
+
 .sports-matches {
   background: white;
   border: 1px solid oklch(0% 0 0 / 0.06);

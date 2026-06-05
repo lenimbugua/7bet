@@ -1,6 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted } from "vue";
 import HeaderLinks from "../components/HeaderLinks.vue";
+import CategoryPills from "../components/mobile/CategoryPills.vue";
 import NewLive3 from "../components/NewLive3.vue";
 import { useScreenSizes } from "../composables/useScreenSizes";
 import { useLiveMatchesStore } from "../stores/live-matches";
@@ -31,13 +32,18 @@ const { isLargeScreen } = useScreenSizes();
   <div>
     <h1 class="sr-only">Live Betting – Real-Time Odds & Matches | 7bet</h1>
     <div v-if="isLargeScreen">
-      <HeaderLinks />
+      <div class="sticky top-0 z-40 bg-gray-50 dark:bg-background">
+        <HeaderLinks hide-nav-links />
+      </div>
       <div class="max-w-[1680px] mx-auto px-3">
         <div class="w-full pt-4 flex justify-between">
           <div class="sticky bottom-0">
             <TheSidebar />
           </div>
-          <NewLive3 />
+          <div class="flex-1 min-w-0 flex flex-col">
+            <CategoryPills :is-sticky="false" class="mb-3" />
+            <NewLive3 />
+          </div>
           <div class="flex sticky">
             <SportsBetslipPanel />
           </div>
@@ -54,6 +60,7 @@ const { isLargeScreen } = useScreenSizes();
         <div class="sticky top-0 pb-2 live-page-bg z-40">
           <!-- <TheDepositBar /> -->
           <HeaderLinks />
+          <CategoryPills :is-sticky="false" class="px-3 pt-2" />
         </div>
         <NewLive3 />
       </div>

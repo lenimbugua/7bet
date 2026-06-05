@@ -2,6 +2,7 @@
 import { computed, toRefs } from "vue";
 import { useNewLiveStore } from "@/stores/new-live";
 import ColumnHeaderSearch from "./ColumnHeaderSearch.vue";
+import LiveSortByMenu from "./live/LiveSortByMenu.vue";
 
 const { competitions } = toRefs(useNewLiveStore());
 
@@ -38,5 +39,10 @@ const flatMatches = computed(() => {
     :outcome-labels="outcomeLabels"
     :is-live="true"
     variant="live"
-  />
+    hide-outcome-labels
+  >
+    <template #trailing>
+      <LiveSortByMenu />
+    </template>
+  </ColumnHeaderSearch>
 </template>

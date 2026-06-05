@@ -38,16 +38,16 @@ function fetchGame(competition) {
 <template>
   <div
     v-if="topLeagues?.length"
-    class="flex gap-1.5 px-3 mt-2 overflow-x-auto scrollbar-hide"
+    class="flex gap-1.5 px-3 sm:px-0 mt-2 overflow-x-auto scrollbar-hide"
   >
     <button
       v-for="league in topLeagues.slice(0, 8)"
       :key="league.competitionId"
-      class="flex items-center gap-1.5 px-2 py-1 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200/70 dark:border-white/5 cursor-pointer active:scale-[0.97] transition-transform shrink-0 league-pill"
+      class="flex items-center gap-1.5 px-2 py-1 rounded-full bg-background border border-gray-200/70 dark:border-white/5 cursor-pointer active:scale-[0.97] transition-transform shrink-0 league-pill"
       @click="fetchGame(league)"
     >
       <div
-        class="w-5 h-5 rounded-full bg-white dark:bg-white/10 flex items-center justify-center overflow-hidden shrink-0"
+        class="w-5 h-5 rounded-full bg-background flex items-center justify-center overflow-hidden shrink-0"
       >
         <img
           :src="getTopLeagueImage(league.cbinomen)"

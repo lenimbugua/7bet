@@ -8,6 +8,8 @@ const props = defineProps({
   outcomeLabels: { type: Array, default: () => ["1", "X", "2"] },
   isLive: { type: Boolean, default: false },
   variant: { type: String, default: "prematch" },
+  // Hide the 1/X/2 outcome labels (used by the live column header)
+  hideOutcomeLabels: { type: Boolean, default: false },
 });
 
 const router = useRouter();
@@ -104,7 +106,7 @@ const isSearching = computed(() => searchQuery.value.trim().length > 0);
 
       <!-- Outcome labels — prematch variant -->
       <div
-        v-if="variant === 'prematch'"
+        v-if="variant === 'prematch' && !hideOutcomeLabels"
         :class="[
           'flex items-center gap-1.5 shrink-0 transition-all duration-300 ease-in-out',
           searchOpen
@@ -124,7 +126,7 @@ const isSearching = computed(() => searchQuery.value.trim().length > 0);
 
       <!-- Outcome labels — live variant -->
       <div
-        v-else
+        v-else-if="!hideOutcomeLabels"
         :class="[
           'shrink-0 grid grid-cols-3 text-center transition-all duration-300 ease-in-out',
           searchOpen
@@ -139,6 +141,11 @@ const isSearching = computed(() => searchQuery.value.trim().length > 0);
         >
           {{ label }}
         </span>
+      </div>
+
+      <!-- Trailing slot (e.g. Sort By in the live column header) -->
+      <div v-if="$slots.trailing && !searchOpen" class="shrink-0">
+        <slot name="trailing" />
       </div>
     </div>
 

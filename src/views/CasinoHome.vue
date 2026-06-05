@@ -286,13 +286,11 @@ function playGame(game) {
     <h1 class="sr-only">Casino | Play 500+ Games Online | 7bet</h1>
     <div class="sticky top-0 z-60 bg-white dark:bg-background">
       <!-- <TheDepositBar class="md:hidden" /> -->
-      <HeaderLinks />
+      <HeaderLinks hide-nav-links />
     </div>
 
-    <!-- Category pills (mobile) -->
-    <div class="md:hidden">
-      <CategoryPills />
-    </div>
+    <!-- Category pills -->
+    <CategoryPills />
 
     <!-- 2. Full-width Search Input -->
     <!--
@@ -393,7 +391,7 @@ function playGame(game) {
     -->
 
     <div class="w-full bg-gray-50 dark:bg-background">
-      <div class="max-w-[1280px] mx-auto px-3 md:px-5 pt-3 pb-20">
+      <div class="max-w-[1680px] mx-auto px-3 md:px-5 pt-3 pb-20">
         <!-- Banner -->
         <div class="rounded-xl overflow-hidden mb-3">
           <TheBanner />
