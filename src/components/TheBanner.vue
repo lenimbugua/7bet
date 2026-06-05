@@ -4,7 +4,7 @@ import { useDefaultSport } from "@/composables/useDefaultSport";
 import formatStuff from "@/utilities/format-stuff";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { computed, onBeforeUnmount, ref } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import { useCasinoStore } from "../stores/casino";
 
@@ -193,12 +193,35 @@ const onSlideChange = (swiper) => {
 onBeforeUnmount(() => {
   stopAutoplay();
 });
+
+/* Desktop (xl+) two-panel 3D flip carousel */
+const pairIndex = ref(0);
+const totalPairs = computed(() => Math.ceil(items.length / 2));
+const leftItem = computed(() => items[(pairIndex.value * 2) % items.length]);
+const rightItem = computed(() => items[(pairIndex.value * 2 + 1) % items.length]);
+
+let flipTimer = null;
+const stopFlip = () => {
+  if (flipTimer) {
+    clearInterval(flipTimer);
+    flipTimer = null;
+  }
+};
+const startFlip = () => {
+  stopFlip();
+  flipTimer = setInterval(() => {
+    pairIndex.value = (pairIndex.value + 1) % totalPairs.value;
+  }, autoplayDelay);
+};
+
+onMounted(startFlip);
+onBeforeUnmount(stopFlip);
 </script>
 
 <template>
   <div class="w-full">
-    <!-- Banner carousel -->
-    <div class="relative w-full h-[116px] overflow-hidden">
+    <!-- Mobile / tablet: swiper carousel -->
+    <div class="relative w-full h-[116px] overflow-hidden xl:hidden">
       <swiper
         :slides-per-view="1"
         :slides-per-group="1"
@@ -206,7 +229,6 @@ onBeforeUnmount(() => {
         :centered-slides="false"
         :navigation="false"
         :modules="modules"
-        :breakpoints="{ 1280: { slidesPerView: 2, slidesPerGroup: 2 } }"
         class="h-full"
         @swiper="onSwiperInit"
         @slide-change="onSlideChange"
@@ -229,5 +251,80 @@ onBeforeUnmount(() => {
         </swiper-slide>
       </swiper>
     </div>
+
+    <!-- Desktop: two 3D-flip panels (left flips left, right flips right) -->
+    <div class="hidden xl:flex gap-3 w-full h-[116px]">
+      <!-- Left panel -->
+      <div class="flip-perspective flex-1 min-w-0">
+        <Transition name="flip-left" mode="out-in">
+          <div
+            :key="leftItem.image"
+            class="banner-card relative h-full w-full rounded-xl overflow-hidden group cursor-pointer ring-1 ring-gray-200/80 dark:ring-white/10"
+            @click="launchGame(leftItem.id, leftItem.name, leftItem.routeName)"
+          >
+            <img
+              :src="formCloudflareImage(leftItem.image)"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              :alt="leftItem.name + ' game banner'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+        </Transition>
+      </div>
+
+      <!-- Right panel -->
+      <div class="flip-perspective flex-1 min-w-0">
+        <Transition name="flip-right" mode="out-in">
+          <div
+            :key="rightItem.image"
+            class="banner-card relative h-full w-full rounded-xl overflow-hidden group cursor-pointer ring-1 ring-gray-200/80 dark:ring-white/10"
+            @click="launchGame(rightItem.id, rightItem.name, rightItem.routeName)"
+          >
+            <img
+              :src="formCloudflareImage(rightItem.image)"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              :alt="rightItem.name + ' game banner'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+        </Transition>
+      </div>
+    </div>
   </div>
 </template>
+
+<style scoped>
+.flip-perspective {
+  perspective: 1200px;
+}
+.banner-card {
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+/* Left panel flips towards the left */
+.flip-left-enter-active,
+.flip-left-leave-active,
+.flip-right-enter-active,
+.flip-right-leave-active {
+  transition: transform 0.55s ease, opacity 0.55s ease;
+}
+.flip-left-enter-from {
+  transform: rotateY(-90deg);
+  opacity: 0;
+}
+.flip-left-leave-to {
+  transform: rotateY(90deg);
+  opacity: 0;
+}
+
+/* Right panel flips towards the right */
+.flip-right-enter-from {
+  transform: rotateY(90deg);
+  opacity: 0;
+}
+.flip-right-leave-to {
+  transform: rotateY(-90deg);
+  opacity: 0;
+}
+</style>

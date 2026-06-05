@@ -33,11 +33,11 @@ const openProvider = (p) => {
 
 <template>
   <section
-    class="rounded-2xl overflow-hidden live-page-bg ring-1 ring-black/5 dark:ring-white/10"
+    class="flex flex-col h-full rounded-2xl overflow-hidden bg-background ring-1 ring-black/5 dark:ring-white/10"
   >
     <!-- Header (styled like the betslip header) -->
     <div
-      class="relative z-10 flex items-center gap-2 px-3 py-2.5 border-b border-gray-200 dark:border-white/5 bg-gray-100 dark:bg-surface-elevated shadow-md shadow-black/10 dark:shadow-black/40"
+      class="relative z-10 shrink-0 flex items-center gap-2 px-3 py-2.5 border-b border-gray-200 dark:border-white/5 bg-gray-100 dark:bg-surface-elevated shadow-md shadow-black/10 dark:shadow-black/40"
     >
       <span class="text-base">🎰</span>
       <h2 class="text-sm font-semibold uppercase tracking-wide text-gray-900 dark:text-white">
@@ -46,7 +46,7 @@ const openProvider = (p) => {
     </div>
 
     <!-- List -->
-    <ul class="space-y-1.5 p-3 sm:p-4">
+    <ul class="flex-1 min-h-0 overflow-y-auto scrollbar-hide space-y-1.5 p-3 sm:p-4">
       <li v-for="(p, i) in providers" :key="p.provider_id">
         <button
           type="button"
@@ -74,12 +74,3 @@ const openProvider = (p) => {
     </ul>
   </section>
 </template>
-
-<style scoped>
-.live-page-bg {
-  background: oklch(98% 0.003 258);
-}
-[data-theme="dark"] .live-page-bg {
-  background: oklch(14% 0.03 258); /* #030915 */
-}
-</style>

@@ -92,7 +92,7 @@ function formatInt(n) {
     >
       <!-- Header bar -->
       <div class="flex items-center justify-between px-3 sm:px-4 pt-3 pb-2">
-        <h3 class="text-white text-base sm:text-xl font-extrabold tracking-wide">
+        <h3 class="text-white text-sm sm:text-lg font-extrabold tracking-wide">
           {{ title }}
         </h3>
         <button
@@ -108,7 +108,7 @@ function formatInt(n) {
       <div class="px-3 sm:px-4 pt-2 pb-3">
         <div class="text-center">
           <div
-            class="inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#fff3a0] to-[#c48a17] text-xl sm:text-2xl font-black tracking-widest italic mb-1 drop-shadow"
+            class="inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#fff3a0] to-[#c48a17] text-lg sm:text-xl font-black tracking-widest italic mb-1 drop-shadow"
           >
             SUPER
           </div>
@@ -117,7 +117,7 @@ function formatInt(n) {
           class="relative rounded-lg border-2 border-[#ffd166]/80 bg-gradient-to-b from-[#fff0b0] via-[#f5c542] to-[#a37310] py-2 px-3 shadow-lg shadow-yellow-900/30"
         >
           <div
-            class="text-center text-[#2a0e4a] text-2xl sm:text-4xl font-black tracking-tight drop-shadow-[0_1px_0_rgba(255,255,255,0.5)]"
+            class="text-center text-[#2a0e4a] text-xl sm:text-3xl font-black tracking-tight drop-shadow-[0_1px_0_rgba(255,255,255,0.5)]"
           >
             <AnimatedNumber :value="superJackpot.amount" :formatter="formatAmount" />
           </div>
@@ -137,7 +137,7 @@ function formatInt(n) {
       <div class="px-3 sm:px-4 grid grid-cols-2 gap-2 sm:gap-3 mb-3">
         <div v-for="tier in tiers" :key="tier.name" class="text-center">
           <div
-            class="text-transparent bg-clip-text bg-gradient-to-b font-black italic text-sm sm:text-base tracking-wider mb-0.5 drop-shadow"
+            class="text-transparent bg-clip-text bg-gradient-to-b font-black italic text-xs sm:text-sm tracking-wider mb-0.5 drop-shadow"
             :class="{
               'from-[#ffe06e] to-[#b13d2f]': tier.name === 'Grand',
               'from-[#bcffa3] to-[#0c5a13]': tier.name === 'Major',
@@ -150,7 +150,7 @@ function formatInt(n) {
           <div
             class="rounded-md border-2 py-1.5 px-2 bg-gradient-to-b from-[#fff0b0] via-[#f5c542] to-[#a37310] border-[#ffd166]/80 shadow"
           >
-            <div class="text-[#2a0e4a] text-base sm:text-xl font-black tracking-tight">
+            <div class="text-[#2a0e4a] text-sm sm:text-lg font-black tracking-tight">
               <AnimatedNumber :value="tier.amount" :formatter="formatAmount" />
             </div>
             <div class="text-[9px] sm:text-[11px] font-bold text-[#2a0e4a] leading-tight">
@@ -172,7 +172,7 @@ function formatInt(n) {
             role="button"
             tabindex="0"
             :aria-label="'Play ' + game.name"
-            class="shrink-0 w-28 sm:w-32 relative rounded-xl overflow-hidden bg-black/40 ring-1 ring-white/10 cursor-pointer group"
+            class="shrink-0 w-24 sm:w-28 relative rounded-xl overflow-hidden bg-black/40 ring-1 ring-white/10 cursor-pointer group"
             @click="$emit('play', game)"
           >
             <span

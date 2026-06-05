@@ -40,7 +40,7 @@ const resolvedGame = computed(() =>
 
 <template>
   <div
-    class="group cursor-pointer shrink-0 w-[100px] sm:w-[150px] md:w-[170px] lg:w-[180px]"
+    class="group cursor-pointer shrink-0 w-[76px] sm:w-[100px] md:w-[112px] lg:w-[120px]"
     role="button"
     tabindex="0"
     :aria-label="'Play ' + displayName"

@@ -103,7 +103,7 @@ const topGames = computed(() => {
     </div>
 
     <!-- Footer: Theme + Logout -->
-    <div class="shrink-0 rounded-xl bg-white dark:bg-white/[0.02] border border-gray-200/80 dark:border-white/[0.06] shadow-sm dark:shadow-none overflow-hidden">
+    <div class="shrink-0 rounded-xl bg-background border border-gray-200/80 dark:border-white/[0.06] shadow-sm dark:shadow-none overflow-hidden">
       <div class="flex items-center justify-between px-3.5 py-2.5">
         <!-- Theme toggle pill -->
         <button

@@ -391,9 +391,10 @@ function playGame(game) {
       <div
         class="max-w-[1680px] mx-auto px-3 md:px-5 pt-3 pb-20 flex items-start gap-5"
       >
-        <!-- Left sidebar: Providers -->
-        <aside class="hidden xl:block w-60 shrink-0 sticky top-16">
-          <ProvidersSidebar />
+        <!-- Left sidebar: Providers + settings -->
+        <aside class="hidden xl:flex flex-col gap-3 w-60 shrink-0 sticky top-16 h-[calc(100vh-5rem)]">
+          <ProvidersSidebar class="flex-1 min-h-0" />
+          <SidebarSettings class="shrink-0" />
         </aside>
 
         <div class="flex-1 min-w-0">
@@ -407,20 +408,15 @@ function playGame(game) {
 
         <!-- Category strip (unstyled, to be styled) -->
         <div
-          class="flex items-center gap-6 sm:gap-8 overflow-x-auto scrollbar-hide py-2"
+          class="flex items-center justify-between rounded-xl bg-gray-100 dark:bg-card px-3 py-2.5"
         >
           <div
             v-for="item in categoryStripItems"
             :key="item.label"
-            class="flex flex-col items-center shrink-0"
+            class="flex flex-col items-center gap-1 shrink-0"
           >
-            <div>
-              <div>
-                <img :src="item.icon" class="w-12 h-12" />
-                <div></div>
-              </div>
-            </div>
-            <div class="text-gray-800 dark:text-white">{{ item.label }}</div>
+            <img :src="item.icon" class="w-8 h-8" />
+            <div class="text-[0.7rem] text-gray-800 dark:text-white">{{ item.label }}</div>
           </div>
         </div>
 
@@ -443,9 +439,6 @@ function playGame(game) {
           <CasinoWinnersTicker @play="playTickerGame" />
         </div> -->
 
-        <!-- Recent Winners -->
-        <WinnersCarousel />
-
         <!-- Crash games (swapped up from the category list) -->
         <CasinoGameCarousel
           v-if="crashCategory"
@@ -455,6 +448,9 @@ function playGame(game) {
           @play="playGame"
           @see-all="onCategorySelect(crashCategory.slug)"
         />
+
+        <!-- Recent Winners (mobile/tablet only — on desktop it lives in the right sidebar) -->
+        <WinnersCarousel class="lg:hidden" />
 
         <!-- 7BET JACKPOT -->
         <BangbetJackpotSection />
@@ -538,7 +534,7 @@ function playGame(game) {
 
             <div
               v-if="activeGridGames.length > 0"
-              class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 sm:gap-5"
+              class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-8 gap-2.5 sm:gap-3"
             >
               <CasinoGameCard
                 v-for="game in activeGridGames"
@@ -559,7 +555,7 @@ function playGame(game) {
         </div>
 
         <!-- Right sidebar: High Rollers -->
-        <aside class="hidden lg:block w-72 shrink-0 sticky top-16">
+        <aside class="hidden lg:flex flex-col w-60 shrink-0 sticky top-16 h-[calc(100vh-5rem)]">
           <HighRollers />
         </aside>
       </div>

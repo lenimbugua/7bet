@@ -77,7 +77,7 @@ function autoScroll() {
   if (!scrollContainer.value) return;
   const element = scrollContainer.value;
   let scrollPos = 0;
-  const cardWidth = 176 + 8; // w-44 (176px) + space-x-2 (8px)
+  const cardWidth = 144 + 8; // w-36 (144px) + space-x-2 (8px)
   const scrollDuration = 600;
   const pauseDuration = 3000;
 
@@ -136,10 +136,10 @@ watch(
         <article
           v-for="winner in winners"
           :key="winner.id"
-          class="shrink-0 w-44 rounded-lg overflow-hidden bg-surface-deepest border border-border-subtle flex"
+          class="shrink-0 w-36 rounded-lg overflow-hidden bg-surface-deepest border border-border-subtle flex"
         >
           <!-- Game art LEFT -->
-          <div class="w-16 h-16 shrink-0 overflow-hidden">
+          <div class="w-12 h-12 shrink-0 overflow-hidden">
             <img
               :src="winner.game.image"
               :alt="winner.game.name"
@@ -149,14 +149,14 @@ watch(
           </div>
 
           <!-- Stats RIGHT -->
-          <div class="flex-1 px-2 py-1.5 flex flex-col justify-center gap-1.5 min-w-0">
-            <div class="text-lg font-extrabold text-primary leading-none">
+          <div class="flex-1 px-2 py-1 flex flex-col justify-center gap-1 min-w-0">
+            <div class="text-base font-extrabold text-primary leading-none">
               {{ formatMultiplier(winner.multiplier) }}
             </div>
-            <div class="text-xs font-bold text-foreground leading-none">
+            <div class="text-[11px] font-bold text-foreground leading-none">
               <span class="mr-1">KSh</span>{{ formatKsh(winner.amount) }}
             </div>
-            <div class="text-[11px] font-semibold text-muted-foreground tracking-wider leading-none">
+            <div class="text-[10px] font-semibold text-muted-foreground tracking-wider leading-none">
               {{ winner.phone }}
             </div>
           </div>
