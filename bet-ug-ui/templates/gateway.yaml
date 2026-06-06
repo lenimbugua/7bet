@@ -1,0 +1,33 @@
+{{- range $host := .Values.gatewayApi.hostname }}
+
+{{- $name := include "app.gatewayName" (dict "host" $host "root" $) }}
+
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: {{ $name }}
+  namespace: {{ $.Values.namespace }}
+  labels:
+    app: {{ include "app.fullname" $ }}
+
+  {{- if $.Values.gatewayApi.annotations }}
+  annotations:
+{{ toYaml $.Values.gatewayApi.annotations | indent 4 }}
+  {{- end }}
+
+spec:
+  gatewayClassName: {{ $.Values.gatewayApi.className | quote }}
+
+  listeners:
+    - name: websecure
+      protocol: HTTPS
+      port: {{ $.Values.gatewayApi.listeners.websecure.port }}
+      hostname: {{ $host | quote }}
+      tls:
+        mode: {{ $.Values.gatewayApi.listeners.websecure.tls.mode }}
+        certificateRefs:
+          - kind: Secret
+            name: {{ $name }}-tls
+
+{{- end }}
