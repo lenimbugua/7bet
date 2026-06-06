@@ -82,7 +82,7 @@ const { openSupportModal } = useSupport();
           <template v-if="token">
             <HeaderProfile />
             <span class="relative inline-flex">
-              <span class="absolute inset-0 rounded-lg bg-brand-bright opacity-75 animate-ping pointer-events-none"></span>
+              <span class="absolute inset-0 rounded-lg bg-brand-bright deposit-ping pointer-events-none"></span>
               <RouterLink
                 :to="{ name: 'deposit' }"
                 class="relative flex items-center gap-1.5 text-sm font-bold text-brand-forest bg-brand-bright hover:bg-brand-bright/90 px-4 py-2 rounded-lg transition-colors duration-150"
@@ -133,7 +133,7 @@ const { openSupportModal } = useSupport();
         <template v-if="token">
           <HeaderProfile />
           <span class="relative inline-flex">
-            <span class="absolute inset-0 rounded-lg bg-brand-bright opacity-75 animate-ping pointer-events-none"></span>
+            <span class="absolute inset-0 rounded-lg bg-brand-bright deposit-ping pointer-events-none"></span>
             <RouterLink
               :to="{ name: 'deposit' }"
               class="relative text-sm font-bold text-brand-forest bg-brand-bright hover:bg-brand-bright/90 rounded-lg px-4 py-1.5 transition-colors duration-150"
@@ -171,5 +171,28 @@ const { openSupportModal } = useSupport();
   background: oklch(100% 0 0 / 0.1);
   border-color: oklch(100% 0 0 / 0.15);
   box-shadow: 0 2px 6px oklch(0% 0 0 / 0.3), inset 0 1px 0 oklch(100% 0 0 / 0.1);
+}
+
+/* Gentle deposit pulse — small scale so it can't push the layout */
+.deposit-ping {
+  transform-origin: center;
+  animation: deposit-ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes deposit-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  70%,
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .deposit-ping {
+    animation: none;
+    opacity: 0;
+  }
 }
 </style>

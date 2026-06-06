@@ -392,11 +392,14 @@
 
 html {
   width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 body {
   overflow-x: clip;
   width: 100%;
+  max-width: 100%;
   font-family: "Inter", "Roboto", sans-serif;
 }
 

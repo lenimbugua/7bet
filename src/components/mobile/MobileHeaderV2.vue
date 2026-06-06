@@ -61,7 +61,7 @@ const { balance } = storeToRefs(useProfileStore());
         </RouterLink>
         <RouterLink
           :to="{ name: 'signup' }"
-          class="text-[0.65rem] font-bold px-2.5 py-1 rounded-md bg-brand-bright text-white"
+          class="join-btn text-[0.65rem] font-extrabold uppercase tracking-wide px-3.5 py-1.5 rounded-lg text-gray-900"
         >
           Join
         </RouterLink>
@@ -73,5 +73,34 @@ const { balance } = storeToRefs(useProfileStore());
 <style scoped>
 [data-theme="light"] .header-bar {
   box-shadow: 0 1px 3px oklch(0% 0 0 / 0.06), 0 1px 2px oklch(0% 0 0 / 0.04);
+}
+
+/* Raised, glossy Join button — keeps the brand-green theme */
+.join-btn {
+  /* texture: subtle lighter top -> brand bottom gradient */
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--brand-bright) 78%, white),
+    var(--brand-bright)
+  );
+  /* elevation + top inner highlight + bottom inner shade */
+  box-shadow:
+    0 2px 5px oklch(0% 0 0 / 0.25),
+    0 1px 2px oklch(0% 0 0 / 0.2),
+    inset 0 1px 0 oklch(100% 0 0 / 0.45),
+    inset 0 -1px 1px oklch(0% 0 0 / 0.12);
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    filter 0.12s ease;
+}
+.join-btn:hover {
+  filter: brightness(1.04);
+}
+.join-btn:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 1px 2px oklch(0% 0 0 / 0.25),
+    inset 0 1px 2px oklch(0% 0 0 / 0.18);
 }
 </style>

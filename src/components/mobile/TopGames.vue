@@ -73,7 +73,7 @@ function viewAll() {
 
 <template>
   <section v-if="topGames.length">
-    <div class="rounded-xl bg-card border border-border-subtle px-3 py-5">
+    <div class="rounded-xl bg-card border border-border-subtle px-3 py-2.5 sm:py-5">
       <header class="flex items-start justify-between mb-2">
         <div>
           <h2 class="flex items-center gap-2 text-sm font-extrabold text-foreground tracking-wide">
