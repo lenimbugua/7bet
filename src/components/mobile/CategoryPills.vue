@@ -71,9 +71,7 @@ function isActive(cat) {
   // Pills targeting a specific casino category (Crash, Virtuals) are active
   // only when that exact category query is present.
   if (catCategory) {
-    return (
-      route.name === "casino-home" && route.query.category === catCategory
-    );
+    return route.name === "casino-home" && route.query.category === catCategory;
   }
 
   // The plain "Casino" pill must not light up while a specific category
@@ -102,7 +100,7 @@ function handleClick(cat) {
 <template>
   <div
     :class="isSticky ? 'sticky top-11 z-50' : ''"
-    class="px-0 md:px-0  rounded-xl overflow-clip"
+    class="px-0 md:px-0 rounded-xl overflow-clip"
   >
     <div
       class="rounded-xl max-w-[1280px] dark:bg-background mx-auto bg-gray-100 dark:bg-card grid grid-cols-7 category-grid"
@@ -110,7 +108,7 @@ function handleClick(cat) {
       <button
         v-for="cat in categories"
         :key="cat.name"
-        class="flex flex-col items-center gap-1 py-3 transition-colors"
+        class="flex flex-col items-center gap-0 py-1.5 md:gap-1 md:py-3 transition-colors"
         :class="isActive(cat) ? 'bg-brand-bright/15' : ''"
         @click="handleClick(cat)"
       >
@@ -119,7 +117,7 @@ function handleClick(cat) {
           <img
             :src="cat.img"
             :alt="cat.name"
-            class="w-8 h-8 object-contain"
+            class="w-5 h-5 md:w-8 md:h-8 object-contain"
             :class="isActive(cat) ? '' : 'opacity-80'"
           />
           <span
@@ -134,7 +132,7 @@ function handleClick(cat) {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          class="w-8 h-8 text-primary"
+          class="w-5 h-5 md:w-8 md:h-8 text-primary"
         >
           <path
             d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z"
@@ -151,7 +149,7 @@ function handleClick(cat) {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          class="w-8 h-8 text-gray-500 dark:text-white/70"
+          class="w-5 h-5 md:w-8 md:h-8 text-gray-500 dark:text-white/70"
         >
           <path
             fill-rule="evenodd"

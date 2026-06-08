@@ -427,13 +427,13 @@ function playGame(game) {
 
         <!-- Category strip -->
         <div
-          class="flex items-center justify-between rounded-xl bg-gray-100 dark:bg-card px-3 py-2.5 overflow-x-auto"
+          class="flex items-center justify-between rounded-xl bg-gray-100 dark:bg-card px-3 py-1 md:py-2.5 overflow-x-auto"
         >
           <button
             v-for="item in visibleStripItems"
             :key="item.slug"
             type="button"
-            class="flex flex-col items-center gap-1 shrink-0 px-2 py-1 rounded-lg transition-colors"
+            class="flex flex-col items-center gap-0 py-0.5 md:gap-1 md:py-1 shrink-0 px-2 rounded-lg transition-colors"
             :class="
               selectedCategory === item.slug
                 ? 'bg-primary/10'
@@ -441,7 +441,7 @@ function playGame(game) {
             "
             @click="onCategorySelect(item.slug)"
           >
-            <img :src="item.icon" class="w-8 h-8" />
+            <img :src="item.icon" class="w-5 h-5 md:w-8 md:h-8" />
             <div
               class="text-[0.7rem]"
               :class="
