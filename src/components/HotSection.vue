@@ -298,7 +298,13 @@ const filteredGames = computed(() => {
 });
 
 function playGame(game) {
-  launchCasino(game.id, game.gameName, game.routeName, game.providerName);
+  launchCasino(
+    game.id,
+    game.gameName,
+    game.routeName,
+    game.providerName,
+    game.imgFullUrl
+  );
 }
 
 const viewAllLink = computed(() => {

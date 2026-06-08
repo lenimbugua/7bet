@@ -35,6 +35,7 @@ const { categoriesWithGames, categoriesLoading } = storeToRefs(casinoStore);
 
 onMounted(() => {
   casinoStore.fetchCategoriesWithGames();
+  casinoStore.fetchProviders();
 });
 
 const route = useRoute();
@@ -121,22 +122,21 @@ function getCategoryIcon(name) {
   return "other";
 }
 
-// Map category to pill slug for navigation
+// Map category to pill slug for navigation. Uses substring matching so it is
+// resilient to API naming variations (e.g. "Crash Games", "Popular Slots").
 function getCategorySlug(cat) {
-  const slug = cat.name.toLowerCase().replace(/\s+/g, "_");
-  const mapped = {
-    crash_game: "crash",
-    slots: "slots",
-    live_casino: "live",
-    table_games: "table",
-    virtuals: "virtuals",
-    roulette: "roulette",
-    baccarat: "baccarat",
-    top_games: "top",
-    popular_games: "top",
-    other: "other",
-  };
-  return mapped[slug] || slug;
+  const lower = cat.name.toLowerCase();
+  if (lower.includes("crash")) return "crash";
+  if (lower.includes("slot")) return "slots";
+  if (lower.includes("live")) return "live";
+  if (lower.includes("table")) return "table";
+  if (lower.includes("virtual")) return "virtuals";
+  if (lower.includes("roulette")) return "roulette";
+  if (lower.includes("baccarat")) return "baccarat";
+  if (lower.includes("hot") || lower.includes("popular") || lower.includes("top"))
+    return "top";
+  if (lower.includes("instant")) return "other";
+  return lower.replace(/\s+/g, "_");
 }
 
 // All games flattened, deduplicated & sorted by priority
@@ -273,7 +273,13 @@ function playGame(game) {
     searchTerm.value = "";
     return;
   }
-  launchCasino(game.id, game.gameName, game.routeName, game.providerName);
+  launchCasino(
+    game.id,
+    game.gameName,
+    game.routeName,
+    game.providerName,
+    game.imgFullUrl
+  );
   searchTerm.value = "";
 }
 
@@ -408,7 +414,7 @@ function playGame(game) {
 
     <div class="w-full live-page-bg">
       <div
-        class="max-w-[1680px] mx-auto px-3 md:px-5 pt-3 pb-20 flex items-start gap-5"
+        class="max-w-[1680px] mx-auto px-3 md:px-5 pb-20 flex items-start gap-5"
       >
         <!-- Left sidebar: Providers + settings -->
         <aside class="hidden xl:flex flex-col gap-3 w-60 shrink-0 sticky top-16 h-[calc(100vh-5rem)]">

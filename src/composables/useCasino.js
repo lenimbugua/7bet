@@ -177,12 +177,12 @@ export function useCasino() {
     }
   }
 
-  function launchCasino(gameId, gameName, routeName, providerName) {
+  function launchCasino(gameId, gameName, routeName, providerName, gameImage) {
     console.log(gameId, gameName, routeName);
 
     const { setLaunchGameId, setLaunchGameMeta } = useCasinoStore();
     setLaunchGameId(gameId);
-    setLaunchGameMeta(gameName, providerName);
+    setLaunchGameMeta(gameName, providerName, gameImage);
 
     const kironLiteNamesIdsMap = {
       "Pari League": hakiLeagueGameId,

@@ -18,8 +18,10 @@ function getAuthHeaders() {
   return { headers, profileSid };
 }
 
-const { initialCategories, providers, categories, getGames, meta } =
-  useCasino();
+const { initialCategories, categories, getGames, meta } = useCasino();
+
+// Soft-gaming tenant (7BET). Drives the sg-* casino endpoints.
+const tenantCode = import.meta.env.VITE_TENANT_CODE;
 
 const HIDDEN_GAMES = ["pari league", "pari jackpot", "haki league", "haki jackpot"];
 function filterHiddenGames(games) {
@@ -38,7 +40,7 @@ export const useCasinoStore = defineStore("casino-store", {
 
     casinoCategories: categories,
     initialCategories: initialCategories,
-    providers: providers,
+    providers: [],
 
     categoriesWithGames: [],
     categoriesLoading: false,
@@ -52,6 +54,7 @@ export const useCasinoStore = defineStore("casino-store", {
     gameIdToLaunch: null,
     gameNameToLaunch: null,
     gameProviderToLaunch: null,
+    gameImageToLaunch: null,
 
     meta: meta,
     isDemo: 0,
@@ -105,7 +108,7 @@ export const useCasinoStore = defineStore("casino-store", {
         this.categoriesLoading = true;
         const { headers } = getAuthHeaders();
         const response = await API(casinoBaseURL).get(
-          "/api/v1/categories/with-games",
+          `/api/v1/sg-categories/tenant/${tenantCode}`,
           { headers }
         );
         this.categoriesWithGames = response.data.data.map((category) => ({
@@ -116,6 +119,19 @@ export const useCasinoStore = defineStore("casino-store", {
         console.log(err);
       } finally {
         this.categoriesLoading = false;
+      }
+    },
+
+    async fetchProviders() {
+      try {
+        const { headers } = getAuthHeaders();
+        const response = await API(casinoBaseURL).get(
+          `/api/v1/sg-games/providers?tenantCode=${tenantCode}`,
+          { headers }
+        );
+        this.providers = response.data.data ?? [];
+      } catch (err) {
+        console.log(err);
       }
     },
 
@@ -182,9 +198,10 @@ export const useCasinoStore = defineStore("casino-store", {
     setLaunchGameId(gameId) {
       this.gameIdToLaunch = gameId;
     },
-    setLaunchGameMeta(name, provider) {
+    setLaunchGameMeta(name, provider, image) {
       this.gameNameToLaunch = name || null;
       this.gameProviderToLaunch = provider || null;
+      this.gameImageToLaunch = image || null;
     },
 
     setSelectedCategory(category) {
@@ -201,6 +218,11 @@ export const useCasinoStore = defineStore("casino-store", {
     },
   },
   persist: {
-    pick: ["launchData", "gameNameToLaunch", "gameProviderToLaunch"],
+    pick: [
+      "launchData",
+      "gameNameToLaunch",
+      "gameProviderToLaunch",
+      "gameImageToLaunch",
+    ],
   },
 });

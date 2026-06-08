@@ -65,7 +65,8 @@ function play(game) {
     game.id,
     game.gameName,
     routeNameFor(category.value?.name || ""),
-    game.providerName
+    game.providerName,
+    game.imgFullUrl
   );
 }
 
