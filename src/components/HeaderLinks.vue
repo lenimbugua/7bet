@@ -67,7 +67,7 @@ const { openSupportModal } = useSupport();
           <template v-if="!token">
             <RouterLink
               :to="{ name: 'login' }"
-              class="text-sm font-semibold px-3 py-1.5 rounded-lg login-glass transition-all duration-150"
+              class="text-sm font-semibold px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200/80 dark:border-white/6 text-brand-bright hover:bg-gray-200 dark:hover:bg-white/8 transition-colors"
             >
               Log in
             </RouterLink>
@@ -126,7 +126,7 @@ const { openSupportModal } = useSupport();
         <template v-if="!token">
           <RouterLink
             :to="{ name: 'login' }"
-            class="text-sm font-semibold px-3 py-1.5 rounded-lg login-glass transition-all duration-150"
+            class="text-sm font-semibold px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200/80 dark:border-white/6 text-brand-bright hover:bg-gray-200 dark:hover:bg-white/8 transition-colors"
           >
             Login
           </RouterLink>
@@ -156,31 +156,6 @@ const { openSupportModal } = useSupport();
 </template>
 
 <style scoped>
-.login-glass {
-  background: oklch(0% 0 0 / 0.04);
-  backdrop-filter: blur(12px);
-  border: 1px solid oklch(0% 0 0 / 0.08);
-  color: oklch(25% 0.02 258);
-  box-shadow: 0 1px 3px oklch(0% 0 0 / 0.04), inset 0 1px 0 oklch(100% 0 0 / 0.5);
-}
-.login-glass:hover {
-  background: oklch(0% 0 0 / 0.07);
-  border-color: oklch(0% 0 0 / 0.12);
-  box-shadow: 0 2px 6px oklch(0% 0 0 / 0.06), inset 0 1px 0 oklch(100% 0 0 / 0.5);
-}
-
-[data-theme="dark"] .login-glass {
-  background: oklch(100% 0 0 / 0.06);
-  border-color: oklch(100% 0 0 / 0.1);
-  color: oklch(90% 0.005 258);
-  box-shadow: 0 1px 3px oklch(0% 0 0 / 0.2), inset 0 1px 0 oklch(100% 0 0 / 0.08);
-}
-[data-theme="dark"] .login-glass:hover {
-  background: oklch(100% 0 0 / 0.1);
-  border-color: oklch(100% 0 0 / 0.15);
-  box-shadow: 0 2px 6px oklch(0% 0 0 / 0.3), inset 0 1px 0 oklch(100% 0 0 / 0.1);
-}
-
 /* Gentle deposit pulse — small scale so it can't push the layout */
 .deposit-ping {
   transform-origin: center;
