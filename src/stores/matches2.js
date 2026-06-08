@@ -14,6 +14,8 @@ export const useMatches2Store = defineStore("matches2-store", {
     selectedMarket: null,
     full: false,
     page: 0,
+    // Consecutive fetch errors — caps retries so a failing API can't be hammered
+    errorCount: 0,
 
     //scrolling
     scrollTop: 0,
@@ -41,7 +43,10 @@ export const useMatches2Store = defineStore("matches2-store", {
       const { setPage } = useSportsQueryParamsStore();
       const { fetchCompetions } = useCompetionsStore();
 
-      if (this.full) {
+      // Stop when everything is loaded, a request is in flight, or we've hit
+      // too many consecutive errors — prevents the infinite-scroll loop from
+      // hammering a failing API and exhausting server resources.
+      if (this.full || this.pending) {
         return;
       }
 
@@ -51,7 +56,6 @@ export const useMatches2Store = defineStore("matches2-store", {
       }
 
       setPage(this.page);
-      this.page++;
 
       try {
         this.pending = true;
@@ -73,16 +77,28 @@ export const useMatches2Store = defineStore("matches2-store", {
 
         this.matches.push(...matches);
 
+        // Advance the page and clear the error counter only on success.
+        this.page++;
+        this.errorCount = 0;
         this.pending = false;
         this.responseOK = true;
       } catch (error) {
         this.pending = false;
+        this.errorCount++;
+        // After repeated failures, halt pagination so the scroll trigger stops
+        // re-firing. Cleared when the list is reset (emptyMatches).
+        if (this.errorCount >= 3) {
+          this.full = true;
+        }
       }
     },
     async emptyMatches() {
       this.matches = [];
       this.full = false;
       this.page = 0;
+      this.errorCount = 0;
+      // Fresh query: clear any in-flight flag so the new load isn't skipped
+      this.pending = false;
     },
     setSelectedMarket(subTypeId) {
       this.selectedMarket = subTypeId;

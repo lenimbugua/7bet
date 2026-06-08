@@ -23,6 +23,12 @@ useInfiniteScroll(
   },
   {
     distance: 600,
+    // Stop vueuse from re-firing the loader while a request is in flight or
+    // once pagination has halted (all loaded / repeated errors). Without this,
+    // a failing API leaves the container unfilled and the loader re-fires in a
+    // tight loop, hammering the server.
+    canLoadMore: () =>
+      layout.value !== "grid" && !matchesStore.full && !matchesStore.pending,
   },
 );
 

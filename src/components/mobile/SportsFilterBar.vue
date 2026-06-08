@@ -25,7 +25,7 @@ const outcomeLabels = computed(() => {
 </script>
 
 <template>
-  <div class="sticky z-40 top-30 mt-3 sports-filter-bar mx-3 rounded-t-xl">
+  <div class="sticky z-40 top-22 md:top-30 mt-3 sports-filter-bar mx-3 rounded-t-xl">
     <!-- Row 1: Sport tabs -->
     <div class="flex items-center gap-3 px-3 pt-3 pb-1.5 overflow-x-auto scrollbar-hide">
       <span class="text-base font-bold text-gray-900 dark:text-white italic shrink-0">

@@ -418,7 +418,8 @@ function playGame(game) {
 
         <div class="flex-1 min-w-0">
           <!-- Category pills (middle section, like landing) -->
-          <CategoryPills class="mb-3" />
+          <!-- pt clears the sticky header overlap so the compacted pills aren't clipped -->
+          <CategoryPills class="mb-3 pt-3" />
 
           <!-- Banner -->
         <div class="rounded-xl overflow-hidden mb-3">
