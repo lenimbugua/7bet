@@ -185,7 +185,7 @@ export const useCasinoStore = defineStore("casino-store", {
         const { headers, profileSid } = getAuthHeaders();
         const profileId = profileSid.value ? profileSid.value : "";
         const response = await API(casinoBaseURL).get(
-          `/api/v1/games/launch?gameId=${this.gameIdToLaunch}&profileSid=${profileId}&isMobile=${isMobile}&isDemo=${this.isDemo}`,
+          `/api/v1/sg-games/launch?gameId=${this.gameIdToLaunch}&profileSid=${profileId}&isMobile=${isMobile}&isDemo=${this.isDemo}`,
           { headers }
         );
         this.pending = false;
