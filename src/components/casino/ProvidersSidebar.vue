@@ -1,10 +1,15 @@
 <script setup>
-import { storeToRefs } from "pinia";
+// import { storeToRefs } from "pinia";
 import { useRouter } from "vue-router";
-import { useCasinoStore } from "../../stores/casino";
+// import { useCasinoStore } from "../../stores/casino";
 
 const router = useRouter();
-const { providers } = storeToRefs(useCasinoStore());
+// const { providers } = storeToRefs(useCasinoStore());
+
+// Guard against entries missing a providerName (avoids render crash + empty rows).
+// const namedProviders = computed(() =>
+//   (providers.value || []).filter((p) => p && p.providerName)
+// );
 
 // Deterministic tile color per provider so logos-less list still reads well.
 const tints = [
@@ -19,15 +24,16 @@ const tints = [
 const tint = (i) => tints[i % tints.length];
 
 const initials = (name) =>
-  name
+  (name || "")
+    .trim()
     .split(/\s+/)
     .slice(0, 2)
-    .map((w) => w[0])
+    .map((w) => w[0] || "")
     .join("")
     .toUpperCase();
 
 const openProvider = (p) => {
-  router.push({ name: "casino-home", query: { provider: p.p_binomen } });
+  router.push({ name: "casino-home", query: { provider: p.providerName } });
 };
 </script>
 
@@ -47,7 +53,7 @@ const openProvider = (p) => {
 
     <!-- List -->
     <ul class="flex-1 min-h-0 overflow-y-auto scrollbar-hide space-y-1.5 p-3 sm:p-4">
-      <li v-for="(p, i) in providers" :key="p.provider_id">
+      <li v-for="(p, i) in namedProviders" :key="p.providerName">
         <button
           type="button"
           class="w-full flex items-center gap-3 rounded-xl px-2.5 py-2 text-left bg-gray-50 dark:bg-white/[0.04] hover:bg-gray-100 dark:hover:bg-white/[0.08] transition-colors cursor-pointer"
@@ -57,17 +63,12 @@ const openProvider = (p) => {
             class="flex items-center justify-center w-9 h-9 rounded-lg text-xs font-bold shrink-0"
             :class="tint(i)"
           >
-            {{ initials(p.provider_name) }}
+            {{ initials(p.providerName) }}
           </span>
           <span class="flex-1 min-w-0">
             <span class="block text-foreground text-sm font-medium truncate">
-              {{ p.provider_name }}
+              {{ p.providerName }}
             </span>
-          </span>
-          <span
-            class="text-muted-foreground text-xs font-medium shrink-0 tabular-nums"
-          >
-            {{ p.games_count }}
           </span>
         </button>
       </li>

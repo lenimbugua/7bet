@@ -4,6 +4,7 @@ const { isSmallScreen, isMediumScreen, isLargeScreen } = useScreenSizes();
 
 import SportsBetslipPanel from "../components/SportsBetslipPanel.vue";
 import TheSidebar from "../components/TheSidebar.vue";
+import CategoryPills from "../components/mobile/CategoryPills.vue";
 </script>
 
 <template>
@@ -12,13 +13,14 @@ import TheSidebar from "../components/TheSidebar.vue";
     v-if="isLargeScreen"
     class="min-h-dvh bg-gray-50 dark:bg-background"
   >
-    <HeaderLinks />
+    <HeaderLinks hide-nav-links />
     <div class="w-full max-w-[1680px] mx-auto px-4 pt-4">
       <div class="w-full flex gap-5">
         <div class="shrink-0">
           <TheSidebar />
         </div>
         <div class="flex-1 min-w-0 max-w-200 lg:max-w-250 py-3">
+          <CategoryPills class="mb-3" />
           <RouterView />
         </div>
         <div class="shrink-0">
@@ -37,6 +39,7 @@ import TheSidebar from "../components/TheSidebar.vue";
           <TheSidebar />
         </div>
         <div class="flex-1 min-w-0 py-3">
+          <CategoryPills class="mb-3" />
           <RouterView />
         </div>
       </div>
@@ -54,6 +57,7 @@ import TheSidebar from "../components/TheSidebar.vue";
       <HeaderLinks />
     </div>
     <div class="w-full grow px-2 py-3">
+      <CategoryPills class="mb-3" />
       <RouterView />
     </div>
     <Footer />

@@ -59,15 +59,13 @@ const legalLinks = [
 
         <!-- Brand column -->
         <div class="col-span-2 sm:col-span-1">
-          <div class="flex items-center gap-2.5 mb-4">
-            <div class="w-8 h-8 rounded-lg bg-brand-bright/15 flex items-center justify-center">
-              <span class="text-sm font-black text-brand-bright tracking-tight">P</span>
-            </div>
-            <div>
-              <span class="text-sm font-bold text-foreground tracking-tight">7bet</span>
-              <span class="block text-[10px] uppercase tracking-widest text-muted-foreground/50 font-semibold leading-none mt-0.5">Kenya</span>
-            </div>
-          </div>
+          <RouterLink :to="{ name: 'home' }" class="inline-flex items-center mb-4">
+            <img
+              src="/logo-7bet-v2.png"
+              alt="7bet Kenya"
+              class="h-10 w-auto object-contain"
+            />
+          </RouterLink>
           <p class="text-xs leading-relaxed text-muted-foreground/70 max-w-xs">
             Kenya's premier sports betting and casino platform. Bet smart, win big.
           </p>
