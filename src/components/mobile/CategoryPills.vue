@@ -103,7 +103,7 @@ function handleClick(cat) {
     class="px-0 md:px-0 rounded-xl overflow-clip"
   >
     <div
-      class="rounded-xl max-w-[1280px] dark:bg-background mx-auto bg-gray-100 dark:bg-card grid grid-cols-7 category-grid"
+      class="rounded-xl overflow-clip max-w-[1280px] dark:bg-background mx-auto bg-gray-100 dark:bg-card grid grid-cols-7 category-grid"
     >
       <button
         v-for="cat in categories"

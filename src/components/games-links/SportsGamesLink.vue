@@ -7,6 +7,14 @@ import { toRefs } from "vue";
 
 import { useSportsNavigationStore } from "@/stores/sports-navigation";
 
+defineProps({
+  // Thinner sizing for dense mobile bars (e.g. QuickAccessBar)
+  compact: {
+    type: Boolean,
+    default: false,
+  },
+});
+
 const { selectedSportId } = toRefs(useSportsNavigationStore());
 const { setSelectedSportId } = useSportsNavigationStore();
 // const { elementRefs: sportRefs } = useScrollToSelected(selectedSportId);
@@ -35,17 +43,19 @@ const isSelected = (id) => {
       class="flex-col justify-center items-center inline-flex"
     >
       <div
-        class="w-10 h-10 flex flex-col items-center justify-center rounded-lg bg-gray-100 dark:bg-white/[0.06] hover:bg-gray-200 dark:hover:bg-white/10 transition-colors"
+        class="flex flex-col items-center justify-center rounded-lg bg-gray-100 dark:bg-white/[0.06] hover:bg-gray-200 dark:hover:bg-white/10 transition-colors"
+        :class="compact ? 'w-8 h-8 md:w-10 md:h-10' : 'w-10 h-10'"
       >
-        <SecondaryNavIcons :icon="link.icon" :icon-css="`h-6 w-6 sm:h-7 sm:w-7 ${link.iconColor || 'text-gray-600 dark:text-white/60'}`" />
+        <SecondaryNavIcons :icon="link.icon" :icon-css="`${compact ? 'h-5 w-5 md:h-6 md:w-6' : 'h-6 w-6 sm:h-7 sm:w-7'} ${link.iconColor || 'text-gray-600 dark:text-white/60'}`" />
       </div>
       <div
         :class="[
           isSelected(link.id)
             ? 'text-brand-bright font-semibold'
             : 'dark:text-gray-100/90 text-gray-800',
+          compact ? 'text-[0.6rem] md:text-xs mt-0.5 md:mt-1' : 'text-xs mt-1',
         ]"
-        class="text-xs font-medium mt-1 w-14 text-ellipsis whitespace-nowrap overflow-hidden"
+        class="font-medium w-14 text-ellipsis whitespace-nowrap overflow-hidden"
       >
         {{ link.name }}
       </div>

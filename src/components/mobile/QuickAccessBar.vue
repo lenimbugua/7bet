@@ -27,7 +27,7 @@ function loginBeforeLaunching(router, game) {
 </script>
 
 <template>
-  <div class="mx-3 mt-2 p-2 rounded-xl bg-gray-100 dark:bg-card overflow-hidden">
+  <div class="mx-3 mt-2 p-1 md:p-2 rounded-xl bg-gray-100 dark:bg-card overflow-hidden">
     <div
       class="relative flex items-center whitespace-nowrap overflow-x-auto overflow-y-visible scrollbar-hide"
     >
@@ -41,6 +41,7 @@ function loginBeforeLaunching(router, game) {
           :icon="game.imgUrl"
           :name="game.gameName"
           :is-new="game.new"
+          compact
           @click="loginBeforeLaunching(router, game)"
         />
       </div>
@@ -53,18 +54,19 @@ function loginBeforeLaunching(router, game) {
           :icon="game.imgUrl"
           :name="game.gameName"
           :is-new="game.new"
+          compact
           @click="loginBeforeLaunching(router, game)"
         />
       </div>
 
-      <SportsGamesLink />
+      <SportsGamesLink compact />
 
       <!-- More button -->
       <div
         class="sticky -right-1 z-10  bg-gray-100 dark:bg-card cursor-pointer"
         @click="openModal(sportsIconsModal)"
       >
-        <MoreTab />
+        <MoreTab compact />
       </div>
     </div>
   </div>

@@ -12,6 +12,11 @@ defineProps({
     type: Boolean,
     required: true,
   },
+  // Thinner sizing for dense mobile bars (e.g. QuickAccessBar)
+  compact: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
 
@@ -19,7 +24,8 @@ defineProps({
   <div class="cursor-pointer overflow-clip">
     <div>
       <div
-        class="w-10 h-10 flex flex-col items-center rounded-lg bg-gray-100 dark:bg-white/6 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors overflow-clip"
+        class="flex flex-col items-center rounded-lg bg-gray-100 dark:bg-white/6 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors overflow-clip"
+        :class="compact ? 'w-8 h-8 md:w-10 md:h-10' : 'w-10 h-10'"
       >
         <div class="relative flex items-center rounded-full h-full w-full">
           <img
@@ -32,7 +38,8 @@ defineProps({
         </div>
       </div>
       <div
-        class="text-xs font-medium mt-1 w-12  text-ellipsis whitespace-nowrap overflow-hidden text-gray-700 dark:text-white/60"
+        class="font-medium w-12 text-ellipsis whitespace-nowrap overflow-hidden text-gray-700 dark:text-white/60"
+        :class="compact ? 'text-[0.6rem] md:text-xs mt-0.5 md:mt-1' : 'text-xs mt-1'"
       >
         {{ name }}
       </div>
