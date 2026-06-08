@@ -41,7 +41,7 @@ const { isLargeScreen } = useScreenSizes();
             <TheSidebar />
           </div>
           <div class="flex-1 min-w-0 flex flex-col">
-            <CategoryPills :is-sticky="false" class="mb-3" />
+            <CategoryPills :is-sticky="false" class="mb-3 sm:mx-6" />
             <NewLive3 />
           </div>
           <div class="flex sticky">
