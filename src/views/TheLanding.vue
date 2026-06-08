@@ -26,10 +26,7 @@ const { isLargeScreen } = useScreenSizes();
 </script>
 
 <template>
-  <LazyInfinityScroll
-    v-if="isLargeScreen"
-    class="live-page-bg"
-  >
+  <LazyInfinityScroll v-if="isLargeScreen" class="live-page-bg">
     <DesktopSportsLayout
       seo-title="Sports Betting - Live Odds & Matches | 7bet Kenya"
       show-sports-tabs
@@ -47,8 +44,7 @@ const { isLargeScreen } = useScreenSizes();
           <SecondaryNav />
         </div>
 
-              <TopLeaguesGrid />
-
+        <TopLeaguesGrid />
 
         <!-- Hot games in Kenya -->
         <div class="mt-3">

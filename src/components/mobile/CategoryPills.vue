@@ -66,6 +66,27 @@ const categories = [
 ];
 
 function isActive(cat) {
+  const catCategory = cat.to?.query?.category;
+
+  // Pills targeting a specific casino category (Crash, Virtuals) are active
+  // only when that exact category query is present.
+  if (catCategory) {
+    return (
+      route.name === "casino-home" && route.query.category === catCategory
+    );
+  }
+
+  // The plain "Casino" pill must not light up while a specific category
+  // (e.g. crash, virtuals) is selected on the casino-home page.
+  if (
+    cat.to?.name === "casino-home" &&
+    route.name === "casino-home" &&
+    route.query.category &&
+    route.query.category !== "all"
+  ) {
+    return false;
+  }
+
   return cat.activeOn.includes(route.name);
 }
 
@@ -90,6 +111,7 @@ function handleClick(cat) {
         v-for="cat in categories"
         :key="cat.name"
         class="flex flex-col items-center gap-1 py-3 transition-colors"
+        :class="isActive(cat) ? 'bg-brand-bright/15' : ''"
         @click="handleClick(cat)"
       >
         <!-- Asset icon -->
