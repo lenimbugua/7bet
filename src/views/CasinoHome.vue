@@ -9,7 +9,6 @@ import CasinoGameCard from "../components/casino/CasinoGameCard.vue";
 import CasinoGameCarousel from "../components/casino/CasinoGameCarousel.vue";
 // import CasinoWinnersTicker from "../components/casino/CasinoWinnersTicker.vue";
 import WinnersCarousel from "../components/casino/WinnersCarousel.vue";
-import CasinoTournaments from "../components/casino/CasinoTournaments.vue";
 import CasinoLeaderboard from "../components/casino/CasinoLeaderboard.vue";
 import JackpotSection from "../components/casino/JackpotSection.vue";
 import BangbetJackpotSection from "../components/casino/BangbetJackpotSection.vue";
@@ -139,6 +138,16 @@ function getCategorySlug(cat) {
   return lower.replace(/\s+/g, "_");
 }
 
+// Which static widget to drop in after a given category row (in the "all" view).
+// Games run two rows at a time; after the first pair we show recent winners +
+// a jackpot, then every subsequent pair alternates leaderboard / jackpot.
+function breakAfter(index) {
+  if ((index + 1) % 2 !== 0) return null; // only after every 2nd row
+  const pair = (index + 1) / 2; // pair number: 1, 2, 3...
+  if (pair === 1) return "intro"; // recent winners + jackpot
+  return pair % 2 === 0 ? "leaderboard" : "jackpot"; // alternate thereafter
+}
+
 // All games flattened, deduplicated & sorted by priority
 // const masterGames = computed(() => {
 //   const map = new Map();
@@ -153,19 +162,17 @@ function getCategorySlug(cat) {
 //   );
 // });
 
-// Dynamic categories from API with games sorted by priority
+// Dynamic categories from API — games kept in the backend's order
 const sortedCategories = computed(() => {
   return categoriesWithGames.value.map((cat) => {
     const routeName = getRouteName(cat.name);
-    const sortedGames = [...cat.games]
-      .sort((a, b) => (b.priority ?? 0) - (a.priority ?? 0))
-      .map((g) => ({ ...g, routeName }));
+    const games = cat.games.map((g) => ({ ...g, routeName }));
     if (cat.name.toLowerCase().includes("virtual")) {
-      sortedGames.unshift({ ...playonGame, routeName });
+      games.unshift({ ...playonGame, routeName });
     }
     return {
       ...cat,
-      games: sortedGames,
+      games,
       icon: getCategoryIcon(cat.name),
       slug: getCategorySlug(cat),
     };
@@ -228,16 +235,28 @@ useHead({
   link: [{ rel: "canonical", href: canonicalUrl }],
 });
 
-// Crash category surfaced to the top (swapped with the Tournaments section)
-const crashCategory = computed(() =>
-  sortedCategories.value.find((c) => c.slug === "crash")
-);
+// Provider filter (driven by ?provider=<name> from the providers sidebar)
+const activeProvider = computed(() => route.query.provider || null);
 
-const slotsCategory = computed(() =>
-  sortedCategories.value.find((c) => c.slug === "slots")
-);
+// Every game by the active provider, across all categories, deduped by id.
+const providerGames = computed(() => {
+  if (!activeProvider.value) return [];
+  const target = activeProvider.value.toLowerCase();
+  const seen = new Set();
+  const out = [];
+  sortedCategories.value.forEach((cat) => {
+    cat.games.forEach((g) => {
+      if (g.providerName?.toLowerCase() === target && !seen.has(g.id)) {
+        seen.add(g.id);
+        out.push(g);
+      }
+    });
+  });
+  return out;
+});
 
 const activeGridGames = computed(() => {
+  if (activeProvider.value) return providerGames.value;
   const cat = sortedCategories.value.find(
     (c) => c.slug === selectedCategory.value
   );
@@ -245,6 +264,7 @@ const activeGridGames = computed(() => {
 });
 
 const activeGridLabel = computed(() => {
+  if (activeProvider.value) return activeProvider.value;
   const cat = sortedCategories.value.find(
     (c) => c.slug === selectedCategory.value
   );
@@ -481,32 +501,6 @@ function playGame(game) {
           <CasinoWinnersTicker @play="playTickerGame" />
         </div> -->
 
-        <!-- Crash games (swapped up from the category list) -->
-        <CasinoGameCarousel
-          v-if="crashCategory && selectedCategory === 'all'"
-          :title="crashCategory.name"
-          :icon="crashCategory.icon"
-          :games="crashCategory.games"
-          @play="playGame"
-          @see-all="onCategorySelect(crashCategory.slug)"
-        />
-
-        <!-- Slots (moved up: below crash games, before the jackpot) -->
-        <CasinoGameCarousel
-          v-if="slotsCategory && selectedCategory === 'all'"
-          :title="slotsCategory.name"
-          :icon="slotsCategory.icon"
-          :games="slotsCategory.games"
-          @play="playGame"
-          @see-all="onCategorySelect(slotsCategory.slug)"
-        />
-
-        <!-- Recent Winners (mobile/tablet only — on desktop it lives in the right sidebar) -->
-        <WinnersCarousel v-if="selectedCategory === 'all'" class="lg:hidden" />
-
-        <!-- 7BET JACKPOT -->
-        <BangbetJackpotSection v-if="selectedCategory === 'all'" />
-
         <!-- Skeleton loader -->
         <div v-if="categoriesLoading" class="space-y-6">
           <div v-for="section in 3" :key="section">
@@ -532,21 +526,24 @@ function playGame(game) {
           </div>
         </div>
 
-        <!-- ALL: Show all carousel sections stacked -->
-        <template v-else-if="selectedCategory === 'all'">
-          <template v-for="cat in sortedCategories" :key="cat.id">
-            <!-- Tournaments takes the crash slot (swapped down) -->
-            <CasinoTournaments v-if="cat.slug === 'crash'" />
+        <!-- ALL: categories in the backend's order, two rows at a time, with a
+             static widget after each pair (winners + jackpot first, then
+             alternating leaderboard / jackpot) -->
+        <template v-else-if="selectedCategory === 'all' && !activeProvider">
+          <template v-for="(cat, index) in sortedCategories" :key="cat.id">
             <CasinoGameCarousel
-              v-else-if="cat.slug !== 'slots'"
               :title="cat.name"
               :icon="cat.icon"
               :games="cat.games"
               @play="playGame"
               @see-all="onCategorySelect(cat.slug)"
             />
-            <JackpotSection v-if="cat.slug === 'crash'" />
-            <CasinoLeaderboard v-if="cat.slug === 'slots'" />
+            <template v-if="breakAfter(index) === 'intro'">
+              <WinnersCarousel class="lg:hidden" />
+              <BangbetJackpotSection />
+            </template>
+            <CasinoLeaderboard v-else-if="breakAfter(index) === 'leaderboard'" />
+            <JackpotSection v-else-if="breakAfter(index) === 'jackpot'" />
           </template>
         </template>
 
@@ -599,7 +596,7 @@ function playGame(game) {
 
             <div v-else class="flex flex-col items-center py-16">
               <p class="text-gray-700 dark:text-muted-foreground font-medium">
-                No games in this category
+                No games found
               </p>
             </div>
           </div>

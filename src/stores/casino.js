@@ -129,7 +129,10 @@ export const useCasinoStore = defineStore("casino-store", {
           `/api/v1/sg-games/providers?tenantCode=${tenantCode}`,
           { headers }
         );
-        this.providers = response.data.data ?? [];
+        // Endpoint returns a bare array of { providerName }. Tolerate a
+        // { data: [...] } envelope too in case the gateway wraps it.
+        const payload = response.data;
+        this.providers = Array.isArray(payload) ? payload : payload?.data ?? [];
       } catch (err) {
         console.log(err);
       }

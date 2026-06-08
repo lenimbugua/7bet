@@ -1,15 +1,22 @@
 <script setup>
-// import { storeToRefs } from "pinia";
+import { storeToRefs } from "pinia";
+import { computed, onMounted } from "vue";
 import { useRouter } from "vue-router";
-// import { useCasinoStore } from "../../stores/casino";
+import { useCasinoStore } from "../../stores/casino";
 
 const router = useRouter();
-// const { providers } = storeToRefs(useCasinoStore());
+const casinoStore = useCasinoStore();
+const { providers } = storeToRefs(casinoStore);
+
+// Self-sufficient: fetch providers if a parent view hasn't already.
+onMounted(() => {
+  if (!providers.value.length) casinoStore.fetchProviders();
+});
 
 // Guard against entries missing a providerName (avoids render crash + empty rows).
-// const namedProviders = computed(() =>
-//   (providers.value || []).filter((p) => p && p.providerName)
-// );
+const namedProviders = computed(() =>
+  (providers.value || []).filter((p) => p && p.providerName)
+);
 
 // Deterministic tile color per provider so logos-less list still reads well.
 const tints = [
