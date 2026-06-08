@@ -29,10 +29,10 @@ onBeforeUnmount(() => {
 const { isLargeScreen } = useScreenSizes();
 </script>
 <template>
-  <div>
+  <div class="live-page-bg min-h-dvh">
     <h1 class="sr-only">Live Betting – Real-Time Odds & Matches | 7bet</h1>
     <div v-if="isLargeScreen">
-      <div class="sticky top-0 z-40 bg-gray-50 dark:bg-background">
+      <div class="sticky top-0 z-40 bg-gray-50 live-page-bg">
         <HeaderLinks hide-nav-links />
       </div>
       <div class="max-w-[1680px] mx-auto px-3">
@@ -60,7 +60,7 @@ const { isLargeScreen } = useScreenSizes();
         <div class="sticky top-0 pb-2 live-page-bg z-40">
           <!-- <TheDepositBar /> -->
           <HeaderLinks />
-          <CategoryPills :is-sticky="false" class="px-3 pt-2" />
+          <CategoryPills :is-sticky="false" class="px-2 sm:px-3 lg:px-6 pt-2" />
         </div>
         <NewLive3 />
       </div>

@@ -99,7 +99,7 @@ function handleClick(cat) {
 
 <template>
   <div
-    :class="isSticky ? 'sticky top-11 z-50' : ''"
+    :class="isSticky ? 'sticky top-12 z-50' : ''"
     class="px-0 md:px-0 rounded-xl overflow-clip"
   >
     <div
@@ -117,7 +117,7 @@ function handleClick(cat) {
           <img
             :src="cat.img"
             :alt="cat.name"
-            class="w-5 h-5 md:w-8 md:h-8 object-contain"
+            class="w-6 h-6 md:w-8 md:h-8 object-contain"
             :class="isActive(cat) ? '' : 'opacity-80'"
           />
           <span

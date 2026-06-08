@@ -104,7 +104,7 @@ const goToDetail = (match) => {
     class="live-page-container flex-1 min-w-0 px-2 sm:px-3 lg:px-6 overflow-x-clip"
   >
     <!-- Sticky hero + column header (sits below the header + category pills) -->
-    <div class="sticky top-40 lg:top-16 z-20 live-page-container">
+    <div class="sticky top-30 lg:top-16 z-20 live-page-container">
       <!-- Live Hero Header -->
       <div class="live-hero rounded-2xl relative overflow-x-clip">
         <!-- Decorative orbs -->
