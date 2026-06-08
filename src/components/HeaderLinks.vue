@@ -105,16 +105,24 @@ const { openSupportModal } = useSupport();
     </div>
 
     <!-- ========== MOBILE ========== -->
-    <div class="flex lg:hidden px-3 py-2 items-center justify-between">
+    <div class="relative flex lg:hidden pr-3 py-0 items-center justify-between">
       <!-- Left: Menu + Logo -->
       <div class="flex items-center gap-1.5">
         <TheLogo />
       </div>
 
-      <div></div>
+      <!-- Center: Search -->
+      <button
+        type="button"
+        aria-label="Search"
+        class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-9 h-9 rounded-lg text-foreground hover:bg-foreground/5 transition-colors cursor-pointer"
+        @click="openSearchModal"
+      >
+        <Search class="w-5 h-5 object-contain" />
+      </button>
 
       <!-- Right: Auth -->
-      <div class="flex items-center gap-1.5">
+      <div class="flex items-center gap-2">
         <template v-if="!token">
           <RouterLink
             :to="{ name: 'login' }"

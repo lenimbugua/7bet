@@ -71,7 +71,7 @@ async function sortDeposit() {
 
       <button
         v-if="!isAuthenticated"
-        class="w-full h-11 rounded-xl bg-brand-bright text-white text-sm font-bold hover:bg-brand-bright/90 transition-all"
+        class="w-full h-11 rounded-xl bg-brand-bright text-brand-forest text-sm font-bold hover:bg-brand-bright/90 transition-all"
         type="button"
         @click="openLoginModal"
       >
@@ -79,7 +79,7 @@ async function sortDeposit() {
       </button>
       <button
         v-else
-        class="w-full h-11 rounded-xl bg-brand-bright text-white text-sm font-bold hover:bg-brand-bright/90 shadow-sm shadow-brand-bright/20 transition-all"
+        class="w-full h-11 rounded-xl bg-brand-bright text-brand-forest text-sm font-bold hover:bg-brand-bright/90 shadow-sm shadow-brand-bright/20 transition-all"
         type="submit"
       >
         <TheButtonSpin v-if="pending" />

@@ -65,7 +65,7 @@ function fetchGame(competition) {
       <button
         v-for="league in topLeagues"
         :key="league.competitionId"
-        class="group w-full flex items-center justify-between px-2.5 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/3 transition-all duration-200 cursor-pointer"
+        class="group w-full flex items-center justify-between px-2.5 py-2 mb-1 rounded-lg bg-background hover:bg-gray-50 dark:hover:bg-white/3 transition-all duration-200 cursor-pointer"
         :aria-label="'View ' + league.competitionName + ' matches'"
         @click="fetchGame(league)"
       >

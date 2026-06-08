@@ -64,7 +64,7 @@ const topGames = computed(() => {
       </div>
 
       <!-- Top Games -->
-      <div class="shrink-0">
+      <div class="shrink-0 bg-background">
         <!-- Header -->
         <div class="relative z-10 flex items-center justify-between px-3.5 py-2.5 border-b border-gray-200 dark:border-white/5 bg-gray-100 dark:bg-surface-elevated shadow-md shadow-black/10 dark:shadow-black/40">
           <h3 class="text-sm font-semibold uppercase tracking-wide text-gray-900 dark:text-white">
@@ -82,12 +82,12 @@ const topGames = computed(() => {
         </div>
 
         <!-- Game grid -->
-        <div v-if="topGames.length" class="px-3 pb-3">
+        <div v-if="topGames.length" class="p-3 pb-3">
           <div class="grid grid-cols-4 gap-2.5">
             <button
               v-for="game in topGames"
               :key="game.id"
-              class="group relative aspect-square rounded-lg overflow-hidden bg-gray-100 dark:bg-white/5 cursor-pointer"
+              class="group relative aspect-square rounded-lg overflow-hidden bg-background cursor-pointer"
               @click="launchCasino(game.id, game.gameName, game.routeName, game.providerName)"
             >
               <img
