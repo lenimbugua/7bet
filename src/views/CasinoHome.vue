@@ -46,42 +46,59 @@ const selectedCategory = ref("all");
 
 const categoryStripItems = [
   {
+    label: "All",
+    slug: "all",
+    icon: "https://www.bangbet.com/images/activity/abChXgJOSvGTtev.svg",
+  },
+  {
     label: "Slots",
+    slug: "slots",
     icon: "https://www.bangbet.com/images/activity/xGjxmJWYNzOsVco.svg",
   },
   {
-    label: "Jackpot",
-    icon: "https://www.bangbet.com/images/activity/RbMcdlisReidjLo.svg",
-  },
-  {
-    label: "Exclusive",
-    icon: "https://www.bangbet.com/images/activity/RZJxVRpzZODxwEG.svg",
-  },
-  {
-    label: "Table",
-    icon: "https://www.bangbet.com/images/activity/MIjgltzpKSkIulD.svg",
-  },
-  {
-    label: "Lottery",
-    icon: "https://www.bangbet.com/images/activity/yrEVGLnFLpeMNxZ.svg",
-  },
-  {
     label: "Crash",
+    slug: "crash",
     icon: "https://www.bangbet.com/images/activity/OrgnFeIwviXuCSf.svg",
   },
   {
+    label: "Live",
+    slug: "live",
+    icon: "https://www.bangbet.com/images/activity/RbMcdlisReidjLo.svg",
+  },
+  {
+    label: "Table",
+    slug: "table",
+    icon: "https://www.bangbet.com/images/activity/MIjgltzpKSkIulD.svg",
+  },
+  {
     label: "Virtual",
+    slug: "virtuals",
     icon: "https://www.bangbet.com/images/activity/cfclJewMihEpotb.svg",
   },
   {
-    label: "Instant",
-    icon: "https://www.bangbet.com/images/activity/LrUCHEsnHPGmSmz.svg",
+    label: "Roulette",
+    slug: "roulette",
+    icon: "https://www.bangbet.com/images/activity/yrEVGLnFLpeMNxZ.svg",
   },
   {
-    label: "All",
-    icon: "https://www.bangbet.com/images/activity/abChXgJOSvGTtev.svg",
+    label: "Baccarat",
+    slug: "baccarat",
+    icon: "https://www.bangbet.com/images/activity/RZJxVRpzZODxwEG.svg",
+  },
+  {
+    label: "Other",
+    slug: "other",
+    icon: "https://www.bangbet.com/images/activity/LrUCHEsnHPGmSmz.svg",
   },
 ];
+
+// Only show strip items that map to a real API category (plus "All")
+const visibleStripItems = computed(() => {
+  const slugs = new Set(sortedCategories.value.map((c) => c.slug));
+  return categoryStripItems.filter(
+    (item) => item.slug === "all" || slugs.has(item.slug)
+  );
+});
 
 // Map API category name to routeName for game launching
 function getRouteName(categoryName) {
@@ -195,9 +212,7 @@ const categoryPills = computed(() => {
 watch(
   () => route.query.category,
   (cat) => {
-    if (cat) {
-      selectedCategory.value = cat;
-    }
+    selectedCategory.value = cat || "all";
   },
   { immediate: true }
 );
@@ -216,6 +231,10 @@ useHead({
 // Crash category surfaced to the top (swapped with the Tournaments section)
 const crashCategory = computed(() =>
   sortedCategories.value.find((c) => c.slug === "crash")
+);
+
+const slotsCategory = computed(() =>
+  sortedCategories.value.find((c) => c.slug === "slots")
 );
 
 const activeGridGames = computed(() => {
@@ -406,18 +425,34 @@ function playGame(game) {
           <TheBanner />
         </div>
 
-        <!-- Category strip (unstyled, to be styled) -->
+        <!-- Category strip -->
         <div
-          class="flex items-center justify-between rounded-xl bg-gray-100 dark:bg-card px-3 py-2.5"
+          class="flex items-center justify-between rounded-xl bg-gray-100 dark:bg-card px-3 py-2.5 overflow-x-auto"
         >
-          <div
-            v-for="item in categoryStripItems"
-            :key="item.label"
-            class="flex flex-col items-center gap-1 shrink-0"
+          <button
+            v-for="item in visibleStripItems"
+            :key="item.slug"
+            type="button"
+            class="flex flex-col items-center gap-1 shrink-0 px-2 py-1 rounded-lg transition-colors"
+            :class="
+              selectedCategory === item.slug
+                ? 'bg-primary/10'
+                : 'hover:bg-gray-200 dark:hover:bg-surface-elevated'
+            "
+            @click="onCategorySelect(item.slug)"
           >
             <img :src="item.icon" class="w-8 h-8" />
-            <div class="text-[0.7rem] text-gray-800 dark:text-white">{{ item.label }}</div>
-          </div>
+            <div
+              class="text-[0.7rem]"
+              :class="
+                selectedCategory === item.slug
+                  ? 'text-primary font-semibold'
+                  : 'text-gray-800 dark:text-white'
+              "
+            >
+              {{ item.label }}
+            </div>
+          </button>
         </div>
 
         <!-- 1. Category Tabs (horizontal scroll) -->
@@ -441,7 +476,7 @@ function playGame(game) {
 
         <!-- Crash games (swapped up from the category list) -->
         <CasinoGameCarousel
-          v-if="crashCategory"
+          v-if="crashCategory && selectedCategory === 'all'"
           :title="crashCategory.name"
           :icon="crashCategory.icon"
           :games="crashCategory.games"
@@ -449,11 +484,21 @@ function playGame(game) {
           @see-all="onCategorySelect(crashCategory.slug)"
         />
 
+        <!-- Slots (moved up: below crash games, before the jackpot) -->
+        <CasinoGameCarousel
+          v-if="slotsCategory && selectedCategory === 'all'"
+          :title="slotsCategory.name"
+          :icon="slotsCategory.icon"
+          :games="slotsCategory.games"
+          @play="playGame"
+          @see-all="onCategorySelect(slotsCategory.slug)"
+        />
+
         <!-- Recent Winners (mobile/tablet only — on desktop it lives in the right sidebar) -->
-        <WinnersCarousel class="lg:hidden" />
+        <WinnersCarousel v-if="selectedCategory === 'all'" class="lg:hidden" />
 
         <!-- 7BET JACKPOT -->
-        <BangbetJackpotSection />
+        <BangbetJackpotSection v-if="selectedCategory === 'all'" />
 
         <!-- Skeleton loader -->
         <div v-if="categoriesLoading" class="space-y-6">
@@ -486,7 +531,7 @@ function playGame(game) {
             <!-- Tournaments takes the crash slot (swapped down) -->
             <CasinoTournaments v-if="cat.slug === 'crash'" />
             <CasinoGameCarousel
-              v-else
+              v-else-if="cat.slug !== 'slots'"
               :title="cat.name"
               :icon="cat.icon"
               :games="cat.games"
