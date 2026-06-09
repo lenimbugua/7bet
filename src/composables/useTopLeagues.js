@@ -74,6 +74,13 @@ export function useTopLeagues() {
     },
   ];
 
+  function isWorldCup(competitionName) {
+    return (
+      typeof competitionName === "string" &&
+      competitionName.toLowerCase().replace(/[\s_]+/g, "-").includes("world-cup")
+    );
+  }
+
   function isTopLeague(competitionName) {
     return topLeagues.some(
       (league) => league.competitionName === competitionName
@@ -81,6 +88,15 @@ export function useTopLeagues() {
   }
 
   function getTopLeagueImage(competitionName) {
+    if (typeof competitionName === "string") {
+      const normalized = competitionName.toLowerCase().replace(/[\s_]+/g, "-");
+      if (normalized.includes("international-friendlies")) {
+        return `/top-leagues/FIFA.png`;
+      }
+      if (normalized.includes("world-cup")) {
+        return `/top-leagues/World Cup.webp`;
+      }
+    }
     if (!isTopLeague(competitionName)) {
       return `https://imagedelivery.net/ZY5OwFLlTE2ePHl_IE20jg/bcd51663-91e3-4a07-94b6-eecca05bdd00/public`;
     }
@@ -90,6 +106,7 @@ export function useTopLeagues() {
   return {
     topLeagues,
     isTopLeague,
+    isWorldCup,
     getTopLeagueImage,
   };
 }

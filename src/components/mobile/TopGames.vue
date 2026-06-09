@@ -73,7 +73,7 @@ function viewAll() {
 
 <template>
   <section v-if="topGames.length">
-    <div class="rounded-xl bg-card border border-border-subtle px-3 py-2.5 sm:py-5">
+    <div class="sm:rounded-xl bg-card border border-border-subtle px-3 py-2.5 sm:py-5">
       <header class="flex items-start justify-between mb-2">
         <div>
           <h2 class="flex items-center gap-2 text-sm font-extrabold text-foreground tracking-wide">
@@ -98,7 +98,7 @@ function viewAll() {
           v-for="game in topGames"
           :key="game.id"
           type="button"
-          class="shrink-0 w-14 rounded-lg overflow-hidden bg-surface-deepest border border-border-subtle text-left hover:shadow-md transition-shadow"
+          class="shrink-0 w-24 rounded-lg overflow-hidden bg-surface-deepest border border-border-subtle text-left hover:shadow-md transition-shadow"
           @click="play(game)"
         >
           <div class="relative aspect-square overflow-hidden">
@@ -108,7 +108,6 @@ function viewAll() {
               class="w-full h-full object-cover"
               loading="lazy"
             />
-            <span class="absolute top-1 left-1 inline-flex items-center justify-center w-4 h-4 rounded bg-background/70 text-[10px]" aria-hidden="true">🔥</span>
           </div>
         </button>
       </div>

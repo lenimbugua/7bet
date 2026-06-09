@@ -21,7 +21,7 @@ defineProps({
     <!-- Scrollable content -->
     <div class="">
       <!-- Category pills -->
-      <CategoryPills class="px-3 pt-2"/>
+      <CategoryPills class="p-0"/>
 
       <!-- Hero content (landing only) -->
       <slot name="hero" />
@@ -32,7 +32,7 @@ defineProps({
       </template>
       <template v-else>
         <SportsFilterBar />
-        <div class="sports-matches mx-3 rounded-b-xl overflow-hidden">
+        <div class="sports-matches mx-0 rounded-b-xl overflow-hidden">
           <InfiniteScroll :flat="true" />
         </div>
       </template>

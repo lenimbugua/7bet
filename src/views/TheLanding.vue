@@ -33,24 +33,33 @@ const { isLargeScreen } = useScreenSizes();
     >
       <template #hero>
         <!-- Banner -->
-        <div class="rounded-xl overflow-hidden">
+        <!-- <div class="rounded-xl overflow-hidden">
           <TheBanner />
+        </div> -->
+
+        <!-- TRYOUT: cloned banner carousel (slides don't point anywhere) -->
+        <div class="rounded-xl overflow-hidden mt-3">
+          <TheBannerTryout />
         </div>
 
         <!-- Secondary nav — game links below header -->
-        <div
+        <!-- <div
           class="rounded-xl secondary-nav-sticky top-14 bg-gray-100 dark:bg-card p-3 mt-3"
         >
           <SecondaryNav />
-        </div>
-
-        <TopLeaguesGrid />
+        </div> -->
 
         <!-- Hot games in Kenya -->
         <div class="mt-3">
           <TopGames />
         </div>
 
+        <!-- Recent winners -->
+        <div class="mt-3">
+          <WinnersCarousel />
+        </div>
+
+        <TopLeaguesGrid />
         <!-- Hot section -->
         <!-- <div class="mt-3">
           <HotSection />

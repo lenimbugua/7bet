@@ -1,8 +1,8 @@
 <script setup>
-import HeroBanner from "../components/mobile/HeroBanner.vue";
+// import HeroBanner from "../components/mobile/HeroBanner.vue";
 // import HotSection from "../components/HotSection.vue";
 // import LiveMatchesPreview from "../components/mobile/LiveMatchesPreview.vue";
-import QuickAccessBar from "../components/mobile/QuickAccessBar.vue";
+// import QuickAccessBar from "../components/mobile/QuickAccessBar.vue";
 import TopLeaguesGrid from "../components/mobile/TopLeaguesGrid.vue";
 </script>
 
@@ -10,19 +10,27 @@ import TopLeaguesGrid from "../components/mobile/TopLeaguesGrid.vue";
   <MobileSportsLayout seo-title="Sports Betting – Fixtures & Odds | 7bet">
     <template #hero>
       <!-- Hero banner carousel -->
-      <HeroBanner />
+      <!-- <HeroBanner /> -->
+
+      <!-- TRYOUT: cloned banner carousel (slides don't point anywhere) -->
+      <TheBannerTryout />
 
       <!-- Quick access: merged navigation -->
-      <QuickAccessBar />
+      <!-- <QuickAccessBar /> -->
 
-      <!-- Top leagues 2-column grid -->
-      <TopLeaguesGrid />
-
+      
       <!-- Hot games in Kenya -->
-        <div class="m-3 ">
+      <div class="mt-3">
           <TopGames />
         </div>
 
+        <!-- Recent winners -->
+        <div class="mt-3">
+          <WinnersCarousel />
+        </div>
+
+        <!-- Top leagues 2-column grid -->
+        <TopLeaguesGrid />
       <!-- HOT section: Matches, Builder, Codes, Games -->
       <!-- <div class="mx-3 mt-3">
           <HotSection />

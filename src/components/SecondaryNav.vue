@@ -1,12 +1,12 @@
 <script setup>
-import { useModalTypes } from "@/composables/useModalTypes";
+// import { useModalTypes } from "@/composables/useModalTypes";
 import { useLoginStore } from "@/stores/login.js";
-import { useModalStore } from "@/stores/modal";
+// import { useModalStore } from "@/stores/modal";
 import { toRefs } from "vue";
 import { useRouter } from "vue-router";
 import { useSecondaryNavGames } from "../composables/useSecondaryNavGames";
-const { sportsIconsModal } = useModalTypes();
-const { openModal } = useModalStore();
+// const { sportsIconsModal } = useModalTypes();
+// const { openModal } = useModalStore();
 
 const router = useRouter();
 const { games, launchGame } = useSecondaryNavGames();
@@ -27,22 +27,8 @@ function loginBeforeLaunching(router, game) {
   <div
     class="relative flex items-center whitespace-nowrap overflow-x-auto overflow-y-visible scrollbar-hide lg:justify-between"
   >
-    <!-- Pinned games -->
-    <div
-      class="flex items-center sticky left-0 z-10 bg-gray-50/95 dark:bg-white/3 backdrop-blur-sm"
-    >
-      <GameLinkIconLayout
-        v-for="game in games.slice(0, 2)"
-        :key="game.gameName"
-        :icon="game.imgUrl"
-        :name="game.gameName"
-        :is-new="game.new"
-        @click="loginBeforeLaunching(router, game)"
-      />
-    </div>
-
     <!-- Scrollable games -->
-    <div class="flex items-center gap-0.5 ml-2">
+    <div class="flex items-center gap-0.5">
       <GameLinkIconLayout
         v-for="game in games.slice(2)"
         :key="game.gameName"
@@ -56,11 +42,11 @@ function loginBeforeLaunching(router, game) {
     <SportsGamesLink />
 
     <!-- More button -->
-    <div
+    <!-- <div
       class="sticky -right-1 z-10 bg-gray-50/95 dark:bg-white/3 backdrop-blur-sm cursor-pointer"
       @click="openModal(sportsIconsModal)"
     >
       <MoreTab />
-    </div>
+    </div> -->
   </div>
 </template>

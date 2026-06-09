@@ -99,11 +99,11 @@ function handleClick(cat) {
 
 <template>
   <div
-    :class="isSticky ? 'sticky top-12 z-50' : ''"
-    class="px-0 md:px-0 rounded-xl overflow-clip"
+    :class="isSticky ? 'sticky top-14 z-50' : ''"
+    class="px-0 md:px-0"
   >
     <div
-      class="rounded-xl overflow-clip max-w-[1280px] dark:bg-background mx-auto bg-gray-100 dark:bg-card grid grid-cols-7 category-grid"
+      class=" max-w-[1280px] dark:bg-background mx-auto bg-gray-100 dark:bg-card grid grid-cols-7 category-grid"
     >
       <button
         v-for="cat in categories"
@@ -117,7 +117,7 @@ function handleClick(cat) {
           <img
             :src="cat.img"
             :alt="cat.name"
-            class="w-6 h-6 md:w-8 md:h-8 object-contain"
+            class="w-7 h-7 md:w-8 md:h-8 object-contain"
             :class="isActive(cat) ? '' : 'opacity-80'"
           />
           <span

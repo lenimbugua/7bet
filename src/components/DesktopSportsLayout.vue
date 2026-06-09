@@ -60,17 +60,16 @@ const outcomeLabels = computed(() => {
               <!-- Sport tabs row (landing only) -->
               <div
                 v-if="showSportsTabs"
-                class="flex items-center gap-3 px-3 pt-3 pb-1.5 overflow-x-auto scrollbar-hide"
+                class="flex flex-col gap-1.5 px-3 pt-3 pb-1.5"
               >
                 <span
                   class="text-base font-bold text-gray-900 dark:text-white italic shrink-0"
                 >
                   Sports
                 </span>
-                <div
-                  class="w-px h-4 bg-gray-300 dark:bg-white/20 shrink-0"
-                ></div>
-                <SportsTabs />
+                <div class="overflow-x-auto scrollbar-hide">
+                  <SecondaryNav />
+                </div>
               </div>
 
               <!-- View mode + action buttons -->

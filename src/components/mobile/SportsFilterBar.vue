@@ -6,7 +6,7 @@ import CalendarDropdown from "../CalendarDropdown.vue";
 import ColumnHeaderSearch from "../ColumnHeaderSearch.vue";
 import HighlitsTab from "../HighlitsTab.vue";
 import MarketsTab from "../MarketsTab.vue";
-import SportsTabs from "../SportsTabs.vue";
+import SecondaryNav from "../SecondaryNav.vue";
 
 const { matches, getDefaultMarket } = storeToRefs(useMatches2Store());
 
@@ -25,14 +25,15 @@ const outcomeLabels = computed(() => {
 </script>
 
 <template>
-  <div class="sticky z-40 top-22 md:top-30 mt-3 sports-filter-bar mx-3 rounded-t-xl">
+  <div class="sticky z-40 top-27.5 md:top-30 mt-3 sports-filter-bar mx-0 rounded-t-xl">
     <!-- Row 1: Sport tabs -->
-    <div class="flex items-center gap-3 px-3 pt-3 pb-1.5 overflow-x-auto scrollbar-hide">
+    <div class="flex flex-col gap-1.5 px-3 pt-3 pb-1.5">
       <span class="text-base font-bold text-gray-900 dark:text-white italic shrink-0">
         Sports
       </span>
-      <div class="w-px h-4 bg-gray-300 dark:bg-white/20 shrink-0"></div>
-      <SportsTabs />
+      <div class="overflow-x-auto scrollbar-hide">
+        <SecondaryNav />
+      </div>
     </div>
 
     <!-- Row 2: View mode + action buttons -->
