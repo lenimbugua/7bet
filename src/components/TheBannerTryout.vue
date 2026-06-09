@@ -116,7 +116,7 @@ onBeforeUnmount(stopFlip);
           :key="item.image"
         >
           <div
-            class="relative w-full aspect-[1366/331] rounded-xl overflow-hidden group cursor-pointer ring-1 ring-gray-200/80 dark:ring-white/10"
+            class="relative w-full aspect-[1366/331] overflow-hidden group cursor-pointer ring-1 ring-gray-200/80 dark:ring-white/10"
             @click="launchGame(item.id, item.name, item.routeName)"
           >
             <img

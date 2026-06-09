@@ -115,7 +115,7 @@ const { openSupportModal } = useSupport();
       <button
         type="button"
         aria-label="Search"
-        class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-9 h-9 rounded-lg text-foreground hover:bg-foreground/5 transition-colors cursor-pointer"
+        class="absolute left-1/2 translate-x-[calc(-50%_-_3rem)] flex items-center justify-center w-9 h-9 rounded-lg text-foreground hover:bg-foreground/5 transition-colors cursor-pointer"
         @click="openSearchModal"
       >
         <Search class="w-5 h-5 object-contain" />

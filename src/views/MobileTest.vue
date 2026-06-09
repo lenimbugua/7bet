@@ -20,7 +20,7 @@ import TopLeaguesGrid from "../components/mobile/TopLeaguesGrid.vue";
 
       
       <!-- Hot games in Kenya -->
-      <div class="mt-3">
+      <div class="">
           <TopGames />
         </div>
 
