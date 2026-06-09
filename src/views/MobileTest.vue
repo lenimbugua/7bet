@@ -18,19 +18,18 @@ import TopLeaguesGrid from "../components/mobile/TopLeaguesGrid.vue";
       <!-- Quick access: merged navigation -->
       <!-- <QuickAccessBar /> -->
 
-      
       <!-- Hot games in Kenya -->
       <div class="">
-          <TopGames />
-        </div>
+        <TopGames />
+      </div>
 
-        <!-- Recent winners -->
-        <div class="mt-3">
-          <WinnersCarousel />
-        </div>
+      <!-- Recent winners -->
+      <div class="m-3">
+        <WinnersCarousel />
+      </div>
 
-        <!-- Top leagues 2-column grid -->
-        <TopLeaguesGrid />
+      <!-- Top leagues 2-column grid -->
+      <TopLeaguesGrid class="m-3" />
       <!-- HOT section: Matches, Builder, Codes, Games -->
       <!-- <div class="mx-3 mt-3">
           <HotSection />
