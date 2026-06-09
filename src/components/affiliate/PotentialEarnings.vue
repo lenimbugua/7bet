@@ -7,7 +7,7 @@
       <h2 class="text-white text-xl font-semibold">Projected Earnings</h2>
     </div>
     <div class="text-center py-3">
-      <h1 class="font-bold text-3xl">KES 12,500</h1>
+      <h1 class="font-bold text-3xl">UGX 12,500</h1>
       <div class="text-white text-sm">
         Projected earnings from registered users not yet active
       </div>
@@ -22,7 +22,7 @@
         <div class="py-1">Inactive Players</div>
       </div>
       <div class="text-center">
-        <div class="text-lg font-extrabold">KES 8,000</div>
+        <div class="text-lg font-extrabold">UGX 8,000</div>
         <div class="py-1">Pending Bonus</div>
       </div>
     </div>

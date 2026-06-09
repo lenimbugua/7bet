@@ -32,7 +32,7 @@ const { buildLegsMessage, oneCutAmout, isOneCutQualified, oneCutRatio } =
           {{ formattedNumber(oneCutAmout()) }}
           <!-- {{ possibleWin.toFixed(2) }} -->
         </div>
-        <span class="text-amber-400">KES</span>
+        <span class="text-amber-400">UGX</span>
       </div>
     </div>
   </div>

@@ -28,8 +28,8 @@ const bonusRanges = [
       <div class="rounded-xl overflow-hidden border border-gray-200/80 dark:border-white/6">
         <!-- Table header -->
         <div class="grid grid-cols-2 bg-gray-50 dark:bg-white/5">
-          <div class="px-4 py-2.5 text-[0.65rem] font-bold text-gray-400 dark:text-white/25 uppercase tracking-widest">Deposit (KES)</div>
-          <div class="px-4 py-2.5 text-[0.65rem] font-bold text-gray-400 dark:text-white/25 uppercase tracking-widest">Bonus (KES)</div>
+          <div class="px-4 py-2.5 text-[0.65rem] font-bold text-gray-400 dark:text-white/25 uppercase tracking-widest">Deposit (UGX)</div>
+          <div class="px-4 py-2.5 text-[0.65rem] font-bold text-gray-400 dark:text-white/25 uppercase tracking-widest">Bonus (UGX)</div>
         </div>
 
         <!-- Rows -->

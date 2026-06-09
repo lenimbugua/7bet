@@ -20,7 +20,7 @@ const cashoutData = computed(() => useCashoutStore().cashoutData(betId.value));
         <TheButtonSpin v-if="pending" />
         <template v-else>
           <span>Cancel Auto Cashout</span>
-          <span class="cashout-btn-tag">{{ cashoutData.autoCashOutAmount }} KES</span>
+          <span class="cashout-btn-tag">{{ cashoutData.autoCashOutAmount }} UGX</span>
         </template>
       </button>
     </div>

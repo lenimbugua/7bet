@@ -307,7 +307,7 @@ export const useBetslipStore = defineStore("sports-betslip", {
           } else if (
             response?.data?.message == "Exceeds maximum debit amount."
           ) {
-            this.betPlaceError = "Sorry, maximum stake is KSH.10,000";
+            this.betPlaceError = "Sorry, maximum stake is UGX.10,000";
             const { openModal } = useModalStore();
 
             const { betPlaceStatus } = useModalTypes();
@@ -316,7 +316,7 @@ export const useBetslipStore = defineStore("sports-betslip", {
           } else if (
             response?.data?.message == "Amount is below minimum debit amount."
           ) {
-            this.betPlaceError = "Sorry, minimum stake is KSH.10";
+            this.betPlaceError = "Sorry, minimum stake is UGX.10";
             const { openModal } = useModalStore();
 
             const { betPlaceStatus } = useModalTypes();
@@ -326,7 +326,7 @@ export const useBetslipStore = defineStore("sports-betslip", {
             response?.data?.message ==
             "Insufficient balance. Kindly topup your account"
           ) {
-            this.betPlaceError = `Sorry, you do not have sufficient balance to stake KSH.${this.stake}. Please top up your account.`;
+            this.betPlaceError = `Sorry, you do not have sufficient balance to stake UGX.${this.stake}. Please top up your account.`;
             const { openModal } = useModalStore();
             const { setDeposit } = useDepositStore();
             const { balance } = storeToRefs(useProfileStore());

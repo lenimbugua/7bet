@@ -17,15 +17,15 @@ const bettingRules = [
   "Bets must include the 1X2 market.",
   "Each betslip must have minimum odds of 4 and above.",
   "Each betslip must include a minimum of 4 events.",
-  "The minimum stake amount per betslip is 20 KES.",
+  "The minimum stake amount per betslip is 20 UGX.",
 ];
 
 const freeBetDetails = [
   "The free bet will be awarded once daily.",
   "The free bet will expire 24 hours after being awarded.",
-  "You can win a maximum of 20,000 KES from the free bet.",
-  "Upon qualifying, you will be awarded a free bet amount of 20 KES.",
-  "This free bet has a cumulative stake wagering requirement of 20 KES.",
+  "You can win a maximum of 20,000 UGX from the free bet.",
+  "Upon qualifying, you will be awarded a free bet amount of 20 UGX.",
+  "This free bet has a cumulative stake wagering requirement of 20 UGX.",
 ];
 </script>
 

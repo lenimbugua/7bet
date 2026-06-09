@@ -3,7 +3,7 @@ import { useBetslipStore } from "@/stores/sports-betslip";
 import { storeToRefs } from "pinia";
 
 export function useBetslipDataLayer() {
-  const currency = "KES";
+  const currency = "UGX";
   const sportBetCartType = "all sports";
 
   //events types

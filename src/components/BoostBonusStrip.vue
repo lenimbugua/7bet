@@ -26,7 +26,7 @@ const {
 <template>
   <div class="strip" @click="openModal(multibetBoostModal)">
     <span v-if="getCurrentBoost() > 0" class="strip-current">
-      {{ getCurrentBoost() }}% Boost KSH {{ calculateBoostBonus(calculatePossibleWin(betslip, stake)).toFixed("2") }}
+      {{ getCurrentBoost() }}% Boost UGX {{ calculateBoostBonus(calculatePossibleWin(betslip, stake)).toFixed("2") }}
     </span>
     <span v-if="getCurrentBoost() > 0" class="strip-sep">&middot;</span>
     <span class="strip-next">Add {{ getLegsToNextBonus() }} more get {{ getNextBoost() }}% boost</span>

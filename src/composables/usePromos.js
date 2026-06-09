@@ -21,9 +21,9 @@ export function usePromos() {
       id: 211333999,
       name: aviatorInviteFriends,
       routeName: "aviator",
-      title: "Invite Friends & Earn KSH 100 Free Bet",
+      title: "Invite Friends & Earn UGX 100 Free Bet",
       img: "281d1bdf-fbde-4551-cf8f-973274e5be00",
-      samary: `Get KSH 100 Free Bet for each friend! Share your unique referral link — when your friend signs up, deposits KSH 49+, and plays at least 3 Aviator rounds (1.5x multiplier, KSH 49+ total stake), you get a KSH 100 Aviator Free Bet instantly.`,
+      samary: `Get UGX 100 Free Bet for each friend! Share your unique referral link — when your friend signs up, deposits UGX 49+, and plays at least 3 Aviator rounds (1.5x multiplier, UGX 49+ total stake), you get a UGX 100 Aviator Free Bet instantly.`,
     },
     // {
     //   id: 211333,
@@ -42,14 +42,14 @@ export function usePromos() {
     //   name: leaderboardPromo,
     //   title: "7BET WEEKLY LEADERBOARD",
     //   img: "7056ec80-7903-4c44-fd42-b6d9ef8a7900",
-    //   samary: `Climb the ranks and claim your share of KES 300,000 every week!`,
+    //   samary: `Climb the ranks and claim your share of UGX 300,000 every week!`,
     // },
     {
       id: 211336345453,
       name: tanoSupuuPromo,
       routeName: "home",
       title:
-        "Bet 5 days in a row and earn your KSh 50 streak bonus every Monday.",
+        "Bet 5 days in a row and earn your UGX 50 streak bonus every Monday.",
       img: "139fc218-facc-4e16-2fa1-d74249e69200",
       samary: `Place 1 qualifying bet daily, keep the streak alive, get rewarded.`,
     },
@@ -72,7 +72,7 @@ export function usePromos() {
     //       title: "✈️ Aviator Welcome Bonus!",
     //       img: "e4360cc3-9679-4afe-be71-4230d1cd9100",
     //       samary: `Welcome to 7bet! We’re excited to offer new players an incredible opportunity to explore one of our most popular games with minimal risk and maximum potential rewards.
-    // Exclusive New Player Benefit: Earn up to 25 free bets worth KES 10 each on Aviator during your first 5 days after registration - that’s a total value of KES 250 in free gameplay!
+    // Exclusive New Player Benefit: Earn up to 25 free bets worth UGX 10 each on Aviator during your first 5 days after registration - that’s a total value of UGX 250 in free gameplay!
     // `,
     //     },
     {
@@ -99,7 +99,7 @@ deposits. `,
       routeName: "aviator",
       title: "7BET AVIATOR FREE RAINS",
       img: "e4360cc3-9679-4afe-be71-4230d1cd9100",
-      samary: `7bet Aviator Rains Promotion offers Aviator players a daily opportunity to win over KSH
+      samary: `7bet Aviator Rains Promotion offers Aviator players a daily opportunity to win over UGX
 200,000 in free bets.`,
     },
     {
@@ -180,7 +180,7 @@ money, giving them a chance to win big without any financial risk.`,
       title: "Aviator Welcome Bonus!",
       img: "/promos/freebets-prom.png",
       bg: "bg-linear-to-r from-red-700 to-red-800",
-      samary: `Earn up to 25 free bets worth KES 10 each on Aviator during your first 5 days after registration!`,
+      samary: `Earn up to 25 free bets worth UGX 10 each on Aviator during your first 5 days after registration!`,
     },
     {
       id: 17700113,
@@ -217,7 +217,7 @@ money.`,
       title: "7BET AVIATOR FREE RAINS",
       img: "/promos/aviator_rain.png",
       bg: "bg-linear-to-l from-sky-700 to-purple-800",
-      samary: `7bet Aviator Rains Promotion offers Aviator players a daily opportunity to win over KSH
+      samary: `7bet Aviator Rains Promotion offers Aviator players a daily opportunity to win over UGX
 200,000 in free bets.`,
     },
     {

@@ -97,7 +97,7 @@ const todayReward = weeklyRewards.find((r) => r.current)
       class="w-full bg-gradient-gold text-accent-foreground text-xs font-bold py-2 rounded-lg shadow-glow-gold flex items-center justify-center gap-1 cta-premium"
     >
       <Gift class="w-3.5 h-3.5" />
-      Claim Day {{ todayReward.day }}: {{ todayReward.reward }} KES
+      Claim Day {{ todayReward.day }}: {{ todayReward.reward }} UGX
     </button>
   </div>
 </template>

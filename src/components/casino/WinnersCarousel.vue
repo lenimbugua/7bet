@@ -154,7 +154,7 @@ watch(
               {{ formatMultiplier(winner.multiplier) }}
             </div>
             <div class="text-[11px] font-bold text-foreground leading-none">
-              <span class="mr-1">KSh</span>{{ formatKsh(winner.amount) }}
+              <span class="mr-1">UGX</span>{{ formatKsh(winner.amount) }}
             </div>
             <div class="text-[10px] font-semibold text-muted-foreground tracking-wider leading-none">
               {{ winner.phone }}

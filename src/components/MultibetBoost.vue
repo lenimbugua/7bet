@@ -26,7 +26,7 @@ const {
           v-if="getCurrentBoost() > 0"
           class="text-xs font-bold text-gold-bright tabular-nums"
         >
-          {{ getCurrentBoost() }}% Boost KSH {{ calculateBoostBonus(calculatePossibleWin(betslip, stake)).toFixed("2") }}
+          {{ getCurrentBoost() }}% Boost UGX {{ calculateBoostBonus(calculatePossibleWin(betslip, stake)).toFixed("2") }}
         </span>
       </div>
 

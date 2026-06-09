@@ -106,7 +106,7 @@ function formatAmount(n) {
 
       <!-- Total jackpot -->
       <div class="flex items-baseline gap-2 mb-3">
-        <span class="text-white text-base sm:text-lg font-bold">KSH</span>
+        <span class="text-white text-base sm:text-lg font-bold">UGX</span>
         <span
           class="text-white text-2xl sm:text-4xl font-extrabold tracking-wide drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)]"
         >

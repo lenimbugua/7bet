@@ -8,7 +8,7 @@
         Stay Consistent & Get Rewarded
       </h1>
       <p class="text-lg opacity-80">
-        Bet 5 days in a row and earn your KSh 50 streak bonus every Monday.
+        Bet 5 days in a row and earn your UGX 50 streak bonus every Monday.
       </p>
     </div>
 
@@ -35,7 +35,7 @@
           consecutive days
         </li>
         <li>
-          Each bet must be <span class="font-semibold">KSh 49 or more</span>
+          Each bet must be <span class="font-semibold">UGX 49 or more</span>
         </li>
         <li>
           Keep your streak alive within the week
@@ -43,7 +43,7 @@
         </li>
         <li>Minimum odds: <span class="font-semibold">4.99</span></li>
         <li>
-          Qualify for a <span class="font-semibold">KSh 50 bonus</span>, paid
+          Qualify for a <span class="font-semibold">UGX 50 bonus</span>, paid
           every Monday
         </li>
       </ul>
@@ -55,9 +55,9 @@
     >
       <h3 class="text-xl font-bold mb-4">Example</h3>
       <p class="leading-relaxed">
-        Bet from <span class="font-semibold">Monday to Friday</span> (KSh 49+
+        Bet from <span class="font-semibold">Monday to Friday</span> (UGX 49+
         each day). You’ll receive a
-        <span class="font-semibold">KSh 50 bonus</span> the following Monday.
+        <span class="font-semibold">UGX 50 bonus</span> the following Monday.
       </p>
     </div>
 
@@ -77,7 +77,7 @@
         <tbody class="bg-white dark:bg-surface-elevated">
           <tr class="border-b border-gray-200 dark:border-gray-700">
             <td class="py-3 px-4">Minimum Stake</td>
-            <td class="py-3 px-4 font-semibold">KSh 49+</td>
+            <td class="py-3 px-4 font-semibold">UGX 49+</td>
           </tr>
           <tr class="border-b border-gray-200 dark:border-gray-700">
             <td class="py-3 px-4">Bet Types</td>
@@ -102,7 +102,7 @@
       <h3 class="text-xl font-bold mb-4">Terms & Conditions</h3>
       <ul class="space-y-3 list-disc pl-6 text-[15px] leading-relaxed">
         <li>
-          Minimum stake per bet: <span class="font-semibold">KSh 49</span>
+          Minimum stake per bet: <span class="font-semibold">UGX 49</span>
         </li>
         <li>
           Valid for <span class="font-semibold">single and multibets</span>

@@ -14,7 +14,7 @@ const steps = [
   },
   {
     title: "Get paid weekly",
-    description: "Receive up to KES 300,000 in your account every week.",
+    description: "Receive up to UGX 300,000 in your account every week.",
   },
 ];
 </script>

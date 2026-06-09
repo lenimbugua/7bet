@@ -37,7 +37,7 @@ const isHidden = ref(true);
               7bet is running a promotion dubbed **"ENDA EXTRA ROUND na
               Aviator Free Rain"** to give Aviator players a chance to claim
               free bet rains. With this promotion, players can win from a daily
-              pool of <strong>KSH 100,000</strong> in guaranteed free bets while
+              pool of <strong>UGX 100,000</strong> in guaranteed free bets while
               enjoying the Aviator game.
             </p>
           </section>
@@ -51,7 +51,7 @@ const isHidden = ref(true);
               The promotion is open to all customers playing 7bet Aviator.
               Free Bet Rain will appear randomly in the chat after a
               notification during gameplay. Players can claim free bets ranging
-              from <strong>KSH 30</strong> to <strong>KSH 1000</strong> by being
+              from <strong>UGX 30</strong> to <strong>UGX 1000</strong> by being
               the fastest to click **CLAIM**.
             </p>
             <p class="mt-3">
@@ -62,11 +62,11 @@ const isHidden = ref(true);
             <!-- Free Bet Rain Details -->
             <div class="space-y-6 mt-6">
               <div class="bg-gray-50 border-l-4 border-indigo-500 p-4">x1xd1xxzzzzzzzzzZ C`AZASZ```````````````````````````K566 BUJJ N <Noframes>JMMMJ</Noframes>`````z`
-                <h3 class="font-bold text-lg">KSH 30 Free Bet Rain</h3>
+                <h3 class="font-bold text-lg">UGX 30 Free Bet Rain</h3>
                 <ul class="list-disc list-inside text-gray-700 mt-2">
                   <li>Randomly awarded <strong>20 times daily</strong>.</li>
-                  <li>Minimum balance: <strong>KSH 200</strong>.</li>
-                  <li>Minimum stake: <strong>KSH 50</strong>.</li>
+                  <li>Minimum balance: <strong>UGX 200</strong>.</li>
+                  <li>Minimum stake: <strong>UGX 50</strong>.</li>
                   <li>
                     Last bet placed within the last <strong>5 minutes</strong>.
                   </li>
@@ -74,11 +74,11 @@ const isHidden = ref(true);
               </div>
 
               <div class="bg-gray-50 border-l-4 border-indigo-500 p-4">
-                <h3 class="font-bold text-lg">KSH 50 Free Bet Rain</h3>
+                <h3 class="font-bold text-lg">UGX 50 Free Bet Rain</h3>
                 <ul class="list-disc list-inside text-gray-700 mt-2">
                   <li>Randomly awarded <strong>20 times daily</strong>.</li>
-                  <li>Minimum balance: <strong>KSH 300</strong>.</li>
-                  <li>Minimum stake: <strong>KSH 100</strong>.</li>
+                  <li>Minimum balance: <strong>UGX 300</strong>.</li>
+                  <li>Minimum stake: <strong>UGX 100</strong>.</li>
                   <li>
                     Last bet placed within the last <strong>5 minutes</strong>.
                   </li>
@@ -86,11 +86,11 @@ const isHidden = ref(true);
               </div>
 
               <div class="bg-gray-50 border-l-4 border-indigo-500 p-4">
-                <h3 class="font-bold text-lg">KSH 100 Free Bet Rain</h3>
+                <h3 class="font-bold text-lg">UGX 100 Free Bet Rain</h3>
                 <ul class="list-disc list-inside text-gray-700 mt-2">
                   <li>Randomly awarded <strong>10 times daily</strong>.</li>
-                  <li>Minimum balance: <strong>KSH 500</strong>.</li>
-                  <li>Minimum stake: <strong>KSH 100</strong>.</li>
+                  <li>Minimum balance: <strong>UGX 500</strong>.</li>
+                  <li>Minimum stake: <strong>UGX 100</strong>.</li>
                   <li>
                     Last bet placed within the last <strong>5 minutes</strong>.
                   </li>
@@ -98,11 +98,11 @@ const isHidden = ref(true);
               </div>
 
               <div class="bg-gray-50 border-l-4 border-indigo-500 p-4">
-                <h3 class="font-bold text-lg">KSH 500 Free Bet Rain</h3>
+                <h3 class="font-bold text-lg">UGX 500 Free Bet Rain</h3>
                 <ul class="list-disc list-inside text-gray-700 mt-2">
                   <li>Randomly awarded <strong>10 times daily</strong>.</li>
-                  <li>Minimum balance: <strong>KSH 1000</strong>.</li>
-                  <li>Minimum stake: <strong>KSH 200</strong>.</li>
+                  <li>Minimum balance: <strong>UGX 1000</strong>.</li>
+                  <li>Minimum stake: <strong>UGX 200</strong>.</li>
                   <li>
                     Last bet placed within the last <strong>5 minutes</strong>.
                   </li>
@@ -118,7 +118,7 @@ const isHidden = ref(true);
             </h2>
             <ul class="list-disc list-inside space-y-2 text-gray-700">
               <li>Only one claim per customer per Rain shower.</li>
-              <li>Free Bets range from KSH 30 to KSH 1000.</li>
+              <li>Free Bets range from UGX 30 to UGX 1000.</li>
               <li>
                 Minimum multiplier to cash out a Free Bet is
                 <strong>x1.50</strong>.

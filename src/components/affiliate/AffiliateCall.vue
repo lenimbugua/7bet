@@ -24,7 +24,7 @@ import { BoltIcon, UserGroupIcon } from "@heroicons/vue/24/solid";
         <span class="text-sm md:text-xl font-semibold text-muted-foreground">
           Up to
         </span>
-        <span class="text-brand-bright font-extrabold"> KES 300,000</span>
+        <span class="text-brand-bright font-extrabold"> UGX 300,000</span>
       </h2>
 
       <div
@@ -41,7 +41,7 @@ import { BoltIcon, UserGroupIcon } from "@heroicons/vue/24/solid";
       </div>
 
       <p class="text-xs md:text-sm text-muted-foreground/80 mt-2 text-center max-w-md">
-        Earn up to KES 200 for every referred user and a percentage of all
+        Earn up to UGX 200 for every referred user and a percentage of all
         their future earnings.
       </p>
     </div>

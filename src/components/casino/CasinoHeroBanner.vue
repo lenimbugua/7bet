@@ -9,8 +9,8 @@ let interval = null;
 const slides = [
   {
     title: "7BET WEEKLY LEADERBOARD",
-    subtitle: "KES 300,000 EVERY WEEK",
-    description: "Climb the ranks and claim your share of KES 300,000 weekly!",
+    subtitle: "UGX 300,000 EVERY WEEK",
+    description: "Climb the ranks and claim your share of UGX 300,000 weekly!",
     cta: "View Leaderboard",
     ctaRoute: "leaderboard",
     gradient: "from-amber-900 via-orange-900 to-rose-900",
@@ -31,9 +31,9 @@ const slides = [
   },
   {
     title: "Aviator Welcome Bonus!",
-    subtitle: "25 FREE BETS WORTH KES 250",
+    subtitle: "25 FREE BETS WORTH UGX 250",
     description:
-      "Earn up to 25 free bets worth KES 10 each on Aviator during your first 5 days!",
+      "Earn up to 25 free bets worth UGX 10 each on Aviator during your first 5 days!",
     cta: "Get Bonus",
     ctaRoute: "aviator",
     gradient: "from-rose-900 via-pink-900 to-fuchsia-900",
@@ -43,9 +43,9 @@ const slides = [
   },
   {
     title: "7BET AVIATOR FREE RAINS",
-    subtitle: "WIN OVER KSH 200,000",
+    subtitle: "WIN OVER UGX 200,000",
     description:
-      "Daily opportunity to win over KSH 200,000 in free bets on Aviator!",
+      "Daily opportunity to win over UGX 200,000 in free bets on Aviator!",
     cta: "Play Aviator",
     ctaRoute: "aviator",
     gradient: "from-sky-900 via-indigo-900 to-purple-900",

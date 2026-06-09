@@ -413,7 +413,7 @@ onBeforeMount(() => {
           <div class="flex items-center space-x-1">
             <span class="font-bold">Won </span>
             <div class="flex space-x-1">
-              <span>KES</span
+              <span>UGX</span
               ><span class="font-black text-lime-300">
                 {{ formattedNumber(getRandomNumber(500, 200000)) }}</span
               >

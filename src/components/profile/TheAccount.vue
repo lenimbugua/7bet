@@ -52,10 +52,10 @@ const showBalance = ref(true);
       <!-- Big balance -->
       <div class="mt-2">
         <span v-if="showBalance" class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight">
-          KES <span class="tabular-nums">{{ balance }}</span>
+          UGX <span class="tabular-nums">{{ balance }}</span>
         </span>
         <span v-else class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight">
-          KES ******
+          UGX ******
         </span>
       </div>
     </div>

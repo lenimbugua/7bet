@@ -102,7 +102,7 @@ onBeforeUnmount(() => {
             </div>
             <span class="card-tag">Soccer</span>
             <div class="card-heading">
-              <span class="card-heading-kes">KES</span>
+              <span class="card-heading-kes">UGX</span>
               <span class="card-heading-amount">20</span>
               <span class="card-heading-label">Free Bet</span>
             </div>
@@ -164,13 +164,13 @@ onBeforeUnmount(() => {
               <div v-if="betslip" class="payout">
                 <div class="payout-item">
                   <span class="payout-label">Stake</span>
-                  <span class="payout-value">KES {{ welcomeStake }}</span>
+                  <span class="payout-value">UGX {{ welcomeStake }}</span>
                 </div>
                 <div class="payout-dot" />
                 <div class="payout-item">
                   <span class="payout-label">Win</span>
                   <span class="payout-value payout-value--win"
-                    >KES {{ possibleWin }}</span
+                    >UGX {{ possibleWin }}</span
                   >
                 </div>
               </div>
@@ -216,7 +216,7 @@ onBeforeUnmount(() => {
             </div>
             <span class="card-tag">Aviator</span>
             <div class="card-heading">
-              <span class="card-heading-kes">KES</span>
+              <span class="card-heading-kes">UGX</span>
               <span class="card-heading-amount">20</span>
               <span class="card-heading-label">Free Bet</span>
             </div>

@@ -23,7 +23,7 @@
           </svg>
         </div>
         <span>Make Up to</span>
-        <span class="text-fuchsia-700 font-black">KES.300K</span>
+        <span class="text-fuchsia-700 font-black">UGX.300K</span>
         <span>On Affiliate!</span>
       </div>
       <div>

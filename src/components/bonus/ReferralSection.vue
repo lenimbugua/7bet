@@ -53,7 +53,7 @@ function handleShare() {
 
         <div class="text-right">
           <p class="text-[9px] text-foreground/60">Earn up to</p>
-          <p class="text-sm font-black text-accent">{{ weeklyPotential.toLocaleString() }} KES</p>
+          <p class="text-sm font-black text-accent">{{ weeklyPotential.toLocaleString() }} UGX</p>
           <p class="text-[9px] text-primary font-bold">WEEKLY!</p>
         </div>
       </div>
@@ -65,7 +65,7 @@ function handleShare() {
       <div class="grid grid-cols-2 gap-2">
         <div class="bg-gray-50 dark:bg-secondary/40 rounded-lg p-2 border border-gray-200/80 dark:border-border/50 text-center">
           <p class="text-[9px] text-foreground/70 uppercase font-semibold">Your Earnings</p>
-          <p class="text-base font-bold text-primary">{{ totalEarnings.toLocaleString() }} KES</p>
+          <p class="text-base font-bold text-primary">{{ totalEarnings.toLocaleString() }} UGX</p>
           <div class="flex items-center justify-center gap-0.5 text-[9px] text-emerald-600 dark:text-emerald-400 font-medium">
             <TrendingUp class="w-2.5 h-2.5" /> +2,500 this week
           </div>
@@ -82,7 +82,7 @@ function handleShare() {
         <div class="flex items-center justify-between mb-2">
           <p class="text-[9px] text-muted-foreground">Your Referral Code</p>
           <span class="text-[9px] bg-primary/20 text-primary px-1.5 py-0.5 rounded-full font-bold">
-            +100 KES per friend
+            +100 UGX per friend
           </span>
         </div>
         <div class="flex items-center gap-2">

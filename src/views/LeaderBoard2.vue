@@ -66,7 +66,7 @@
           class="bg-linear-to-r from-purple-600 to-indigo-600 rounded-xl p-5 shadow-sm text-white"
         >
           <p class="text-sm opacity-80">Weekly Prize</p>
-          <p class="mt-1 font-extrabold text-2xl">KES 30,000.00</p>
+          <p class="mt-1 font-extrabold text-2xl">UGX 30,000.00</p>
         </div>
       </div>
 
@@ -78,7 +78,7 @@
             <h3 class="font-semibold mb-1">How Points Are Calculated</h3>
             <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
               Earn <strong>1 point</strong> for every
-              <strong>KES 20</strong> wagered on qualifying bets. To qualify,
+              <strong>UGX 20</strong> wagered on qualifying bets. To qualify,
               place a <strong>multibet with 3 or more games</strong>, each with
               minimum odds of <strong>1.6</strong>.
             </p>

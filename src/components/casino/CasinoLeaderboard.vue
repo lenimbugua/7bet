@@ -3,10 +3,10 @@ defineEmits(["reward-detail"]);
 
 // Placeholder reward tiers until real leaderboard/CMS data is wired in.
 const rewards = [
-  { name: "Monthly Mega Jackpot", prize: "KSH 500,000", winners: 1 },
-  { name: "Weekly Jackpot", prize: "KSH 100,000", winners: 5 },
-  { name: "Daily Bonanza", prize: "KSH 20,000", winners: 20 },
-  { name: "Lucky Spin", prize: "KSH 5,000", winners: 100 },
+  { name: "Monthly Mega Jackpot", prize: "UGX 500,000", winners: 1 },
+  { name: "Weekly Jackpot", prize: "UGX 100,000", winners: 5 },
+  { name: "Daily Bonanza", prize: "UGX 20,000", winners: 20 },
+  { name: "Lucky Spin", prize: "UGX 5,000", winners: 100 },
 ];
 </script>
 

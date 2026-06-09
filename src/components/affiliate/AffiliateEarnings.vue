@@ -3,7 +3,7 @@
     <div class="bg-gray-900 dark:bg-surface-active space-y-2 p-4 text-white rounded-md shadow-sm">
       <p>Your Current Earnings</p>
       <div class="text-lg space-x-2 font-semibold">
-        <span>KES</span>
+        <span>UGX</span>
         <span>1,000</span>
       </div>
     </div>
@@ -11,7 +11,7 @@
     <div class="space-y-2 border border-gray-200 dark:border-white/10 rounded-md p-4 bg-white dark:bg-transparent shadow-sm">
       <p class="text-gray-600 dark:text-gray-400">Total Paid</p>
       <div class="text-lg space-x-2 font-semibold text-gray-900 dark:text-white">
-        <span>KES</span>
+        <span>UGX</span>
         <span>1,000</span>
       </div>
     </div>

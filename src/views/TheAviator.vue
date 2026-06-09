@@ -76,15 +76,15 @@ const steps = [
   },
   {
     icon: BanknotesIcon,
-    text: "Your friend signs up and deposits KSH 49 or more.",
+    text: "Your friend signs up and deposits UGX 49 or more.",
   },
   {
     icon: DevicePhoneMobileIcon,
-    text: "They play at least 3 Aviator rounds with a 1.5x multiplier and a total stake of KSH 49 or more.",
+    text: "They play at least 3 Aviator rounds with a 1.5x multiplier and a total stake of UGX 49 or more.",
   },
   {
     icon: GiftIcon,
-    text: "Boom! You get a KSH 100 Aviator Free Bet instantly.",
+    text: "Boom! You get a UGX 100 Aviator Free Bet instantly.",
   },
   {
     icon: CheckCircleIcon,
@@ -107,7 +107,7 @@ const steps = [
       <div class="aviator-promo-bar" @click="handleToggle">
         <div class="promo-inner">
           <GiftIcon class="promo-icon" />
-          <span class="promo-text">Earn Ksh 100 Aviator Free Bets Instantly</span>
+          <span class="promo-text">Earn UGX 100 Aviator Free Bets Instantly</span>
           <button class="promo-cta">INVITE NOW →</button>
         </div>
       </div>
@@ -126,7 +126,7 @@ const steps = [
             <div>
               <h3 class="popover-title">Invite Friends & Earn</h3>
               <p class="popover-subtitle">
-                Get KSH 100 Free Bet for each friend
+                Get UGX 100 Free Bet for each friend
               </p>
             </div>
             <button class="popover-close" @click="showInvitePopover = false">

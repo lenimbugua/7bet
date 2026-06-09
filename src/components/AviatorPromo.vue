@@ -53,7 +53,7 @@
           <h3 class="text-xl font-semibold mb-2">Eligibility</h3>
           <ul class="space-y-2 text-gray-700 dark:text-gray-300">
             <li>🎮 Played Aviator within last 48 hours</li>
-            <li>💰 Net losses of KES 200+ in last 24 hours</li>
+            <li>💰 Net losses of UGX 200+ in last 24 hours</li>
             <li>✅ Verified active account</li>
             <li>🔟 Minimum 10 Aviator rounds</li>
             <li>📈 More play = higher chance of selection</li>
@@ -70,22 +70,22 @@
           class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md border-t-4 border-brand-dark"
         >
           <h3 class="text-lg font-bold text-brand-dark mb-2">Bronze</h3>
-          <p>Stakes: KES 5,000<br />Net Loss: KES 1,000</p>
-          <p class="mt-2 font-semibold">15% Cashback → KES 150</p>
+          <p>Stakes: UGX 5,000<br />Net Loss: UGX 1,000</p>
+          <p class="mt-2 font-semibold">15% Cashback → UGX 150</p>
         </div>
         <div
           class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md border-t-4 border-gold-bright"
         >
           <h3 class="text-lg font-bold text-gold-bright mb-2">Gold</h3>
-          <p>Stakes: KES 20,000<br />Net Loss: KES 5,000</p>
-          <p class="mt-2 font-semibold">25% Cashback → KES 1,250</p>
+          <p>Stakes: UGX 20,000<br />Net Loss: UGX 5,000</p>
+          <p class="mt-2 font-semibold">25% Cashback → UGX 1,250</p>
         </div>
         <div
           class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md border-t-4 border-red-500"
         >
           <h3 class="text-lg font-bold text-red-500 mb-2">Diamond</h3>
-          <p>Stakes: KES 40,000<br />Net Loss: KES 15,000</p>
-          <p class="mt-2 font-semibold">30% Cashback → KES 4,500</p>
+          <p>Stakes: UGX 40,000<br />Net Loss: UGX 15,000</p>
+          <p class="mt-2 font-semibold">30% Cashback → UGX 4,500</p>
         </div>
       </div>
     </section>

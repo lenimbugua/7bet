@@ -13,7 +13,7 @@ import {
 
 defineProps({
   totalBalance: { type: Number, required: true },
-  currency: { type: String, default: "KES" },
+  currency: { type: String, default: "UGX" },
 });
 
 const userName = "Amos";

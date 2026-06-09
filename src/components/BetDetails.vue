@@ -98,7 +98,7 @@ function showScores(isLive, status) {
       <div class="financials">
         <div class="financial-item">
           <span class="fin-label">Stake</span>
-          <span class="fin-value">KES {{ selectedBet?.betAmount.toFixed("2") }}</span>
+          <span class="fin-value">UGX {{ selectedBet?.betAmount.toFixed("2") }}</span>
         </div>
         <div class="financial-item text-center">
           <span class="fin-label">Odds</span>
@@ -109,7 +109,7 @@ function showScores(isLive, status) {
             {{ selectedBet?.status === won ? 'Won' : selectedBet?.status === cashedOut ? 'Cashed Out' : 'To Win' }}
           </span>
           <span class="fin-value-highlight" :class="'win-' + selectedBet?.status">
-            KES {{ selectedBet?.status === cashedOut ? selectedBet?.cashedOutAmount?.toFixed("2") : selectedBet?.possibleWin }}
+            UGX {{ selectedBet?.status === cashedOut ? selectedBet?.cashedOutAmount?.toFixed("2") : selectedBet?.possibleWin }}
           </span>
         </div>
       </div>

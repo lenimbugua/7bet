@@ -131,7 +131,7 @@ watch(
             {{ formatMultiplier(w.multiplier) }}
           </p>
           <p class="text-gold text-sm font-bold leading-none mt-1">
-            <span class="mr-1">KSh</span>{{ formatKsh(w.amount) }}
+            <span class="mr-1">UGX</span>{{ formatKsh(w.amount) }}
           </p>
           <p class="text-muted-foreground text-[11px] leading-none mt-1 truncate">
             {{ w.phone }}<span v-if="w.game"> · {{ w.game.name }}</span>

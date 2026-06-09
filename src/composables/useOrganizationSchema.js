@@ -120,7 +120,7 @@ export function useOrganizationSchema() {
             "@type": "Offer",
             url: canonicalUrl,
             price: "0.00",
-            priceCurrency: "KES",
+            priceCurrency: "UGX",
             availability: "https://schema.org/InStock",
             validFrom: new Date().toISOString(),
             description: `Bet on ${matchSlug
@@ -183,7 +183,7 @@ export function useOrganizationSchema() {
                 "Register now and get a free bet bonus on your first deposit.",
               url: `${baseUrl}/promotions/free-bet`,
               price: "0",
-              priceCurrency: "KES",
+              priceCurrency: "UGX",
               availability: "https://schema.org/InStock",
             },
           ],

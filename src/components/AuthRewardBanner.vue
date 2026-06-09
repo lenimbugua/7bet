@@ -21,7 +21,7 @@ import aviatorIcon from "@/assets/bonus/aviator-icon.png";
         <div
           class="text-2xl sm:text-3xl font-black italic leading-none text-transparent bg-clip-text bg-gradient-to-b from-[#fff3a0] via-[#ffd34d] to-[#e0980f] drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)]"
         >
-          KSH 1,630
+          UGX 1,630
         </div>
         <div
           class="mt-1.5 text-white text-xs sm:text-sm font-extrabold tracking-wide leading-tight drop-shadow"

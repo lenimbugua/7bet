@@ -64,7 +64,7 @@ function goToRoute() {
             <p class="text-gray-600 dark:text-gray-300">
               Win your share of over
               <span class="font-black text-xl text-amber-600"
-                >KSH 200,000 in Free Bets every day!</span
+                >UGX 200,000 in Free Bets every day!</span
               >
               with 7bet Aviator Free Bet Rains!
             </p>
@@ -79,7 +79,7 @@ function goToRoute() {
               ranging from:
             </p>
             <p class="mt-1 font-bold text-amber-600">
-              KSH 10, KSH 20, KSH 30, KSH 50, KSH 100, KSH 200, KSH 500, and KSH
+              UGX 10, UGX 20, UGX 30, UGX 50, UGX 100, UGX 200, UGX 500, and UGX
               1000.
             </p>
           </div>
@@ -110,14 +110,14 @@ function goToRoute() {
               class="p-4 rounded-xl bg-white dark:bg-background border border-gray-200 dark:border-white/10 space-y-2"
             >
               <div class="font-bold text-amber-500">
-                1. KSH 10 FREE BET RAIN (100 drops/day)
+                1. UGX 10 FREE BET RAIN (100 drops/day)
               </div>
               <ul class="list-disc pl-6">
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum account balance: KSH 10
+                  Minimum account balance: UGX 10
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum stake played: KSH 10
+                  Minimum stake played: UGX 10
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
                   Must have placed a bet in the last 5 minutes
@@ -129,14 +129,14 @@ function goToRoute() {
               class="p-4 rounded-xl bg-white dark:bg-background border border-gray-200 dark:border-white/10 space-y-2"
             >
               <p class="font-bold text-amber-600">
-                2. KSH 20 FREE BET RAIN (90 drops/day)
+                2. UGX 20 FREE BET RAIN (90 drops/day)
               </p>
               <ul class="list-disc pl-6">
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum account balance: KSH 20
+                  Minimum account balance: UGX 20
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum stake played: KSH 20
+                  Minimum stake played: UGX 20
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
                   Must have placed a bet in the last 5 minutes
@@ -148,14 +148,14 @@ function goToRoute() {
               class="p-4 rounded-xl bg-white dark:bg-background border border-gray-200 dark:border-white/10 space-y-2"
             >
               <div class="font-bold text-amber-600">
-                3. KSH 30 FREE BET RAIN (80 drops/day)
+                3. UGX 30 FREE BET RAIN (80 drops/day)
               </div>
               <ul class="list-disc pl-6">
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum account balance: KSH 30
+                  Minimum account balance: UGX 30
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum stake played: KSH 30
+                  Minimum stake played: UGX 30
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
                   Must have placed a bet in the last 5 minutes
@@ -167,33 +167,14 @@ function goToRoute() {
               class="p-4 rounded-xl bg-white dark:bg-background border border-gray-200 dark:border-white/10 space-y-2"
             >
               <div class="font-bold text-amber-600">
-                4. KSH 50 FREE BET RAIN (60 drops/day)
+                4. UGX 50 FREE BET RAIN (60 drops/day)
               </div>
               <ul class="list-disc pl-6">
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum account balance: KSH 50
+                  Minimum account balance: UGX 50
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum stake played: KSH 50
-                </li>
-                <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Must have placed a bet in the last 5 minutes
-                </li>
-              </ul>
-            </div>
-
-            <div
-              class="p-4 rounded-xl bg-white dark:bg-background border border-gray-200 dark:border-white/10 space-y-2"
-            >
-              <p class="font-bold text-amber-600">
-                5. KSH 100 FREE BET RAIN (40 drops/day)
-              </p>
-              <ul class="list-disc pl-6">
-                <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum account balance: KSH 100
-                </li>
-                <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum stake played: KSH 100
+                  Minimum stake played: UGX 50
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
                   Must have placed a bet in the last 5 minutes
@@ -205,14 +186,14 @@ function goToRoute() {
               class="p-4 rounded-xl bg-white dark:bg-background border border-gray-200 dark:border-white/10 space-y-2"
             >
               <p class="font-bold text-amber-600">
-                6. KSH 200 FREE BET RAIN (80 drops/day)
+                5. UGX 100 FREE BET RAIN (40 drops/day)
               </p>
               <ul class="list-disc pl-6">
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum account balance: KSH 200
+                  Minimum account balance: UGX 100
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum stake played: KSH 200
+                  Minimum stake played: UGX 100
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
                   Must have placed a bet in the last 5 minutes
@@ -224,14 +205,33 @@ function goToRoute() {
               class="p-4 rounded-xl bg-white dark:bg-background border border-gray-200 dark:border-white/10 space-y-2"
             >
               <p class="font-bold text-amber-600">
-                7. KSH 500 FREE BET RAIN (20 drops/day)
+                6. UGX 200 FREE BET RAIN (80 drops/day)
               </p>
               <ul class="list-disc pl-6">
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum account balance: KSH 500
+                  Minimum account balance: UGX 200
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum stake played: KSH 500
+                  Minimum stake played: UGX 200
+                </li>
+                <li class="text-sm text-gray-700 dark:text-gray-300">
+                  Must have placed a bet in the last 5 minutes
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="p-4 rounded-xl bg-white dark:bg-background border border-gray-200 dark:border-white/10 space-y-2"
+            >
+              <p class="font-bold text-amber-600">
+                7. UGX 500 FREE BET RAIN (20 drops/day)
+              </p>
+              <ul class="list-disc pl-6">
+                <li class="text-sm text-gray-700 dark:text-gray-300">
+                  Minimum account balance: UGX 500
+                </li>
+                <li class="text-sm text-gray-700 dark:text-gray-300">
+                  Minimum stake played: UGX 500
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
                   Must have placed a bet in the last 10 minutes
@@ -242,14 +242,14 @@ function goToRoute() {
               class="p-4 rounded-xl bg-white dark:bg-background border border-gray-200 dark:border-white/10 space-y-2"
             >
               <p class="font-bold text-amber-600">
-                8. KSH 1000 FREE BET RAIN (20 drops/day)
+                8. UGX 1000 FREE BET RAIN (20 drops/day)
               </p>
               <ul class="list-disc pl-6">
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum account balance: KSH 1000
+                  Minimum account balance: UGX 1000
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
-                  Minimum stake played: KSH 1000
+                  Minimum stake played: UGX 1000
                 </li>
                 <li class="text-sm text-gray-700 dark:text-gray-300">
                   Must have placed a bet in the last 10 minutes
@@ -265,7 +265,7 @@ function goToRoute() {
             </h3>
             <ul class="list-disc pl-6">
               <li>You can claim once per Rain event.</li>
-              <li>Free Bet values range from KSH 10–200.</li>
+              <li>Free Bet values range from UGX 10–200.</li>
               <li>Minimum cashout multiplier: 1.50x.</li>
               <li>Free Bets are credited instantly and expire in 24 hours.</li>
               <li>Must claim within 180 minutes after the Rain appears.</li>

@@ -72,7 +72,7 @@
               </h3>
               <div class="flex items-baseline gap-2">
                 <span class="text-2xl font-black text-white tracking-tight"
-                  >KES 2,400</span
+                  >UGX 2,400</span
                 >
                 <span class="text-[10px] text-gray-400">from 12 users</span>
               </div>

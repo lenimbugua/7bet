@@ -19,14 +19,14 @@
           <h3 class="text-xl font-bold text-white">Platinum</h3>
         </div>
         <div class="text-gray-300 text-sm">
-          Earn KES 20 if they signup and make KES 30 first deposit
+          Earn UGX 20 if they signup and make UGX 30 first deposit
         </div>
         <div class="text-gray-300 text-xs mb-2">
           Earn 5% of their deposits every day
         </div>
         <div class="flex items-end justify-between">
           <div>
-            <div class="text-3xl font-bold text-white">KES 200</div>
+            <div class="text-3xl font-bold text-white">UGX 200</div>
             <div class="text-sm text-gray-400">Maximum Bonus</div>
           </div>
           <div
@@ -53,14 +53,14 @@
           <h3 class="text-xl font-bold text-white">Gold</h3>
         </div>
         <div class="text-gray-300 text-sm">
-          Earn KES 20 if they signup and make KES 30 first deposit
+          Earn UGX 20 if they signup and make UGX 30 first deposit
         </div>
         <div class="text-gray-300 text-xs mb-2">
           Earn 5% of their deposits every day
         </div>
         <div class="flex items-end justify-between">
           <div>
-            <div class="text-3xl font-bold text-white">KES 200</div>
+            <div class="text-3xl font-bold text-white">UGX 200</div>
             <div class="text-sm text-gray-400">Maximum Bonus</div>
           </div>
           <div
@@ -87,14 +87,14 @@
           <h3 class="text-xl font-bold text-white">Bronze</h3>
         </div>
         <div class="text-gray-300 text-sm">
-          Earn KES 20 if they signup and make KES 30 first deposit
+          Earn UGX 20 if they signup and make UGX 30 first deposit
         </div>
         <div class="text-gray-300 text-xs mb-2">
           Earn 5% of their deposits every day
         </div>
         <div class="flex items-end justify-between">
           <div>
-            <div class="text-3xl font-bold text-white">KES 200</div>
+            <div class="text-3xl font-bold text-white">UGX 200</div>
             <div class="text-sm text-gray-400">Maximum Bonus</div>
           </div>
           <div

@@ -15,7 +15,7 @@ import { computed } from "vue";
 const props = defineProps({
   title: { type: String, required: true },
   amount: { type: Number, required: true },
-  currency: { type: String, default: "KES" },
+  currency: { type: String, default: "UGX" },
   expiryDate: { type: String, required: true },
   status: { type: String, required: true },
   icon: { type: String, required: true },

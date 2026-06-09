@@ -46,7 +46,7 @@ import { RouterLink } from "vue-router";
             class="bg-gray-50 dark:bg-surface-sunken p-4 rounded-xl shadow-sm text-center"
           >
             <p class="font-semibold">📏 Meet the Minimums</p>
-            <p class="text-sm">Stake KES 50+, odds ≥ 1.2</p>
+            <p class="text-sm">Stake UGX 50+, odds ≥ 1.2</p>
           </div>
           <div
             class="bg-gray-50 dark:bg-surface-sunken p-4 rounded-xl shadow-sm text-center"
@@ -99,7 +99,7 @@ import { RouterLink } from "vue-router";
           </div>
           <div class="bg-gray-50 dark:bg-surface-sunken p-6 rounded-2xl shadow-sm">
             <h3 class="font-semibold mb-2">✅ Fair & Accessible</h3>
-            <p>Stake from KES 50, odds ≥ 1.2, cashback up to 10K.</p>
+            <p>Stake from UGX 50, odds ≥ 1.2, cashback up to 10K.</p>
           </div>
           <div class="bg-gray-50 dark:bg-surface-sunken p-6 rounded-2xl shadow-sm">
             <h3 class="font-semibold mb-2">✅ Automatic & Instant</h3>
@@ -137,7 +137,7 @@ import { RouterLink } from "vue-router";
         >
           <p>
             <strong>Eligibility:</strong> Registered customers only, 6+
-            selections, odds ≥ 1.2, stake ≥ KES 50, pre-match only.
+            selections, odds ≥ 1.2, stake ≥ UGX 50, pre-match only.
           </p>
           <p>
             <strong>Cashback Rules:</strong> 50% of stake refunded if exactly 1
@@ -165,7 +165,7 @@ import { RouterLink } from "vue-router";
             <li>Select matches & markets</li>
             <li>Add 6+ selections (odds ≥ 1.2)</li>
             <li>Confirm protection status</li>
-            <li>Place bet (min KES 50)</li>
+            <li>Place bet (min UGX 50)</li>
             <li>Enjoy matches with peace of mind</li>
           </ul>
           <div class="bg-gray-50 dark:bg-surface-sunken p-6 rounded-2xl shadow-sm">

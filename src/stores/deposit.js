@@ -228,7 +228,7 @@ export const useDepositStore = defineStore("deposit-store", {
             businessID: "4999908", //paybill number
             billReference: `${msisdn.value}`,
             amount: `${this.deposit}`,
-            currency: "KES", // currencyCode to be used - only KES supported for now
+            currency: "UGX", // currencyCode to be used - only UGX supported for now
             reason: "deposit", // optional field
           },
           (res) => {
@@ -268,7 +268,7 @@ export const useDepositStore = defineStore("deposit-store", {
     //         businessID: "4999908", // Paybill number
     //         billReference: this.msisdn,
     //         amount: this.deposit,
-    //         currency: "KES",
+    //         currency: "UGX",
     //         reason: "Hakibets Ali Payment",
     //       },
     //       (res) => {

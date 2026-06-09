@@ -17,7 +17,7 @@ const missions = [
     id: 2,
     title: "Sports Bonus",
     depositAmount: 200,
-    reward: "+200 KES",
+    reward: "+200 UGX",
     rewardType: "Sports",
     gameIcon: "sports",
     urgency: "Today",
@@ -34,7 +34,7 @@ const missions = [
     id: 4,
     title: "Esports Bonus",
     depositAmount: 300,
-    reward: "+150 KES",
+    reward: "+150 UGX",
     rewardType: "Esports",
     gameIcon: "esports",
     hot: true,
@@ -102,7 +102,7 @@ const gameIconMap = {
               <Wallet class="w-3 h-3 text-muted-foreground" />
               <div>
                 <p class="text-[9px] text-foreground/70 uppercase font-semibold">Deposit</p>
-                <p class="text-[11px] font-bold text-foreground">{{ mission.depositAmount }} KES</p>
+                <p class="text-[11px] font-bold text-foreground">{{ mission.depositAmount }} UGX</p>
               </div>
             </div>
 

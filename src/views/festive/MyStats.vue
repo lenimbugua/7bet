@@ -83,7 +83,7 @@ fetchEarnings(date.value);
                   My Earnings
                 </p>
                 <p class="text-2xl font-black text-gold-bright mt-1">
-                  <span class="text-sm">KES</span> {{ earnings.earnings }}
+                  <span class="text-sm">UGX</span> {{ earnings.earnings }}
                 </p>
               </div>
               <div

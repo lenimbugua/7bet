@@ -24,12 +24,12 @@ const partialCashoutValue = ref(0);
         </svg>
       </span>
       <span class="font-bold text-xl text-gray-700 dark:text-slate-300"
-        >427 Ksh</span
+        >427 UGX</span
       >
     </div>
     <p class="py-2 text-sm">
       Enter below the amount of the stake of your bet you want to cash out, or
-      scroll the bar, minimum amount 1.00 Ksh.
+      scroll the bar, minimum amount 1.00 UGX.
     </p>
     <div class="flex items-center gap-2 py-2">
       <label

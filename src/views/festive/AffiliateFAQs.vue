@@ -7,13 +7,13 @@ const faqs = ref([
   {
     id: 1,
     question: "1.⁠ ⁠What is Sambaza za Krisii na Mabeste promo?",
-    answer: `Join our Sambaza za Krisi na Mabeste festive promo and earn amazing rewards just for sharing with your friends! For every friend you invite who signs up and places a sportbook bet, you instantly get KES 30 after sportsbook resulting. You'll also earn a 10% bonus from their first 7 days deposits. Plus, every referral gives you a daily chance to win a "Mbuzi" – KES 5,000 cash! Start sharing now and let the festive wins begin.`,
+    answer: `Join our Sambaza za Krisi na Mabeste festive promo and earn amazing rewards just for sharing with your friends! For every friend you invite who signs up and places a sportbook bet, you instantly get UGX 30 after sportsbook resulting. You'll also earn a 10% bonus from their first 7 days deposits. Plus, every referral gives you a daily chance to win a "Mbuzi" – UGX 5,000 cash! Start sharing now and let the festive wins begin.`,
   },
   {
     id: 2,
     question:
       "2.⁠ ⁠What are the requirements for eligibility to participate in this program?",
-    answer: `Jump into the Sambaza za Krisii na Mabeste promo at no extra cost! All you need is to have made a deposit of at least KES 49 in the last week. Once you're in, just start sharing—it's that simple to grow your network and your earnings!`,
+    answer: `Jump into the Sambaza za Krisii na Mabeste promo at no extra cost! All you need is to have made a deposit of at least UGX 49 in the last week. Once you're in, just start sharing—it's that simple to grow your network and your earnings!`,
   },
   {
     id: 3,

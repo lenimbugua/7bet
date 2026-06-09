@@ -35,7 +35,7 @@ const showTax = ref(false);
       <span class="text-[0.85rem] font-black text-gray-900 dark:text-white">
         {{ formattedNumber(possibleWin) }}
       </span>
-      <span class="text-[0.6rem] text-gray-400 dark:text-white/30">KES</span>
+      <span class="text-[0.6rem] text-gray-400 dark:text-white/30">UGX</span>
     </div>
   </div>
 </template>

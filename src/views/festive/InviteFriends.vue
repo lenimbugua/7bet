@@ -41,8 +41,8 @@ const handleSubmit = async () => {
     <div
       class="bg-red-600/10 text-red-600 py-6 px-3 border border-red-600 rounded-md"
     >
-      You must be an active user who has diposited atleast KES 30 and wagered
-      KES 30 in the last 7 days to be eligible to invite friends .
+      You must be an active user who has diposited atleast UGX 30 and wagered
+      UGX 30 in the last 7 days to be eligible to invite friends .
     </div>
   </div>
   <section v-else class="block lg:flex">

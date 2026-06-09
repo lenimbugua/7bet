@@ -97,7 +97,7 @@ onBeforeUnmount(() => {
                     : 'text-gray-700 dark:text-gray-200',
               ]"
             >
-              KES {{ formatAmount(w.amount) }}
+              UGX {{ formatAmount(w.amount) }}
             </span>
             <span class="text-gray-500 dark:text-gray-400 shrink-0">on</span>
             <span class="text-gray-600 dark:text-gray-300 font-medium truncate">{{ w.game }}</span>

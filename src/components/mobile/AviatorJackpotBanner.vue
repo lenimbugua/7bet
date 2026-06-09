@@ -25,12 +25,12 @@ function learnMore() {
       type="button"
       class="collapsed-bar"
       :aria-expanded="open"
-      aria-label="Aviator Weekly KES 300,000 cash jackpot"
+      aria-label="Aviator Weekly UGX 300,000 cash jackpot"
       @click="toggle"
     >
       <span class="collapsed-text">
         <span class="label">Aviator Weekly</span>
-        <span class="amount">KES 300,000 CASH JACKPOT</span>
+        <span class="amount">UGX 300,000 CASH JACKPOT</span>
       </span>
       <svg
         class="chevron"
@@ -51,7 +51,7 @@ function learnMore() {
       <div v-if="open" class="expanded">
         <div class="expanded-inner">
           <p class="exp-label">Aviator Weekly</p>
-          <p class="exp-amount">KES 300,000 CASH JACKPOT</p>
+          <p class="exp-amount">UGX 300,000 CASH JACKPOT</p>
           <div class="actions">
             <button type="button" class="learn-more" @click="learnMore">
               Learn more

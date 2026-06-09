@@ -68,13 +68,13 @@ function copyBookingCode() {
         <div class="flex items-center justify-between px-4 py-3">
           <span class="text-sm text-gray-500 dark:text-gray-400">Total Stake</span>
           <span class="text-base font-bold text-gray-900 dark:text-white tabular-nums">
-            KES{{ afterBetDetails?.stake }}
+            UGX{{ afterBetDetails?.stake }}
           </span>
         </div>
         <div class="flex items-center justify-between px-4 py-3">
           <span class="text-sm text-gray-500 dark:text-gray-400">Potential Win</span>
           <span class="text-base font-bold text-primary tabular-nums">
-            KES{{ afterBetDetails?.possibleWin }}
+            UGX{{ afterBetDetails?.possibleWin }}
           </span>
         </div>
         <div v-if="afterBetDetails?.bookingCode" class="flex items-center justify-between px-4 py-3">

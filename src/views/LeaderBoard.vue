@@ -67,7 +67,7 @@ const handleTabChange = (category) => {
         </h1>
         <p class="text-sm text-muted-foreground mt-0.5">
           Compete for the top spot and win
-          <span class="text-brand-bright font-semibold">KES 150,000 Weekly!</span>
+          <span class="text-brand-bright font-semibold">UGX 150,000 Weekly!</span>
         </p>
       </div>
 
@@ -131,14 +131,14 @@ const handleTabChange = (category) => {
         >
           Place a multibet with <span class="font-semibold text-foreground">3+ selections</span>
           at <span class="font-semibold text-foreground">1.6+</span> odds.
-          Earn <span class="text-brand-bright font-semibold">1 point</span> per KES 20 staked.
+          Earn <span class="text-brand-bright font-semibold">1 point</span> per UGX 20 staked.
         </p>
         <p
           v-else
           class="text-xs text-muted-foreground leading-relaxed"
         >
           Play with a <span class="font-semibold text-foreground">2x+</span> multiplier,
-          stake at least <span class="font-semibold text-foreground">KES 20</span>.
+          stake at least <span class="font-semibold text-foreground">UGX 20</span>.
           Earn <span class="text-brand-bright font-semibold">1 point</span> per wager.
         </p>
       </button>
@@ -152,7 +152,7 @@ const handleTabChange = (category) => {
             Earn Points, Climb the Ranks!
           </p>
           <p class="text-sm font-bold text-brand-bright mt-0.5">
-            Win KES 150,000 Weekly!
+            Win UGX 150,000 Weekly!
           </p>
         </div>
       </div>
@@ -196,7 +196,7 @@ const handleTabChange = (category) => {
             <span class="text-[10px] text-muted-foreground">Weekly Prize</span>
           </div>
           <p class="text-xs md:text-sm font-bold text-brand-bright tabular-nums">
-            KES 150,000
+            UGX 150,000
           </p>
         </div>
       </div>
@@ -231,7 +231,7 @@ const handleTabChange = (category) => {
               v-if="myRank.prizeAmount"
               class="text-xs font-semibold text-gold-bright tabular-nums"
             >
-              {{ formattedNumber(myRank.prizeAmount) }} KES
+              {{ formattedNumber(myRank.prizeAmount) }} UGX
             </p>
           </div>
         </div>
@@ -310,7 +310,7 @@ const handleTabChange = (category) => {
                     {{ secondPlace?.msisdn }}
                   </p>
                   <p class="text-[10px] md:text-xs font-bold text-gray-300 tabular-nums">
-                    {{ formattedNumber(secondPlace?.prizeAmount) }} KES
+                    {{ formattedNumber(secondPlace?.prizeAmount) }} UGX
                   </p>
                 </div>
 
@@ -325,7 +325,7 @@ const handleTabChange = (category) => {
                     {{ firstPlace?.msisdn }}
                   </p>
                   <p class="text-[11px] md:text-sm font-bold text-gold-bright tabular-nums">
-                    {{ formattedNumber(firstPlace?.prizeAmount) }} KES
+                    {{ formattedNumber(firstPlace?.prizeAmount) }} UGX
                   </p>
                 </div>
 
@@ -340,7 +340,7 @@ const handleTabChange = (category) => {
                     {{ thirdPlace?.msisdn }}
                   </p>
                   <p class="text-[10px] md:text-xs font-bold text-amber-400 tabular-nums">
-                    {{ formattedNumber(thirdPlace?.prizeAmount) }} KES
+                    {{ formattedNumber(thirdPlace?.prizeAmount) }} UGX
                   </p>
                 </div>
               </div>

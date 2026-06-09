@@ -10,17 +10,17 @@ const steps = [
   {
     num: 2,
     title: "Friend Signs Up",
-    desc: "Your friend registers on 7bet and deposits KSH 49 or more.",
+    desc: "Your friend registers on 7bet and deposits UGX 49 or more.",
   },
   {
     num: 3,
     title: "They Play Aviator",
-    desc: "They play at least 3 Aviator rounds with a 1.5x multiplier and a total stake of KSH 49 or more.",
+    desc: "They play at least 3 Aviator rounds with a 1.5x multiplier and a total stake of UGX 49 or more.",
   },
   {
     num: 4,
     title: "You Get Rewarded!",
-    desc: "Boom! You receive a KSH 100 Aviator Free Bet instantly.",
+    desc: "Boom! You receive a UGX 100 Aviator Free Bet instantly.",
   },
 ];
 
@@ -45,10 +45,10 @@ const shareChannels = [
             <span class="text-[11px] font-bold text-gold-bright uppercase tracking-wider">Refer & Earn</span>
           </div>
           <h1 class="text-2xl font-bold text-foreground leading-tight">
-            Invite Friends & Earn KSH 100 Free Bet
+            Invite Friends & Earn UGX 100 Free Bet
           </h1>
           <p class="text-sm text-muted-foreground mt-2 leading-relaxed max-w-md">
-            Get a <span class="font-bold text-gold-bright">KSH 100 Aviator Free Bet</span> for every friend you invite. No limits — the more friends, the more free bets!
+            Get a <span class="font-bold text-gold-bright">UGX 100 Aviator Free Bet</span> for every friend you invite. No limits — the more friends, the more free bets!
           </p>
         </div>
       </div>
@@ -56,7 +56,7 @@ const shareChannels = [
       <!-- Reward highlight strip -->
       <div class="flex items-center justify-center gap-3 px-5 py-3.5 bg-brand-bright/5 dark:bg-brand-bright/8 border-t border-border/20">
         <div class="text-center">
-          <p class="text-2xl font-bold text-brand-bright tabular-nums">KSH 100</p>
+          <p class="text-2xl font-bold text-brand-bright tabular-nums">UGX 100</p>
           <p class="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Free Bet Per Referral</p>
         </div>
         <div class="w-px h-8 bg-border/30"></div>

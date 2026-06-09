@@ -222,7 +222,7 @@ function formatInt(n) {
           <span class="mr-1">🪙</span>
           <span class="font-bold">{{ lastWinner.phone }}</span>
           <span class="text-white/80"> won </span>
-          <span class="font-bold">KSH {{ formatInt(lastWinner.amount) }}</span>
+          <span class="font-bold">UGX {{ formatInt(lastWinner.amount) }}</span>
           <span class="text-white/80"> in </span>
           <span class="font-bold">{{ lastWinner.gameName }}</span>
         </p>

@@ -20,7 +20,7 @@
           Refer Friends, Get Paid, Get Mbuzi.
         </h1>
         <p class="text-xl font-light mb-8">
-          We’re giving away three Mbuzis worth KES 5,000 every single day!
+          We’re giving away three Mbuzis worth UGX 5,000 every single day!
           Everyone eats, even if you miss the goat, you earn cash for every
           single friend.
         </p>
@@ -56,9 +56,9 @@
               </thead>
               <tbody>
                 <tr class="border-b border-gray-200 dark:border-purple-700">
-                  <td class="p-3">Instant Sign-Up Cash (min KES 30 bet)</td>
+                  <td class="p-3">Instant Sign-Up Cash (min UGX 30 bet)</td>
                   <td class="p-3 font-bold text-yellow-500">
-                    KES 30 Instantly
+                    UGX 30 Instantly
                   </td>
                 </tr>
                 <tr
@@ -135,31 +135,31 @@
                 class="text-xl font-extrabold bg-red-100 dark:bg-purple-800/50"
               >
                 <td class="p-3 border-r border-yellow-600">1st - 3rd</td>
-                <td class="p-3 text-yellow-500">🐐 Mbuzi (KES 5,000 Cash)</td>
+                <td class="p-3 text-yellow-500">🐐 Mbuzi (UGX 5,000 Cash)</td>
               </tr>
               <tr class="bg-white dark:bg-secondary">
                 <td class="p-3 border-r border-gray-200 dark:border-purple-700">
                   4th - 5th
                 </td>
-                <td class="p-3 font-semibold text-red-500">💰 KES 2,000</td>
+                <td class="p-3 font-semibold text-red-500">💰 UGX 2,000</td>
               </tr>
               <tr class="bg-gray-50 dark:bg-card">
                 <td class="p-3 border-r border-gray-200 dark:border-purple-700">
                   6th - 10th
                 </td>
-                <td class="p-3 font-semibold text-red-500">💸 KES 1,000</td>
+                <td class="p-3 font-semibold text-red-500">💸 UGX 1,000</td>
               </tr>
               <tr class="bg-white dark:bg-secondary">
                 <td class="p-3 border-r border-gray-200 dark:border-purple-700">
                   11th - 20th
                 </td>
-                <td class="p-3 font-semibold text-red-500">💵 KES 500</td>
+                <td class="p-3 font-semibold text-red-500">💵 UGX 500</td>
               </tr>
               <tr class="bg-gray-50 dark:bg-card">
                 <td class="p-3 border-r border-gray-200 dark:border-purple-700">
                   21st - 30th
                 </td>
-                <td class="p-3 font-semibold text-red-500">🪙 KES 200</td>
+                <td class="p-3 font-semibold text-red-500">🪙 UGX 200</td>
               </tr>
             </tbody>
           </table>
@@ -177,7 +177,7 @@
           <p>
             Welcome Bonus: Your friends unlock over
             <span class="text-yellow-500 font-bold"
-              >KES 800 in Welcome Bonuses</span
+              >UGX 800 in Welcome Bonuses</span
             >
             immediately after joining.
           </p>
@@ -207,11 +207,11 @@
         <ul class="list-disc pl-5 space-y-1 mb-6">
           <li>
             Qualifying Referral: A friend counts as a referral only after they
-            sign up, deposit, and place a sportsbook bet of min KES 30.
+            sign up, deposit, and place a sportsbook bet of min UGX 30.
           </li>
           <li>Daily Reset: The leaderboard runs from 00:00 to 23:59 daily.</li>
           <li>
-            Prize Distribution: Mbuzi winners (Top 3) receive KES 5,000 credited
+            Prize Distribution: Mbuzi winners (Top 3) receive UGX 5,000 credited
             to their account.
           </li>
           <li>

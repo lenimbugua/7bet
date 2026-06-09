@@ -18,7 +18,7 @@ const { downloadApp } = useDownloadApp();
           <span class="animate-pulse">🔥</span>
         </div>
         <span class="text-xs">Download App Today</span>
-        <!-- <span class="text-fuchsia-600 font-black text-xs">KES.30</span> -->
+        <!-- <span class="text-fuchsia-600 font-black text-xs">UGX.30</span> -->
         <div class="flex space-x-1 justify-between">
           <span class="animate-pulse">🔥</span>
           <span class="animate-pulse">🔥</span>

@@ -13,7 +13,7 @@ import { GiftIcon } from "@heroicons/vue/24/solid";
           <GiftIcon class="h-5 w-5 text-fuchsia-600" />
         </div>
         <span>Congrats! Free Bet</span>
-        <span class="text-fuchsia-600 font-black">KES.20</span>
+        <span class="text-fuchsia-600 font-black">UGX.20</span>
         <span>Haki League</span>
       </div>
       <div>

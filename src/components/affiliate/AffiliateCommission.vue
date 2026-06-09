@@ -22,13 +22,13 @@ const { earnings } = storeToRefs(useAffiliateStore());
 
       <p class="text-sm text-muted-foreground leading-relaxed">
         Get
-        <span class="text-brand-bright font-bold">KSH 30</span> instantly for
-        every friend you refer who wagers KSH 30.
+        <span class="text-brand-bright font-bold">UGX 30</span> instantly for
+        every friend you refer who wagers UGX 30.
       </p>
 
       <div class="pt-2 border-t border-border/50">
         <p class="text-base font-bold tabular-nums text-foreground">
-          KSH
+          UGX
           {{ formattedNumber(earnings?.earnings?.totalPlayerRegisteredEarnings) }}
         </p>
         <p class="text-xs text-muted-foreground">Revenue earned</p>
@@ -54,7 +54,7 @@ const { earnings } = storeToRefs(useAffiliateStore());
 
       <div class="pt-2 border-t border-border/50">
         <p class="text-base font-bold tabular-nums text-foreground">
-          KSH
+          UGX
           {{ formattedNumber(earnings?.earnings?.totalPlayerRevenueEarnings) }}
         </p>
         <p class="text-xs text-muted-foreground">Revenue earned</p>

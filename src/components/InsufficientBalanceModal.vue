@@ -116,7 +116,7 @@ function closeThisModal() {
                         Balance
                       </div>
                       <div class="text-lg font-bold text-gray-900 dark:text-white tabular-nums leading-tight">
-                        {{ balance }} <span class="text-[0.6rem] font-medium text-gray-400 dark:text-gray-500">KES</span>
+                        {{ balance }} <span class="text-[0.6rem] font-medium text-gray-400 dark:text-gray-500">UGX</span>
                       </div>
                     </div>
                     <div class="w-px bg-gray-200 dark:bg-white/8"></div>
@@ -125,7 +125,7 @@ function closeThisModal() {
                         Needed
                       </div>
                       <div class="text-lg font-bold text-amber-600 dark:text-amber-400 tabular-nums leading-tight">
-                        {{ deposit }} <span class="text-[0.6rem] font-medium text-gray-400 dark:text-gray-500">KES</span>
+                        {{ deposit }} <span class="text-[0.6rem] font-medium text-gray-400 dark:text-gray-500">UGX</span>
                       </div>
                     </div>
                   </div>

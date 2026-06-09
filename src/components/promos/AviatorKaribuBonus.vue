@@ -39,25 +39,25 @@ import { RouterLink } from "vue-router";
         </thead>
         <tbody>
           <tr class="border-b border-gray-300 dark:border-gray-700">
-            <td class="p-2">Ksh 100 – 500</td>
+            <td class="p-2">UGX 100 – 500</td>
             <td class="p-2">5 Free Bets</td>
           </tr>
           <tr class="border-b border-gray-300 dark:border-gray-700">
-            <td class="p-2">Ksh 501 – 1,000</td>
+            <td class="p-2">UGX 501 – 1,000</td>
             <td class="p-2">10 Free Bets</td>
           </tr>
           <tr class="border-b border-gray-300 dark:border-gray-700">
-            <td class="p-2">Ksh 1,001 – 5,000</td>
+            <td class="p-2">UGX 1,001 – 5,000</td>
             <td class="p-2">20 Free Bets</td>
           </tr>
           <tr>
-            <td class="p-2">Ksh 5,001+</td>
+            <td class="p-2">UGX 5,001+</td>
             <td class="p-2">50 Free Bets</td>
           </tr>
         </tbody>
       </table>
       <ul class="list-disc pl-6 mt-3 space-y-1">
-        <li>👉 Each free bet is worth <strong>Ksh 10</strong></li>
+        <li>👉 Each free bet is worth <strong>UGX 10</strong></li>
         <li>👉 Winnings are real cash (no wagering required!)</li>
       </ul>
     </div>
@@ -89,7 +89,7 @@ import { RouterLink } from "vue-router";
         <li>
           Free Aviator Bets are awarded based on your first deposit amount only.
         </li>
-        <li>Each free bet is worth <strong>Ksh 10</strong>.</li>
+        <li>Each free bet is worth <strong>UGX 10</strong>.</li>
         <li>
           Winnings from free bets are credited as real cash (no wagering
           requirements).

@@ -86,7 +86,7 @@ getCashoutValue(props.bet.betId, false);
     >
       <span class="cashout-label">CASHOUT</span>
       <template v-if="cashoutData?.cashOutAllowed">
-        <span class="cashout-amount">KES {{ cashoutData?.cashOutValue }}</span>
+        <span class="cashout-amount">UGX {{ cashoutData?.cashOutValue }}</span>
       </template>
       <span v-else class="cashout-label">UNAVAILABLE</span>
     </button>

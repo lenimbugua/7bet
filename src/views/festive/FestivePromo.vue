@@ -71,7 +71,7 @@
         >
           <h3 class="text-xl font-bold mb-3">Instant Bonuses 💰</h3>
           <p class="text-gray-300">
-            Earn 5% affiliate bonus (up to KES 200) when your friend deposits
+            Earn 5% affiliate bonus (up to UGX 200) when your friend deposits
             and wagers.
           </p>
         </div>

@@ -54,13 +54,13 @@ onUnmounted(() => {
 
         <div class="flex-1 min-w-0">
           <p class="text-sm text-foreground font-bold mb-0.5">
-            Deposit <span class="text-accent">1,000 KES</span>
+            Deposit <span class="text-accent">1,000 UGX</span>
           </p>
           <p class="text-xs text-primary font-semibold">
             Get <span class="text-lg font-bold">100%</span> Match Bonus!
           </p>
           <p class="text-[10px] text-foreground/60">
-            That's <span class="text-foreground font-bold">2,000 KES</span> to play with!
+            That's <span class="text-foreground font-bold">2,000 UGX</span> to play with!
           </p>
         </div>
 

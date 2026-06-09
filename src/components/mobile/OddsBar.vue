@@ -68,7 +68,7 @@ function openBetslip() {
         <div class="flex items-center gap-2">
           <div class="flex flex-col items-end">
             <span class="text-[0.6rem] font-semibold uppercase tracking-wide text-white/45">Win</span>
-            <span class="text-[0.85rem] font-extrabold text-brand-bright tabular-nums">KES {{ possibleWin }}</span>
+            <span class="text-[0.85rem] font-extrabold text-brand-bright tabular-nums">UGX {{ possibleWin }}</span>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-brand-bright/70">
             <path fill-rule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clip-rule="evenodd" />

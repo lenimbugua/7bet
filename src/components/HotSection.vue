@@ -542,7 +542,7 @@ const isLoading = computed(() => {
                   </div>
                   <span
                     class="text-[0.65rem] font-bold text-emerald-300 bg-emerald-400/10 px-2 py-0.5 rounded-full tabular-nums"
-                    >KES {{ freebetStore.stake }}</span
+                    >UGX {{ freebetStore.stake }}</span
                   >
                 </div>
 
@@ -611,7 +611,7 @@ const isLoading = computed(() => {
                     >
                       Win:
                       <span class="font-bold text-emerald-300 tabular-nums"
-                        >KES {{ freebetPossibleWin }}</span
+                        >UGX {{ freebetPossibleWin }}</span
                       >
                     </span>
                     <span v-else class="text-[0.65rem] text-white/30"

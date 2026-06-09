@@ -57,12 +57,12 @@ const prizeData = [
 const sportsbookPoints = [
   { text: "Place a multibet with 3+ selections" },
   { text: "Each selection: odds of 1.6 or higher" },
-  { text: "Earn 1 point per KES 20 staked" },
+  { text: "Earn 1 point per UGX 20 staked" },
 ];
 
 const casinoPoints = [
   { text: "Play with a 2x multiplier or higher" },
-  { text: "Stake at least KES 20 per wager" },
+  { text: "Stake at least UGX 20 per wager" },
   { text: "Earn 1 point per qualifying wager" },
 ];
 
@@ -76,7 +76,7 @@ const casinoPoints = [
 const termsContent = [
   {
     title: "1. Introduction",
-    content: `1.1. These Terms and Conditions ("Terms") govern participation in the 7bet Weekly Leaderboard Promotion ("Promotion"), operated by 7bet ("the Company", "we", "us", or "our").\n\n1.2. By participating in the Promotion, you ("Participant", "Player", or "you") agree to be bound by these Terms, 7bet' General Terms and Conditions, and Privacy Policy.\n\n1.3. The Promotion consists of two separate leaderboards: the Sportsbook Leaderboard and the Casino Leaderboard, each with a weekly prize pool of KES 300,000.`,
+    content: `1.1. These Terms and Conditions ("Terms") govern participation in the 7bet Weekly Leaderboard Promotion ("Promotion"), operated by 7bet ("the Company", "we", "us", or "our").\n\n1.2. By participating in the Promotion, you ("Participant", "Player", or "you") agree to be bound by these Terms, 7bet' General Terms and Conditions, and Privacy Policy.\n\n1.3. The Promotion consists of two separate leaderboards: the Sportsbook Leaderboard and the Casino Leaderboard, each with a weekly prize pool of UGX 300,000.`,
   },
   {
     title: "2. Eligibility",
@@ -88,11 +88,11 @@ const termsContent = [
   },
   {
     title: "4. Sportsbook Leaderboard Rules",
-    content: `4.1. Qualifying Bets must contain a minimum of 3 selections, each with odds of 1.60 or higher, placed using real money.\n\n4.2. Earn 1 point for every KES 20 staked on qualifying bets, regardless of outcome.\n\n4.3. Non-qualifying: single bets, fewer than 3 selections, odds below 1.60, bonus funds, cashed-out or void bets.`,
+    content: `4.1. Qualifying Bets must contain a minimum of 3 selections, each with odds of 1.60 or higher, placed using real money.\n\n4.2. Earn 1 point for every UGX 20 staked on qualifying bets, regardless of outcome.\n\n4.3. Non-qualifying: single bets, fewer than 3 selections, odds below 1.60, bonus funds, cashed-out or void bets.`,
   },
   {
     title: "5. Casino Leaderboard Rules",
-    content: `5.1. Qualifying wagers must be on games with 2x+ multiplier, minimum KES 20 stake, using real money.\n\n5.2. Earn 1 point per qualifying wager, regardless of amount (above KES 20 minimum).\n\n5.3. All casino games with 2x+ multiplier qualify including slots, crash, table, and live games.\n\n5.4. Non-qualifying: wagers below KES 20, multipliers below 2x, bonus funds, void wagers.`,
+    content: `5.1. Qualifying wagers must be on games with 2x+ multiplier, minimum UGX 20 stake, using real money.\n\n5.2. Earn 1 point per qualifying wager, regardless of amount (above UGX 20 minimum).\n\n5.3. All casino games with 2x+ multiplier qualify including slots, crash, table, and live games.\n\n5.4. Non-qualifying: wagers below UGX 20, multipliers below 2x, bonus funds, void wagers.`,
   },
   {
     title: "6. Leaderboard Updates",
@@ -147,7 +147,7 @@ const termsContent = [
 
         <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-8">
           Compete weekly for a share of
-          <span class="text-gold-bright font-bold">KES 300,000</span> in prizes.
+          <span class="text-gold-bright font-bold">UGX 300,000</span> in prizes.
           Place bets, earn points, and rise to the top.
         </p>
 
@@ -155,7 +155,7 @@ const termsContent = [
           <div
             class="bg-white dark:bg-surface-elevated border border-gray-100 dark:border-border-subtle rounded-2xl px-6 py-4 text-center"
           >
-            <div class="text-2xl font-bold text-gold-bright font-display">KES 300K</div>
+            <div class="text-2xl font-bold text-gold-bright font-display">UGX 300K</div>
             <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Weekly Prize Pool</div>
           </div>
           <div
@@ -230,7 +230,7 @@ const termsContent = [
               <div class="text-xs text-gold-bright font-semibold mb-1">EXAMPLE</div>
               <p class="text-sm text-gray-700 dark:text-gray-300">
                 Stake
-                <span class="dark:text-white text-primary-foreground font-medium">KES 1,000</span>
+                <span class="dark:text-white text-primary-foreground font-medium">UGX 1,000</span>
                 on a qualifying multibet =
                 <span class="text-brand-bright font-bold">50 points</span> earned
               </p>
@@ -335,7 +335,7 @@ const termsContent = [
           <h2 class="font-display text-3xl md:text-4xl font-bold mb-2">
             Weekly Prize Pool:
             <span class="text-transparent bg-clip-text bg-linear-to-r from-[#FFB002] to-[#FF8C00]">
-              KES 300,000
+              UGX 300,000
             </span>
           </h2>
         </div>
@@ -351,7 +351,7 @@ const termsContent = [
             <div
               class="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 text-right"
             >
-              Prize (KES)
+              Prize (UGX)
             </div>
           </div>
           <div
@@ -400,7 +400,7 @@ const termsContent = [
             class="bg-white dark:bg-surface-elevated border border-gray-100 dark:border-border-subtle rounded-2xl p-4 text-center"
           >
             <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">{{ item.label }}</div>
-            <div class="font-display font-bold" :class="item.colorClass">KES {{ item.amount }}</div>
+            <div class="font-display font-bold" :class="item.colorClass">UGX {{ item.amount }}</div>
           </div>
         </div> -->
       </div>

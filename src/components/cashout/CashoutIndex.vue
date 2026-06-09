@@ -77,7 +77,7 @@ onBeforeUnmount(() => {
       <!-- Cashout value display -->
       <div v-if="cashoutData" class="cashout-value-card">
         <span class="cashout-value-label">Current Cashout Value</span>
-        <span class="cashout-value-amount">KES {{ cashoutData.cashOutValue }}</span>
+        <span class="cashout-value-amount">UGX {{ cashoutData.cashOutValue }}</span>
       </div>
 
       <div v-if="selectedCashout === 'instant'">

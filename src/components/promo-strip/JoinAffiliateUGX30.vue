@@ -22,7 +22,7 @@
           </svg>
         </div>
         <span>Get</span>
-        <span class="text-fuchsia-700 font-black">KES.30</span>
+        <span class="text-fuchsia-700 font-black">UGX.30</span>
         <span>Per Referral</span>
       </div>
       <div>

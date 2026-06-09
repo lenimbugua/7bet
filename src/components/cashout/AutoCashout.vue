@@ -42,7 +42,7 @@ const handleCashout = (betId) => {
         <TheButtonSpin v-if="pending" />
         <template v-else>
           <span>Cancel Auto Cashout</span>
-          <span class="cashout-btn-tag">{{ cashoutData.autoCashOutAmount }} KES</span>
+          <span class="cashout-btn-tag">{{ cashoutData.autoCashOutAmount }} UGX</span>
         </template>
       </button>
     </div>
@@ -56,9 +56,9 @@ const handleCashout = (betId) => {
 
       <!-- Amount input card -->
       <div class="cashout-input-card">
-        <label for="autoCashoutAmount" class="cashout-input-label">Amount (KES)</label>
+        <label for="autoCashoutAmount" class="cashout-input-label">Amount (UGX)</label>
         <div class="cashout-input-wrap" :class="{ 'cashout-input-wrap-error': !isValid }">
-          <span class="cashout-input-prefix">KES</span>
+          <span class="cashout-input-prefix">UGX</span>
           <input
             id="autoCashoutAmount"
             v-model="autoCashoutAmount"
@@ -70,16 +70,16 @@ const handleCashout = (betId) => {
           />
         </div>
         <div v-if="!isValid" class="cashout-error-text">
-          Amount must be between {{ min }} and {{ cashoutData?.possibleWin }} KES
+          Amount must be between {{ min }} and {{ cashoutData?.possibleWin }} UGX
         </div>
         <div class="cashout-range">
           <div class="cashout-range-item">
             <span class="cashout-range-label">Min</span>
-            <span class="cashout-range-value">{{ min }} KES</span>
+            <span class="cashout-range-value">{{ min }} UGX</span>
           </div>
           <div class="cashout-range-item">
             <span class="cashout-range-label">Max</span>
-            <span class="cashout-range-value">{{ cashoutData?.possibleWin }} KES</span>
+            <span class="cashout-range-value">{{ cashoutData?.possibleWin }} UGX</span>
           </div>
         </div>
       </div>

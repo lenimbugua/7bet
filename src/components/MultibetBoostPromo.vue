@@ -68,7 +68,7 @@
             <ul class="mt-3 space-y-2 text-sm">
               <li class="flex items-start gap-2">
                 <span>✅</span
-                ><span>Minimum stake: <strong>KES 10</strong></span>
+                ><span>Minimum stake: <strong>UGX 10</strong></span>
               </li>
               <li class="flex items-start gap-2">
                 <span>✅</span><span>Min selections: <strong>3+</strong></span>
@@ -157,9 +157,9 @@
             <h4 class="font-semibold">5-Selection (7% Boost)</h4>
             <ul class="text-sm mt-2 space-y-1 opacity-90">
               <li>Odds: 2.0 × 1.8 × 2.2 × 1.9 × 2.1 = <strong>30.3</strong></li>
-              <li>Stake: <strong>KES 100</strong></li>
-              <li>Standard payout: <strong>KES 3,030</strong></li>
-              <li>With 7%: <strong>KES 3,242.10</strong> (+KES 212.10)</li>
+              <li>Stake: <strong>UGX 100</strong></li>
+              <li>Standard payout: <strong>UGX 3,030</strong></li>
+              <li>With 7%: <strong>UGX 3,242.10</strong> (+UGX 212.10)</li>
             </ul>
           </div>
 
@@ -169,9 +169,9 @@
             <h4 class="font-semibold">15-Selection (34% Boost)</h4>
             <ul class="text-sm mt-2 space-y-1 opacity-90">
               <li>Combined odds: <strong>1,250.0</strong></li>
-              <li>Stake: <strong>KES 100</strong></li>
-              <li>Standard payout: <strong>KES 125,000</strong></li>
-              <li>With 34%: <strong>KES 167,500</strong> (+KES 42,500)</li>
+              <li>Stake: <strong>UGX 100</strong></li>
+              <li>Standard payout: <strong>UGX 125,000</strong></li>
+              <li>With 34%: <strong>UGX 167,500</strong> (+UGX 42,500)</li>
             </ul>
           </div>
 
@@ -181,10 +181,10 @@
             <h4 class="font-semibold">30-Selection (100% Boost)</h4>
             <ul class="text-sm mt-2 space-y-1 opacity-90">
               <li>Combined odds: <strong>50,000.0</strong></li>
-              <li>Stake: <strong>KES 100</strong></li>
-              <li>Standard payout: <strong>KES 5,000,000</strong></li>
+              <li>Stake: <strong>UGX 100</strong></li>
+              <li>Standard payout: <strong>UGX 5,000,000</strong></li>
               <li>
-                With 100%: <strong>KES 10,000,000</strong> (+KES 5,000,000)
+                With 100%: <strong>UGX 10,000,000</strong> (+UGX 5,000,000)
               </li>
             </ul>
           </div>
@@ -200,7 +200,7 @@
             <li>• Minimum <strong>3 selections</strong> per multibet</li>
             <li>• Minimum odds per leg: <strong>1.30</strong></li>
             <li>• Minimum total odds: <strong>3.0</strong></li>
-            <li>• Minimum stake: <strong>KES 10</strong></li>
+            <li>• Minimum stake: <strong>UGX 10</strong></li>
           </ul>
         </div>
 
@@ -237,7 +237,7 @@
                 <strong>different matches/events</strong>
               </li>
               <li>
-                • Maximum boost amount: <strong>KES 100,000</strong> per
+                • Maximum boost amount: <strong>UGX 100,000</strong> per
                 multibet
               </li>
             </ul>
@@ -254,7 +254,7 @@
                 excluded)
               </li>
               <li>
-                • Max boost cap: <strong>KES 100,000</strong> per multibet
+                • Max boost cap: <strong>UGX 100,000</strong> per multibet
               </li>
             </ul>
           </div>
@@ -293,7 +293,7 @@
             <li>Select Your Matches: pick favorites across sports</li>
             <li>Add to Betslip: minimum 3 selections at 1.30+</li>
             <li>Check Your Boost: auto-calculated percentage</li>
-            <li>Place Your Bet: min stake KES 10</li>
+            <li>Place Your Bet: min stake UGX 10</li>
             <li>Watch & Win: enjoy enhanced returns when all win!</li>
           </ol>
         </div>

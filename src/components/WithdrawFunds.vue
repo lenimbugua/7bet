@@ -75,7 +75,7 @@ onUnmounted(() => {
           <p class="balance-label">Available Balance</p>
           <div class="flex items-center gap-2">
             <p class="balance-amount">
-              <span class="balance-currency">KES</span>
+              <span class="balance-currency">UGX</span>
               <span v-if="showBalance">{{ formattedNumber(balance) }}</span>
               <span v-else class="tracking-widest">****</span>
             </p>
@@ -121,21 +121,21 @@ onUnmounted(() => {
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 shrink-0">
             <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495ZM10 5a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 10 5Zm0 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd" />
           </svg>
-          <p>Your balance (KES {{ formattedNumber(balance) }}) is below the minimum withdrawal of KES {{ formattedNumber(MIN_WITHDRAWAL) }}.</p>
+          <p>Your balance (UGX {{ formattedNumber(balance) }}) is below the minimum withdrawal of UGX {{ formattedNumber(MIN_WITHDRAWAL) }}.</p>
         </div>
 
         <!-- Amount input -->
         <div class="space-y-2">
           <label for="withdraw-amount" class="input-label">Amount</label>
           <div class="input-wrap" :class="{ 'input-wrap-error': balanceBelowMin }">
-            <span class="input-prefix">KES</span>
+            <span class="input-prefix">UGX</span>
             <input
               id="withdraw-amount"
               v-model="withdrawAmount"
               type="number"
               :min="MIN_WITHDRAWAL"
               :max="getMaxWithdrawal()"
-              aria-label="Withdrawal amount in KES"
+              aria-label="Withdrawal amount in UGX"
               class="amount-input"
               placeholder="100"
               name="withdraw"
@@ -172,12 +172,12 @@ onUnmounted(() => {
         <div class="info-strip">
           <div class="info-row">
             <span class="info-label">Min withdrawal</span>
-            <span class="info-value">KES {{ formattedNumber(MIN_WITHDRAWAL) }}</span>
+            <span class="info-value">UGX {{ formattedNumber(MIN_WITHDRAWAL) }}</span>
           </div>
           <div class="info-divider" />
           <div class="info-row">
             <span class="info-label">Max withdrawal</span>
-            <span class="info-value">KES {{ formattedNumber(getMaxWithdrawal()) }}</span>
+            <span class="info-value">UGX {{ formattedNumber(getMaxWithdrawal()) }}</span>
           </div>
           <div class="info-divider" />
           <!-- <div class="info-row">

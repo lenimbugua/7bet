@@ -20,11 +20,11 @@
       </div>
       <div class="text-gray-300 text-sm">
         Refer a friend and get
-        <span class="font-bold text-amber-500">KES 30</span> instantly when they
-        deposit and wager KES 30 on sportsbook. Plus, earn
+        <span class="font-bold text-amber-500">UGX 30</span> instantly when they
+        deposit and wager UGX 30 on sportsbook. Plus, earn
         <span class="font-bold text-amber-500">10%</span> on all their first 7 days deposits.
         Your friend gets over
-        <span class="font-bold text-amber-500">KES 800</span>
+        <span class="font-bold text-amber-500">UGX 800</span>
         in bonuses too!
       </div>
     </div>

@@ -94,7 +94,7 @@ async function resetCashout() {
             <span class="leading-none text-brand-bright font-semibold text-lg">{{
               cashoutData.cashOutValue
             }}</span
-            ><span class="text-xs text-gray-600 dark:text-slate-600"> KES</span>
+            ><span class="text-xs text-gray-600 dark:text-slate-600"> UGX</span>
           </div>
           <div>
             <span class="text-left text-gray-600 dark:text-slate-400 text-xs"
@@ -111,7 +111,7 @@ async function resetCashout() {
         <div>
           <div class="text-gray-950 dark:text-slate-400">
             <span>{{ cashoutData.betAmount }}</span
-            ><span class="text-xs text-gray-600 dark:text-slate-600"> KES</span>
+            ><span class="text-xs text-gray-600 dark:text-slate-600"> UGX</span>
           </div>
           <div class="text-gray-600 dark:text-slate-400">
             <span>Stake</span>
@@ -120,7 +120,7 @@ async function resetCashout() {
         <div>
           <div class="text-gray-950 dark:text-slate-400">
             <span>{{ cashoutData.possibleWin }}</span
-            ><span class="text-xs text-gray-600 dark:text-slate-600"> KES</span>
+            ><span class="text-xs text-gray-600 dark:text-slate-600"> UGX</span>
           </div>
           <div class="text-gray-600 dark:text-slate-400">
             <span>To win</span>

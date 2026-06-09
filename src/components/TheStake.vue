@@ -56,7 +56,7 @@ function formatStakeLabel(amount) {
         <span class="font-bold text-gray-700 dark:text-white/60">
           {{ parseFloat(balance).toFixed("2") }}
         </span>
-        <span class="text-[0.6rem]">KES</span>
+        <span class="text-[0.6rem]">UGX</span>
       </div>
       <TotalOdds :total-odds />
     </div>
@@ -96,12 +96,12 @@ function formatStakeLabel(amount) {
         </button>
         <div class="relative flex-1">
           <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-[0.65rem] font-medium text-gray-400 dark:text-white/25 pointer-events-none">
-            KES
+            UGX
           </span>
           <input
             v-model="selectedStakeAmount"
             type="number"
-            aria-label="Stake amount in KES"
+            aria-label="Stake amount in UGX"
             class="w-full pl-10 pr-3 py-2 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200/80 dark:border-white/8 text-right text-[0.85rem] font-bold text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-bright/30 focus:border-brand-bright/30 transition-all stake-input"
             required
             @input="updateStake(selectedStakeAmount)"

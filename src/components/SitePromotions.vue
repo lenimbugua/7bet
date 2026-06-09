@@ -17,7 +17,7 @@
         class="block p-3 rounded-lg bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
       >
         <div class="text-sm font-medium text-gray-900 dark:text-white">Join Affiliate</div>
-        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Earn up to KES 50,000 weekly</div>
+        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Earn up to UGX 50,000 weekly</div>
       </RouterLink>
     </div>
   </div>

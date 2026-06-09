@@ -9,7 +9,7 @@
           7bet Aviator Welcome Bonus
         </h1>
         <p class="text-lg md:text-xl font-medium text-gold-bright">
-          Supercharge your first week with up to KES 250 in free Aviator bets!
+          Supercharge your first week with up to UGX 250 in free Aviator bets!
         </p>
       </header>
 
@@ -24,8 +24,8 @@
           potential rewards.
         </p>
         <p class="font-semibold text-gold-bright">
-          Earn up to 25 free bets worth KES 10 each during your first 5 days —
-          total value KES 250!
+          Earn up to 25 free bets worth UGX 10 each during your first 5 days —
+          total value UGX 250!
         </p>
       </div>
 
@@ -48,7 +48,7 @@
           <h2 class="text-2xl font-bold text-brand-dark">How It Works</h2>
           <ul class="list-decimal pl-6 space-y-2">
             <li>Place 10 qualifying bets in a day</li>
-            <li>Receive 5 free bets (KES 10 each) by 2:00 PM next day</li>
+            <li>Receive 5 free bets (UGX 10 each) by 2:00 PM next day</li>
             <li>Repeat up to 5 days after registration</li>
           </ul>
         </div>
@@ -62,7 +62,7 @@
           Qualifying Bet Criteria
         </h2>
         <ul class="list-disc pl-6 space-y-2">
-          <li>Minimum stake: <strong>KES 10+</strong></li>
+          <li>Minimum stake: <strong>UGX 10+</strong></li>
           <li>Game: <strong>Aviator only</strong></li>
           <li>Outcome: Cashed out at <strong>2.0x+</strong> OR a losing bet</li>
         </ul>
@@ -84,7 +84,7 @@
             <tr class="bg-white dark:bg-background">
               <td class="py-3 px-4">Day 1</td>
               <td class="py-3 px-4">10 qualifying bets</td>
-              <td class="py-3 px-4">5 free bets (KES 10 each)</td>
+              <td class="py-3 px-4">5 free bets (UGX 10 each)</td>
             </tr>
             <tr>
               <td class="py-3 px-4">Days 2–5</td>

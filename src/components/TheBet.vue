@@ -56,7 +56,7 @@ function showRebet(status) {
       <div class="bet-financials">
         <div class="bet-financial-item">
           <span class="bet-label">Stake</span>
-          <span class="bet-value">KES {{ bet.betAmount.toFixed("2") }}</span>
+          <span class="bet-value">UGX {{ bet.betAmount.toFixed("2") }}</span>
         </div>
         <div class="bet-financial-item text-center">
           <span class="bet-label">Odds</span>
@@ -65,7 +65,7 @@ function showRebet(status) {
         <div class="bet-financial-item text-right">
           <span class="bet-label">{{ bet.status === won ? 'Won' : bet.status === cashedOut ? 'Cashed Out' : 'To Win' }}</span>
           <span class="bet-value-highlight" :class="'win-' + bet.status">
-            KES {{ bet.status === cashedOut ? bet?.cashedOutAmount?.toFixed("2") : bet.possibleWin.toFixed("2") }}
+            UGX {{ bet.status === cashedOut ? bet?.cashedOutAmount?.toFixed("2") : bet.possibleWin.toFixed("2") }}
           </span>
         </div>
       </div>

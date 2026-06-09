@@ -57,7 +57,7 @@ function oneCutReady() {
         <polyline points="12 5 19 12 12 19" />
       </svg>
       <span class="payout-boosted">{{ possibleWin }}</span>
-      <span class="payout-currency">KES</span>
+      <span class="payout-currency">UGX</span>
     </div>
 
     <!-- 1 Cut Win progress -->

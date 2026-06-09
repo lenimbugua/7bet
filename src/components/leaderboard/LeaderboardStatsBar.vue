@@ -21,7 +21,7 @@ const stats = [
   {
     icon: GiftIcon,
     label: "Weekly Prize",
-    value: "KES 30,000",
+    value: "UGX 30,000",
     accent: true,
   },
 ];

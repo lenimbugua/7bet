@@ -18,7 +18,7 @@ const { calculateBoostBonus } = useMultibetBonus();
     </div>
     <div class="flex items-baseline gap-1">
       <span class="text-xs font-extrabold text-foreground tabular-nums">{{ calculateBoostBonus(calculatePossibleWin(betslip, stake)) }}</span>
-      <span class="text-[10px] text-muted-foreground">KES</span>
+      <span class="text-[10px] text-muted-foreground">UGX</span>
     </div>
   </div>
 </template>

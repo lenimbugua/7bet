@@ -22,7 +22,7 @@ const {
     <span v-else class="onecut-legs">{{ buildLegsMessage() }}</span>
     <div v-if="isOneCutQualified()" class="onecut-value">
       <span class="onecut-amount">{{ formattedNumber(oneCutAmout()) }}</span>
-      <span class="onecut-currency">KES</span>
+      <span class="onecut-currency">UGX</span>
     </div>
   </div>
 </template>
