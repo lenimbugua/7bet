@@ -81,7 +81,7 @@ const features = [
           Elevate Your Betting Experience
         </h1>
         <p class="text-center text-lg md:text-xl max-w-3xl mx-auto opacity-90">
-          Discover how 7bet, one of Kenya's leading betting platforms,
+          Discover how 7bet, one of Uganda's leading betting platforms,
           offers incredible opportunities for both new and existing users to
           enjoy free bets.
         </p>

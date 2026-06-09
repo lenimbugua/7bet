@@ -7,16 +7,16 @@ const sections = [
   {
     title: "Global Soccer Betting",
     text: "Whether you call it soccer or football, the beautiful game draws crowds and punters from around the globe. Place an online bet on almost any professional football league worldwide with 7bet.",
-    extra: "Follow us for great soccer betting tips, the latest football news, and predictions. Our expert information could make you the next millionaire in Kenya through online sports betting!",
+    extra: "Follow us for great soccer betting tips, the latest football news, and predictions. Our expert information could make you the next millionaire in Uganda through online sports betting!",
   },
   {
     title: "English Premier League",
-    text: "There is a lot of English Premier League action on 7bet, guaranteeing many betting markets. Many Kenyan punters are EPL fans, as shown by Kenya's love for Arsenal and Manchester United.",
+    text: "There is a lot of English Premier League action on 7bet, guaranteeing many betting markets. Many Ugandan punters are EPL fans, as shown by Uganda's love for Arsenal and Manchester United.",
     extra: "Customers can select from Arsenal, Manchester City, Chelsea, and Liverpool. With English Premier League action year-round, customers have many opportunities to win.",
   },
   {
     title: "Local Team Support",
-    text: "7bet proudly supports Kenyan football. We feature local teams in our sports markets, allowing you to bet on the Kenyan Premier League — from AFC Leopards to Gor Mahia, fans have impressive odds for their favourite teams.",
+    text: "7bet proudly supports Ugandan football. We feature local teams in our sports markets, allowing you to bet on the Uganda Premier League — from KCCA FC to Vipers SC, fans have impressive odds for their favourite teams.",
   },
 ];
 

@@ -62,12 +62,12 @@ const legalLinks = [
           <RouterLink :to="{ name: 'home' }" class="inline-flex items-center mb-4">
             <img
               src="/logo-7bet-v2.png"
-              alt="7bet Kenya"
+              alt="7bet Uganda"
               class="h-10 w-auto object-contain"
             />
           </RouterLink>
           <p class="text-xs leading-relaxed text-muted-foreground/70 max-w-xs">
-            Kenya's premier sports betting and casino platform. Bet smart, win big.
+            Uganda's premier sports betting and casino platform. Bet smart, win big.
           </p>
 
           <!-- Social icons -->
@@ -192,7 +192,7 @@ const legalLinks = [
       <div class="h-px bg-border/50 mb-4"></div>
       <div class="flex items-center justify-center">
         <p class="text-[11px] text-muted-foreground/40">
-          &copy; {{ currentYear }} 7bet Kenya. All rights reserved.
+          &copy; {{ currentYear }} 7bet Uganda. All rights reserved.
         </p>
       </div>
     </div>

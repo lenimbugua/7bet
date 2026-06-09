@@ -75,13 +75,13 @@ defineProps({
 defineEmits(["view-more", "play", "play-winner"]);
 
 function formatAmount(n, fixed = 2) {
-  return n.toLocaleString("en-KE", {
+  return n.toLocaleString("en-UG", {
     minimumFractionDigits: Number.isInteger(n) ? 0 : fixed,
     maximumFractionDigits: fixed,
   });
 }
 function formatInt(n) {
-  return n.toLocaleString("en-KE");
+  return n.toLocaleString("en-UG");
 }
 </script>
 

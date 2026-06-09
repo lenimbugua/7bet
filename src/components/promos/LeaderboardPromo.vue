@@ -80,7 +80,7 @@ const termsContent = [
   },
   {
     title: "2. Eligibility",
-    content: `2.1. To participate in the Promotion, you must:\na) Be at least 18 years of age or the legal gambling age in your jurisdiction;\nb) Hold a valid, verified 7bet account in good standing;\nc) Be a resident of Kenya or any other jurisdiction where participation is legally permitted;\nd) Not be an employee, director, or immediate family member of 7bet or its affiliates;\ne) Not have any pending disputes or unresolved issues with your 7bet account.\n\n2.2. 7bet reserves the right to verify the eligibility of any Participant at any time.`,
+    content: `2.1. To participate in the Promotion, you must:\na) Be at least 18 years of age or the legal gambling age in your jurisdiction;\nb) Hold a valid, verified 7bet account in good standing;\nc) Be a resident of Uganda or any other jurisdiction where participation is legally permitted;\nd) Not be an employee, director, or immediate family member of 7bet or its affiliates;\ne) Not have any pending disputes or unresolved issues with your 7bet account.\n\n2.2. 7bet reserves the right to verify the eligibility of any Participant at any time.`,
   },
   {
     title: "3. Promotion Period",
@@ -104,7 +104,7 @@ const termsContent = [
   },
   {
     title: "8. General Terms",
-    content: `8.1. 7bet may modify, suspend, or terminate the Promotion at any time.\n\n8.2. In event of termination, prizes are awarded based on standings at time of termination.\n\n8.3. These Terms are governed by the laws of Kenya.\n\n8.4. Disputes are resolved through 7bet' standard dispute resolution process.`,
+    content: `8.1. 7bet may modify, suspend, or terminate the Promotion at any time.\n\n8.2. In event of termination, prizes are awarded based on standings at time of termination.\n\n8.3. These Terms are governed by the laws of Uganda.\n\n8.4. Disputes are resolved through 7bet' standard dispute resolution process.`,
   },
   {
     title: "9. Responsible Gambling",

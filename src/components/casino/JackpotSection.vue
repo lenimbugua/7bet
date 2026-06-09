@@ -80,7 +80,7 @@ defineProps({
 defineEmits(["view-more", "play"]);
 
 function formatAmount(n) {
-  return n.toLocaleString("en-KE", {
+  return n.toLocaleString("en-UG", {
     minimumFractionDigits: Number.isInteger(n) ? 0 : 2,
     maximumFractionDigits: 2,
   });

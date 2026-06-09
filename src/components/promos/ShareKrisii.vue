@@ -270,10 +270,10 @@
           </li>
           <li>
             Binding Arbitration: If unresolved, submitted to binding arbitration
-            under a recognized arbitration body in Kenya. Decision is final.
+            under a recognized arbitration body in Uganda. Decision is final.
           </li>
           <li>
-            Governing Law and Jurisdiction: Terms governed by the laws of Kenya.
+            Governing Law and Jurisdiction: Terms governed by the laws of Uganda.
           </li>
         </ol>
       </section>

@@ -169,7 +169,7 @@ import { RouterLink } from "vue-router";
           class="bg-gray-50 dark:bg-surface-sunken p-6 rounded-2xl shadow-sm space-y-3 text-sm"
         >
           <p>
-            <strong>Eligibility:</strong> Open to 7bet Kenya customers,
+            <strong>Eligibility:</strong> Open to 7bet Uganda customers,
             ongoing promo.
           </p>
           <p>

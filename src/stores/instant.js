@@ -21,7 +21,7 @@ const competitions = [
     id: "41309",
   },
   {
-    name: "kenyan",
+    name: "ugandan",
     flag: kenyanFlag,
     id: "13367",
   },

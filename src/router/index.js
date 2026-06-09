@@ -75,7 +75,7 @@ export const routes = [
     name: "home",
     component: TheLanding,
     meta: {
-      title: "Best online sports betting in Kenya– 7bet",
+      title: "Best online sports betting in Uganda– 7bet",
       description:
         "Experience the best online sports betting and casino games with 7bet. Fast payouts, live odds, and instant deposits.",
       requiresAuth: false,
@@ -86,7 +86,7 @@ export const routes = [
 //     name: "home",
 //     component: TheLanding,
 //     meta: {
-//       title: "Best online sports betting in Kenya– 7bet",
+//       title: "Best online sports betting in Uganda– 7bet",
 //       description:
 //         "Experience the best online sports betting and casino games with 7bet. Fast payouts, live odds, and instant deposits.",
 //       requiresAuth: false,
@@ -97,9 +97,9 @@ export const routes = [
   //     name: "home-page",
   //     component: HomePage,
   //     meta: {
-  //       title: "7bet Kenya | Official Sports Betting & Casino Platform",
+  //       title: "7bet Uganda | Official Sports Betting & Casino Platform",
   //       description:
-  //         "Bet on football, basketball, and casino games at 7bet Kenya. Instant M-Pesa payments, great odds, and fun live betting.",
+  //         "Bet on football, basketball, and casino games at 7bet Uganda. Instant M-Pesa payments, great odds, and fun live betting.",
   //       requiresAuth: false,
   //     },
   //   },
@@ -121,7 +121,7 @@ export const routes = [
     meta: {
       title: "Football Leagues & Fixtures | 7bet Sportsbook",
       description:
-        "Browse upcoming football leagues and fixtures. Bet pre-match or live on your favorite teams at 7bet Kenya.",
+        "Browse upcoming football leagues and fixtures. Bet pre-match or live on your favorite teams at 7bet Uganda.",
       requiresAuth: false,
     },
   },
@@ -152,9 +152,9 @@ export const routes = [
     name: "sports",
     component: TheLanding,
     meta: {
-      title: "Bet on :sport – Live Odds & Results | 7bet Kenya",
+      title: "Bet on :sport – Live Odds & Results | 7bet Uganda",
       description:
-        "Bet live and pre-match on :sport events with top odds and instant payouts. 7bet delivers Kenya’s best sports betting experience.",
+        "Bet live and pre-match on :sport events with top odds and instant payouts. 7bet delivers Uganda’s best sports betting experience.",
       requiresAuth: false,
     },
   },
@@ -213,7 +213,7 @@ export const routes = [
         meta: {
           title: "Register on 7bet – Create Account & Start Betting",
           description:
-            "Sign up with 7bet and enjoy Kenya’s leading sports betting and casino experience. Quick, secure registration.",
+            "Sign up with 7bet and enjoy Uganda’s leading sports betting and casino experience. Quick, secure registration.",
           requiresAuth: false,
         },
       },
@@ -257,7 +257,7 @@ export const routes = [
         meta: {
           title: "Change Password | 7bet Security Settings",
           description:
-            "Update your password for better account security. Protect your funds and data on 7bet Kenya.",
+            "Update your password for better account security. Protect your funds and data on 7bet Uganda.",
           requiresAuth: false,
         },
       },
@@ -266,7 +266,7 @@ export const routes = [
         name: "verify-account",
         component: VerifyAccount,
         meta: {
-          title: "Verify Account | 7bet Kenya",
+          title: "Verify Account | 7bet Uganda",
           description:
             "Complete your 7bet verification to enable withdrawals, bonuses, and secure transactions.",
           requiresAuth: false,
@@ -281,7 +281,7 @@ export const routes = [
     meta: {
       title: "All Sports Countries | 7bet",
       description:
-        "Explore betting markets by country. Bet on leagues and matches across Kenya, Europe, and worldwide.",
+        "Explore betting markets by country. Bet on leagues and matches across Uganda, Europe, and worldwide.",
       requiresAuth: false,
     },
   },
@@ -307,7 +307,7 @@ export const routes = [
         meta: {
           title: "My Bets | 7bet History & Results",
           description:
-            "Track your bet history, view results, and manage open wagers securely on 7bet Kenya.",
+            "Track your bet history, view results, and manage open wagers securely on 7bet Uganda.",
           requiresAuth: true,
         },
       },
@@ -353,7 +353,7 @@ export const routes = [
     meta: {
       title: "Affiliate Program | Earn with 7bet",
       description:
-        "Join the 7bet Affiliate Program and earn commission promoting Kenya’s leading sports betting platform.",
+        "Join the 7bet Affiliate Program and earn commission promoting Uganda’s leading sports betting platform.",
       requiresAuth: true,
     },
   },
@@ -488,7 +488,7 @@ export const routes = [
     meta: {
       title: `Play :name | 7bet Crash Game`,
       description:
-        "Enjoy :name with smooth gameplay, fair odds, and real cash prizes at 7bet Kenya Crash Games.",
+        "Enjoy :name with smooth gameplay, fair odds, and real cash prizes at 7bet Uganda Crash Games.",
       requiresAuth: false,
     },
   },
@@ -499,7 +499,7 @@ export const routes = [
     meta: {
       title: "Play :name | 7bet Virtual Game",
       description:
-        "Enjoy :name with smooth gameplay, fair odds, and real cash prizes at 7bet Kenya Virtual Games.",
+        "Enjoy :name with smooth gameplay, fair odds, and real cash prizes at 7bet Uganda Virtual Games.",
       requiresAuth: false,
     },
   },
@@ -510,7 +510,7 @@ export const routes = [
     meta: {
       title: "Play :name | 7bet Casino Game",
       description:
-        "Enjoy :name with smooth gameplay, fair odds, and real cash prizes at 7bet Kenya Casino Games.",
+        "Enjoy :name with smooth gameplay, fair odds, and real cash prizes at 7bet Uganda Casino Games.",
       requiresAuth: false,
     },
   },
@@ -521,7 +521,7 @@ export const routes = [
   //   meta: {
   //     title: "Christmass Cheer: Holiday Bonus | 7bet Casino Games",
   //     description:
-  //       "Claim your special Christmas Bonus! Join the Festive Cheer promotion for smooth gameplay, extra prizes, Mbuzi, and real cash giveaways at 7bet Kenya Casino Games this season.",
+  //       "Claim your special Christmas Bonus! Join the Festive Cheer promotion for smooth gameplay, extra prizes, Mbuzi, and real cash giveaways at 7bet Uganda Casino Games this season.",
   //     requiresAuth: true,
   //   },
   // },
@@ -555,7 +555,7 @@ export const routes = [
     meta: {
       title: "Pari Turbo | Fast Virtual Betting | 7bet",
       description:
-        "Experience Pari Turbo – fast, exciting virtual betting rounds with quick results on 7bet Kenya.",
+        "Experience Pari Turbo – fast, exciting virtual betting rounds with quick results on 7bet Uganda.",
       requiresAuth: true,
     },
   },
@@ -587,7 +587,7 @@ export const routes = [
     name: "terms-and-conditions",
     component: TermsAndConditions,
     meta: {
-      title: "Terms & Conditions | 7bet Kenya",
+      title: "Terms & Conditions | 7bet Uganda",
       description:
         "Read 7bet’ terms and conditions to understand our rules, fair play policy, and legal requirements.",
       requiresAuth: false,
@@ -611,7 +611,7 @@ export const routes = [
     meta: {
       title: "Privacy Policy | Data Protection | 7bet",
       description:
-        "Learn how 7bet protects your data under Kenya’s Data Protection Act and ensures secure transactions.",
+        "Learn how 7bet protects your data under Uganda’s Data Protection Act and ensures secure transactions.",
       requiresAuth: false,
     },
   },
@@ -913,9 +913,9 @@ router.beforeEach((to, from, next) => {
 });
 
 router.afterEach((to) => {
-  const defaultTitle = "7bet - Sports Betting & Casino Kenya";
+  const defaultTitle = "7bet - Sports Betting & Casino Uganda";
   const defaultDesc =
-    "Bet on football, live games, and casino with 7bet Kenya. Fast payouts, bonuses, and real-time odds.";
+    "Bet on football, live games, and casino with 7bet Uganda. Fast payouts, bonuses, and real-time odds.";
   const baseUrl = "https://7bet.com";
 
   const stripQuery = (p) => p.split("?")[0].replace(/\/{2,}/g, "/");

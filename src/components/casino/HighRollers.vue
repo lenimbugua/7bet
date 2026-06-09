@@ -36,7 +36,7 @@ function randomMultiplier() {
   return +(Math.random() * 3000 + 500).toFixed(1);
 }
 const formatMultiplier = (m) => `x${m}`;
-const formatKsh = (n) => n.toLocaleString("en-KE");
+const formatKsh = (n) => n.toLocaleString("en-UG");
 function randomPhone() {
   const last = String(Math.floor(Math.random() * 100)).padStart(2, "0");
   return `07***${last}`;

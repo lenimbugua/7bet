@@ -29,7 +29,7 @@ onMounted(() => {
 const hotCategory = computed(() => {
   if (!categoriesWithGames.value?.length) return null;
   return (
-    categoriesWithGames.value.find((c) => c.slug === "hot-games-in-kenya") ||
+    categoriesWithGames.value.find((c) => c.slug === "hot-games-in-uganda") ||
     categoriesWithGames.value.find((c) =>
       c.name?.toLowerCase().includes("hot")
     ) ||
@@ -43,7 +43,7 @@ const topGames = computed(() => {
 });
 
 const heading = computed(() =>
-  (hotCategory.value?.name || "Top Games in Kenya").toUpperCase()
+  (hotCategory.value?.name || "Top Games in Uganda").toUpperCase()
 );
 
 function routeNameFor(categoryName = "") {

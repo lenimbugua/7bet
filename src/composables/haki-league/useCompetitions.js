@@ -36,9 +36,9 @@ export function useCompetitions() {
       flag: "spanish",
     },
     {
-      name: "Kenyan",
+      name: "Ugandan",
       id: "3",
-      flag: "kenyan",
+      flag: "ugandan",
     },
     {
       name: "Italian",

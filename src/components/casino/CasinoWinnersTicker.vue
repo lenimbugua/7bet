@@ -48,7 +48,7 @@ function generateWinner() {
 }
 
 function formatAmount(n) {
-  return n.toLocaleString("en-KE");
+  return n.toLocaleString("en-UG");
 }
 
 const counter = ref(0);

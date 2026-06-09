@@ -43,8 +43,8 @@ export function useOrganizationSchema() {
           name: "7bet",
           url: baseUrl,
           description:
-            "7bet is Kenya’s most trusted online sports betting and casino platform, offering live sports, virtuals, and instant payouts via M-Pesa.",
-          inLanguage: "en-KE",
+            "7bet is Uganda’s most trusted online sports betting and casino platform, offering live sports, virtuals, and instant payouts via M-Pesa.",
+          inLanguage: "en-UG",
           publisher: {
             "@type": "Organization",
             name: "7bet",
@@ -95,7 +95,7 @@ export function useOrganizationSchema() {
               addressCountry:
                 country?.toUpperCase() === "ENGLAND"
                   ? "GB"
-                  : country?.substring(0, 2).toUpperCase() || "KE",
+                  : country?.substring(0, 2).toUpperCase() || "UG",
             },
           },
           competitor: [
@@ -208,7 +208,7 @@ export function useOrganizationSchema() {
               "@type": "ContactPoint",
               telephone: "+254111060000",
               contactType: "Customer Support",
-              areaServed: "KE",
+              areaServed: "UG",
               availableLanguage: ["English", "Swahili"],
             },
           },
@@ -221,7 +221,7 @@ export function useOrganizationSchema() {
           name: to.meta.title || "7bet",
           description:
             to.meta.description ||
-            "7bet offers sports betting, live games, virtuals, and casino entertainment in Kenya.",
+            "7bet offers sports betting, live games, virtuals, and casino entertainment in Uganda.",
           url: canonicalUrl,
         };
     }

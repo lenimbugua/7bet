@@ -18,7 +18,7 @@ import TopLeaguesGrid from "../components/mobile/TopLeaguesGrid.vue";
       <!-- Quick access: merged navigation -->
       <!-- <QuickAccessBar /> -->
 
-      <!-- Hot games in Kenya -->
+      <!-- Hot games in Uganda -->
       <div class="">
         <TopGames />
       </div>
