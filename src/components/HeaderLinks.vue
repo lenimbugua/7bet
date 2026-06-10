@@ -29,7 +29,7 @@ const openSearchModal = () => openModal(search);
     <!-- ========== DESKTOP ========== -->
     <div class="hidden lg:block w-full px-3 md:px-5">
       <!-- Top row: Logo + (centered) Support/Search + Auth + Theme -->
-      <div class="relative flex h-16 items-center">
+      <div class="relative flex h-16 items-center max-w-[1680px] mx-auto">
         <!-- Logo (nudged left, toward the viewport edge) -->
         <div class="flex items-center shrink-0 w-64 -ml-4">
           <TheLogo />
@@ -79,7 +79,10 @@ const openSearchModal = () => openModal(search);
       </div>
 
       <!-- Nav links row (hidden when a layout hosts <NavLinks /> in its middle column) -->
-      <NavLinks v-if="!hideNavLinks" class="border-t border-border/50" />
+      <NavLinks
+        v-if="!hideNavLinks"
+        class="border-t border-border/50 max-w-[1680px] mx-auto"
+      />
     </div>
 
     <!-- ========== MOBILE ========== -->
