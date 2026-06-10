@@ -87,7 +87,7 @@ function handleItemClick(item) {
       v-for="tab in tabs"
       :key="tab.id"
       :class="activeTab === tab.id
-        ? 'bg-brand-bright text-white'
+        ? 'bg-brand-bright text-brand-forest'
         : 'bg-gray-100 dark:bg-white/6 text-muted-foreground'"
       class="shrink-0 px-3 py-1 rounded-full text-[0.65rem] font-semibold transition-colors"
       @click="activeTab = tab.id"

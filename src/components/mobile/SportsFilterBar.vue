@@ -2,6 +2,8 @@
 import { storeToRefs } from "pinia";
 import { computed } from "vue";
 import { useMatches2Store } from "@/stores/matches2";
+import { useModalStore } from "@/stores/modal";
+import { useModalTypes } from "@/composables/useModalTypes";
 import CalendarDropdown from "../CalendarDropdown.vue";
 import ColumnHeaderSearch from "../ColumnHeaderSearch.vue";
 import HighlitsTab from "../HighlitsTab.vue";
@@ -9,6 +11,8 @@ import MarketsTab from "../MarketsTab.vue";
 import SecondaryNav from "../SecondaryNav.vue";
 
 const { matches, getDefaultMarket } = storeToRefs(useMatches2Store());
+const { sportsIconsModal } = useModalTypes();
+const { openModal } = useModalStore();
 
 const outcomeLabels = computed(() => {
   if (!matches.value?.length) return ["1", "X", "2"];
@@ -28,9 +32,20 @@ const outcomeLabels = computed(() => {
   <div class="sticky z-40 top-27.5 md:top-30 mt-3 sports-filter-bar mx-0 rounded-t-xl">
     <!-- Row 1: Sport tabs -->
     <div class="flex flex-col gap-1.5 px-3 pt-3 pb-1.5">
-      <span class="text-base font-bold text-gray-900 dark:text-white italic shrink-0">
-        Sports
-      </span>
+      <div class="flex items-center justify-between">
+        <span class="text-base font-bold text-gray-900 dark:text-white italic shrink-0">
+          Sports
+        </span>
+        <button
+          class="flex items-center gap-0.5 text-[0.65rem] font-semibold text-brand-bright hover:text-brand-bright/80 transition-colors cursor-pointer"
+          @click="openModal(sportsIconsModal)"
+        >
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-3 h-3">
+            <path fill-rule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
       <div class="overflow-x-auto scrollbar-hide">
         <SecondaryNav />
       </div>

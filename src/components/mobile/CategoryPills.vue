@@ -131,7 +131,7 @@ function handleClick(cat) {
       :class="[
         inHeader
           ? 'flex items-center gap-3'
-          : 'max-w-[1280px] dark:bg-background mx-auto bg-gray-100 dark:bg-card grid grid-cols-7 lg:grid-cols-9 category-grid',
+          : 'max-w-[1280px] dark:bg-background mx-auto bg-gray-100 dark:bg-card grid grid-cols-7 lg:grid-cols-9 gap-1 p-1 category-grid',
         !inHeader && rounded ? 'rounded-xl overflow-hidden' : '',
       ]"
     >
@@ -143,14 +143,14 @@ function handleClick(cat) {
           cat.desktopOnly ? 'hidden lg:flex' : 'flex',
           inHeader
             ? 'gap-0.5 px-3 py-1 rounded-md'
-            : 'gap-0 py-1.5 md:gap-1 md:py-3',
+            : 'gap-0 py-1.5 md:gap-1 md:py-3 rounded-md',
           isActive(cat)
             ? inHeader
               ? 'bg-brand-bright/30'
               : 'bg-brand-bright/15'
             : inHeader
               ? 'bg-gray-100 dark:bg-white/5 hover:bg-brand-bright/10'
-              : '',
+              : 'bg-white dark:bg-white/5',
         ]"
         @click="handleClick(cat)"
       >
