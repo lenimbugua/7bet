@@ -150,7 +150,7 @@ function outcomeIsLocked() {
       <div
         :class="[
           outcomeIsSelected
-            ? 'text-lime-50'
+            ? 'text-brand-forest/80'
             : 'dark:text-slate-400 text-gray-950',
         ]"
         class="text-xs"
@@ -164,7 +164,7 @@ function outcomeIsLocked() {
       </div>
       <div
         :class="[
-          outcomeIsSelected ? 'text-white' : 'dark:text-white text-gray-950',
+          outcomeIsSelected ? 'text-brand-forest' : 'dark:text-white text-gray-950',
         ]"
         class="text-[0.7rem] font-bold"
       >
@@ -192,7 +192,7 @@ function outcomeIsLocked() {
       <div
         :class="[
           outcomeIsSelected
-            ? 'text-lime-100'
+            ? 'text-brand-forest/80'
             : 'dark:text-slate-400 text-gray-700',
         ]"
         class="text-xs"
@@ -205,7 +205,7 @@ function outcomeIsLocked() {
       </div>
       <div
         :class="[
-          outcomeIsSelected ? 'text-white' : 'dark:text-white text-gray-950',
+          outcomeIsSelected ? 'text-brand-forest' : 'dark:text-white text-gray-950',
         ]"
         class="text-[1rem] font-black"
       >

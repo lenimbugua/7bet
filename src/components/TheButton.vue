@@ -154,7 +154,7 @@ function outcomeIsLocked() {
     <ThePadlock v-if="outcomeIsLocked()" />
     <template v-else>
       <span
-        :class="outcomeIsSelected ? 'text-white/80' : 'text-gray-500 dark:text-white/65'"
+        :class="outcomeIsSelected ? 'text-brand-forest/80' : 'text-gray-500 dark:text-white/65'"
         class="text-[0.6rem] leading-none mb-0.5"
       >
         {{ outcome.outcomeName }}
@@ -165,7 +165,7 @@ function outcomeIsLocked() {
         />
       </span>
       <span
-        :class="outcomeIsSelected ? 'text-white' : 'text-gray-900 dark:text-white'"
+        :class="outcomeIsSelected ? 'text-brand-forest' : 'text-gray-900 dark:text-white'"
         class="text-[0.8rem] font-bold leading-tight tabular-nums"
       >
         {{ outcome.oddValue }}
@@ -194,7 +194,7 @@ function outcomeIsLocked() {
       <!-- With label: name left, odds right -->
       <template v-if="showLabel">
         <span
-          :class="outcomeIsSelected ? 'text-white/80' : 'text-gray-600 dark:text-white/70'"
+          :class="outcomeIsSelected ? 'text-brand-forest/80' : 'text-gray-600 dark:text-white/70'"
           class="text-[0.6rem] font-normal leading-tight"
         >
           {{ outcome.outcomeNameAlias }}
@@ -204,7 +204,7 @@ function outcomeIsLocked() {
           />
         </span>
         <span
-          :class="outcomeIsSelected ? 'text-white' : 'text-brand-bright'"
+          :class="outcomeIsSelected ? 'text-brand-forest' : 'text-brand-bright'"
           class="text-[0.8rem] font-bold tabular-nums"
         >
           {{ outcome.oddValue }}
@@ -213,7 +213,7 @@ function outcomeIsLocked() {
       <!-- Without label: centered odds only -->
       <template v-else>
         <span
-          :class="outcomeIsSelected ? 'text-white' : 'text-brand-bright'"
+          :class="outcomeIsSelected ? 'text-brand-forest' : 'text-brand-bright'"
           class="text-[0.8rem] font-bold tabular-nums"
         >
           {{ outcome.oddValue }}
