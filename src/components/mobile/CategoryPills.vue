@@ -143,7 +143,7 @@ function handleClick(cat) {
           cat.desktopOnly ? 'hidden lg:flex' : 'flex',
           inHeader
             ? 'gap-0.5 px-3 py-1 rounded-md'
-            : 'gap-0 py-1.5 md:gap-1 md:py-3 rounded-md',
+            : 'gap-0 py-1 md:gap-1 md:py-3 rounded-md',
           isActive(cat)
             ? inHeader
               ? 'bg-brand-bright/30'

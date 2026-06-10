@@ -33,7 +33,7 @@ import TopLeaguesGrid from "../components/mobile/TopLeaguesGrid.vue";
       </div>
 
       <!-- Top leagues 2-column grid -->
-      <TopLeaguesGrid class="m-3" />
+      <TopLeaguesGrid class="my-3" />
       <!-- HOT section: Matches, Builder, Codes, Games -->
       <!-- <div class="mx-3 mt-3">
           <HotSection />

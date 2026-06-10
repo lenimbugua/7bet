@@ -38,7 +38,7 @@ function fetchGame(competition) {
 <template>
   <div
     v-if="topLeagues?.length"
-    class="flex gap-1.5 px-3 sm:px-0 mt-2 overflow-x-auto scrollbar-hide"
+    class="flex gap-1.5 px-3 sm:px-0 mt-2 pt-2 border-t border-gray-200 dark:border-white/5 overflow-x-auto scrollbar-hide"
   >
     <button
       v-for="league in topLeagues.slice(0, 8)"
