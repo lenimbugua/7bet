@@ -142,9 +142,15 @@ function handleClick(cat) {
         :class="[
           cat.desktopOnly ? 'hidden lg:flex' : 'flex',
           inHeader
-            ? 'gap-0.5 px-3 py-1 rounded-md hover:bg-brand-bright/10'
+            ? 'gap-0.5 px-3 py-1 rounded-md'
             : 'gap-0 py-1.5 md:gap-1 md:py-3',
-          isActive(cat) ? (inHeader ? 'bg-brand-bright/30' : 'bg-brand-bright/15') : '',
+          isActive(cat)
+            ? inHeader
+              ? 'bg-brand-bright/30'
+              : 'bg-brand-bright/15'
+            : inHeader
+              ? 'bg-gray-100 dark:bg-white/5 hover:bg-brand-bright/10'
+              : '',
         ]"
         @click="handleClick(cat)"
       >
