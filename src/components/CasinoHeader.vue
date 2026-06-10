@@ -5,9 +5,16 @@ import { useLoginStore } from "@/stores/login";
 import { useModalStore } from "@/stores/modal";
 import { storeToRefs } from "pinia";
 import { computed, onMounted } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 const route = useRoute();
+const router = useRouter();
+
+// The browser back button steps through the iframe's internal history, so a
+// direct escape to the casino lobby keeps the user from getting stuck.
+function goToLobby() {
+  router.push({ name: "casino-home" });
+}
 
 const { setAfterLoginAction } = useLoginStore();
 const { isAuthenticated } = storeToRefs(useLoginStore());
@@ -55,21 +62,42 @@ function handleDeposit() {
 <template>
   <div class="casino-header">
     <div class="casino-header-inner">
-      <!-- Back button -->
-      <button aria-label="Go back" class="header-btn bg-white/15 dark:bg-black/15" @click="$router.go(-1)">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          class="header-icon"
+      <!-- Left: Back + Home (lobby) -->
+      <div class="flex items-center gap-1.5 shrink-0">
+        <button aria-label="Go back" class="header-btn bg-white/15 dark:bg-black/15" @click="$router.go(-1)">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="header-icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+
+        <button
+          aria-label="Go to casino lobby"
+          class="header-btn bg-white/15 dark:bg-black/15"
+          @click="goToLobby"
         >
-          <path
-            fill-rule="evenodd"
-            d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z"
-            clip-rule="evenodd"
-          />
-        </svg>
-      </button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="header-icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
 
       <!-- Center: Game name + provider -->
       <div class="header-center">
