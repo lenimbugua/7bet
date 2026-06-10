@@ -45,9 +45,7 @@ const openProvider = (p) => {
 </script>
 
 <template>
-  <section
-    class="flex flex-col h-full rounded-2xl overflow-hidden bg-background ring-1 ring-black/5 dark:ring-white/10"
-  >
+  <section class="flex flex-col h-full overflow-hidden bg-background">
     <!-- Header (styled like the betslip header) -->
     <div
       class="relative z-10 shrink-0 flex items-center gap-2 px-3 py-2.5 border-b border-gray-200 dark:border-white/5 bg-gray-100 dark:bg-surface-elevated shadow-md shadow-black/10 dark:shadow-black/40"

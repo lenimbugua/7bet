@@ -14,16 +14,16 @@ import CategoryPills from "../components/mobile/CategoryPills.vue";
     class="min-h-dvh bg-gray-50 dark:bg-background"
   >
     <HeaderLinks hide-nav-links />
-    <div class="w-full max-w-[1680px] mx-auto px-4 pt-4">
+    <div class="w-full max-w-[1680px] mx-auto pr-4">
       <div class="w-full flex gap-5">
+        <!-- Sidebar (no top padding so it sits flush against the header) -->
         <div class="shrink-0">
           <TheSidebar />
         </div>
-        <div class="flex-1 min-w-0 max-w-200 lg:max-w-250 py-3">
-          <CategoryPills class="mb-3" />
+        <div class="flex-1 min-w-0 max-w-200 lg:max-w-250 pt-4 pb-3">
           <RouterView />
         </div>
-        <div class="shrink-0">
+        <div class="shrink-0 pt-4">
           <SportsBetslipPanel />
         </div>
       </div>

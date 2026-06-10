@@ -1,7 +1,12 @@
 <script setup>
+import { computed } from "vue";
 import { useModalTypes } from "@/composables/useModalTypes";
 import { useModalStore } from "@/stores/modal";
+import { useSupport } from "@/composables/useSupport";
 import { useRoute, useRouter } from "vue-router";
+
+import SearchSvg from "@/components/icons/svgs/Search.vue";
+import SupportSvg from "@/components/icons/svgs/Support.vue";
 
 import casinoIcon from "@/assets/icons/casino.svg";
 import liveIcon from "@/assets/icons/live.svg";
@@ -9,16 +14,28 @@ import promosIcon from "@/assets/icons/promos.svg";
 import sportsIcon from "@/assets/icons/sports.svg";
 import virtualsIcon from "@/assets/icons/virtuals.svg";
 
-defineProps({
+const props = defineProps({
   // Whether the pills bar sticks to the top (disable when another sticky
   // section sits below it, e.g. the live page hero).
   isSticky: { type: Boolean, default: true },
+  // Compact horizontal variant hosted inside the desktop header row.
+  inHeader: { type: Boolean, default: false },
+  // Round the pills bar corners (standalone card look, e.g. casino home).
+  rounded: { type: Boolean, default: false },
 });
+
+// Icon sizing: smaller in the header so the pills fit the h-14 row.
+const iconCls = computed(() =>
+  props.inHeader ? "w-6 h-6" : "w-7 h-7 md:w-8 md:h-8",
+);
 
 const router = useRouter();
 const route = useRoute();
-const { sportsIconsModal } = useModalTypes();
+const { sportsIconsModal, search } = useModalTypes();
 const { openModal } = useModalStore();
+const { openSupportModal } = useSupport();
+
+const openSearchModal = () => openModal(search);
 
 const categories = [
   {
@@ -62,6 +79,9 @@ const categories = [
     icon: "promotions",
     img: promosIcon,
   },
+  // Desktop-only pills (moved here from the header)
+  { name: "Support", to: null, activeOn: [], icon: "support", desktopOnly: true },
+  { name: "Search", to: null, activeOn: [], icon: "search", desktopOnly: true },
   { name: "More", to: null, activeOn: [], icon: "more" },
 ];
 
@@ -93,23 +113,39 @@ function handleClick(cat) {
     openModal(sportsIconsModal);
     return;
   }
+  if (cat.icon === "support") {
+    openSupportModal();
+    return;
+  }
+  if (cat.icon === "search") {
+    openSearchModal();
+    return;
+  }
   router.push(cat.to);
 }
 </script>
 
 <template>
-  <div
-    :class="isSticky ? 'sticky top-14 z-50' : ''"
-    class="px-0 md:px-0"
-  >
+  <div :class="!inHeader && isSticky ? 'sticky top-14 sm:top-17 z-50' : ''">
     <div
-      class=" max-w-[1280px] dark:bg-background mx-auto bg-gray-100 dark:bg-card grid grid-cols-7 category-grid"
+      :class="[
+        inHeader
+          ? 'flex items-center gap-3'
+          : 'max-w-[1280px] dark:bg-background mx-auto bg-gray-100 dark:bg-card grid grid-cols-7 lg:grid-cols-9 category-grid',
+        !inHeader && rounded ? 'rounded-xl overflow-hidden' : '',
+      ]"
     >
       <button
         v-for="cat in categories"
         :key="cat.name"
-        class="flex flex-col items-center gap-0 py-1.5 md:gap-1 md:py-3 transition-colors"
-        :class="isActive(cat) ? 'bg-brand-bright/15' : ''"
+        class="flex-col items-center transition-colors"
+        :class="[
+          cat.desktopOnly ? 'hidden lg:flex' : 'flex',
+          inHeader
+            ? 'gap-0.5 px-3 py-1 rounded-md hover:bg-brand-bright/10'
+            : 'gap-0 py-1.5 md:gap-1 md:py-3',
+          isActive(cat) ? (inHeader ? 'bg-brand-bright/30' : 'bg-brand-bright/15') : '',
+        ]"
         @click="handleClick(cat)"
       >
         <!-- Asset icon -->
@@ -117,8 +153,8 @@ function handleClick(cat) {
           <img
             :src="cat.img"
             :alt="cat.name"
-            class="w-7 h-7 md:w-8 md:h-8 object-contain"
-            :class="isActive(cat) ? '' : 'opacity-80'"
+            class="object-contain"
+            :class="[iconCls, isActive(cat) ? '' : 'opacity-80']"
           />
           <span
             v-if="cat.icon === 'live'"
@@ -132,7 +168,8 @@ function handleClick(cat) {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          class="w-5 h-5 md:w-8 md:h-8 text-primary"
+          class="text-primary"
+          :class="inHeader ? 'w-6 h-6' : 'w-5 h-5 md:w-8 md:h-8'"
         >
           <path
             d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z"
@@ -143,13 +180,28 @@ function handleClick(cat) {
           />
         </svg>
 
+        <!-- Support (desktop only, moved from header) -->
+        <SupportSvg
+          v-else-if="cat.icon === 'support'"
+          class="object-contain"
+          :class="iconCls"
+        />
+
+        <!-- Search (desktop only, moved from header) -->
+        <SearchSvg
+          v-else-if="cat.icon === 'search'"
+          class="object-contain"
+          :class="iconCls"
+        />
+
         <!-- More -->
         <svg
           v-else-if="cat.icon === 'more'"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          class="w-5 h-5 md:w-8 md:h-8 text-gray-500 dark:text-white/70"
+          class="text-gray-500 dark:text-white/70"
+          :class="inHeader ? 'w-6 h-6' : 'w-5 h-5 md:w-8 md:h-8'"
         >
           <path
             fill-rule="evenodd"

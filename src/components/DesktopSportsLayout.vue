@@ -4,7 +4,6 @@ import { computed } from "vue";
 // import SecondaryNav from "./SecondaryNav.vue";
 // import NavLinks from "./NavLinks.vue";
 import { useMatches2Store } from "../stores/matches2";
-import CategoryPills from "./mobile/CategoryPills.vue";
 
 const { matches, getDefaultMarket } = storeToRefs(useMatches2Store());
 
@@ -30,20 +29,19 @@ const outcomeLabels = computed(() => {
 <template>
   <h1 v-if="seoTitle" class="sr-only">{{ seoTitle }}</h1>
   <HeaderLinks hide-nav-links />
-  <div class="max-w-[1680px] mx-auto px-4">
+  <div class="max-w-[1680px] mx-auto pr-4">
     
 
-    <div class="w-full pt-3 flex justify-between gap-5">
-      <!-- Sidebar -->
+    <div class="w-full flex justify-between gap-5">
+      <!-- Sidebar (no top padding so it sits flush against the header) -->
       <div class="shrink-0">
         <TheSidebar />
       </div>
 
       <!-- Main content -->
-      <div class="flex-1 min-w-0 max-w-[800px] 2xl:max-w-[1000px]">
+      <div class="flex-1 min-w-0 max-w-[800px] 2xl:max-w-[1000px] pt-3">
         <!-- Navigation links (hosted in the middle column on desktop) -->
         <!-- <NavLinks class="mb-2" /> -->
-         <CategoryPills class="mb-3"/>
 
         <!-- Hero content (Banner, HotSection, LivePreview — landing only) -->
         <slot name="hero" />
@@ -104,7 +102,7 @@ const outcomeLabels = computed(() => {
       </div>
 
       <!-- Betslip panel -->
-      <div class="shrink-0">
+      <div class="shrink-0 pt-3">
         <SportsBetslipPanel />
       </div>
     </div>

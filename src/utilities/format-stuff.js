@@ -110,6 +110,10 @@ const formatStuff = () => {
     return `${parent_match_id}${sub_type_id}${outcome_name}${index}`;
   };
   const formCloudflareImage = (imageId, variant="public") => {
+    // Pass through local public-dir paths and full URLs untouched.
+    if (imageId?.startsWith("/") || imageId?.startsWith("http")) {
+      return imageId;
+    }
     return `https://imagedelivery.net/ZY5OwFLlTE2ePHl_IE20jg/${imageId}/${variant}`;
   };
 

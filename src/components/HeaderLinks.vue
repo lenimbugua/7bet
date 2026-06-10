@@ -4,10 +4,9 @@ import { useLoginStore } from "../stores/login";
 import HeaderProfile from "./HeaderProfile.vue";
 import NavLinks from "./NavLinks.vue";
 import Search from "./icons/svgs/Search.vue";
-import Support from "./icons/svgs/Support.vue";
+import CategoryPills from "./mobile/CategoryPills.vue";
 import { useModalStore } from "@/stores/modal";
 import { useModalTypes } from "@/composables/useModalTypes";
-import { useSupport } from "@/composables/useSupport";
 import { storeToRefs } from "pinia";
 
 defineProps({
@@ -21,7 +20,6 @@ const { token } = storeToRefs(useLoginStore());
 const { search } = useModalTypes();
 const { openModal } = useModalStore();
 const openSearchModal = () => openModal(search);
-const { openSupportModal } = useSupport();
 </script>
 
 <template>
@@ -31,35 +29,15 @@ const { openSupportModal } = useSupport();
     <!-- ========== DESKTOP ========== -->
     <div class="hidden lg:block w-full px-3 md:px-5">
       <!-- Top row: Logo + (centered) Support/Search + Auth + Theme -->
-      <div class="relative flex h-14 items-center">
-        <!-- Logo -->
-        <div class="flex items-center shrink-0 w-64">
+      <div class="relative flex h-16 items-center">
+        <!-- Logo (nudged left, toward the viewport edge) -->
+        <div class="flex items-center shrink-0 w-64 -ml-4">
           <TheLogo />
         </div>
 
-        <div class="flex-1 min-w-0"></div>
-
-        <!-- Centered: Support + Search (icons only) -->
-        <div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-5">
-          <!-- Support -->
-          <span
-            role="button"
-            aria-label="Support"
-            class="hover:opacity-80 transition-opacity cursor-pointer"
-            @click="openSupportModal"
-          >
-            <Support class="w-6 h-6 object-contain" />
-          </span>
-
-          <!-- Search -->
-          <span
-            role="button"
-            aria-label="Search"
-            class="cursor-pointer"
-            @click="openSearchModal"
-          >
-            <Search class="w-6 h-6 object-contain" />
-          </span>
+        <!-- Category pills (compact header variant), left-aligned after the logo -->
+        <div class="flex-1 min-w-0 flex justify-start">
+          <CategoryPills in-header />
         </div>
 
         <!-- Actions -->
@@ -67,13 +45,13 @@ const { openSupportModal } = useSupport();
           <template v-if="!token">
             <RouterLink
               :to="{ name: 'login' }"
-              class="text-sm font-semibold px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200/80 dark:border-white/6 text-brand-bright hover:bg-gray-200 dark:hover:bg-white/8 transition-colors"
+              class="text-sm font-semibold px-3 py-1.5 rounded-md bg-gray-100 dark:bg-white/5 border border-gray-200/80 dark:border-white/6 text-brand-bright hover:bg-gray-200 dark:hover:bg-white/8 transition-colors"
             >
               Log in
             </RouterLink>
             <RouterLink
               :to="{ name: 'signup' }"
-              class="text-sm font-bold text-brand-forest bg-brand-bright hover:bg-brand-bright/90 px-4 py-2 rounded-lg transition-colors duration-150"
+              class="text-sm font-bold text-brand-forest bg-brand-bright hover:bg-brand-bright/90 px-4 py-2 rounded-md transition-colors duration-150"
             >
               Get Started
             </RouterLink>
@@ -126,13 +104,13 @@ const { openSupportModal } = useSupport();
         <template v-if="!token">
           <RouterLink
             :to="{ name: 'login' }"
-            class="text-sm font-semibold px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200/80 dark:border-white/6 text-brand-bright hover:bg-gray-200 dark:hover:bg-white/8 transition-colors"
+            class="text-sm font-semibold px-3 py-1.5 rounded-md bg-gray-100 dark:bg-white/5 border border-gray-200/80 dark:border-white/6 text-brand-bright hover:bg-gray-200 dark:hover:bg-white/8 transition-colors"
           >
             Login
           </RouterLink>
           <RouterLink
             :to="{ name: 'signup' }"
-            class="text-sm font-semibold text-brand-forest bg-brand-bright hover:bg-brand-bright/90 rounded-lg px-4 py-1.5 transition-colors duration-150"
+            class="text-sm font-semibold text-brand-forest bg-brand-bright hover:bg-brand-bright/90 rounded-md px-4 py-1.5 transition-colors duration-150"
           >
             Join
           </RouterLink>

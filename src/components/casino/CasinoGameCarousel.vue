@@ -26,7 +26,10 @@ function scrollRight() {
 </script>
 
 <template>
-  <section v-if="games.length > 0" class="mb-3 sm:mb-6">
+  <section
+    v-if="games.length > 0"
+    class="mb-3 sm:mb-6 rounded-xl bg-background p-3"
+  >
     <!-- Section header -->
     <div class="flex items-center justify-between mb-2 sm:mb-3 px-1">
       <h2 class="text-foreground text-sm sm:text-base font-bold">{{ title }}</h2>
@@ -63,7 +66,7 @@ function scrollRight() {
     <!-- Horizontal scroll row -->
     <div
       ref="scrollContainer"
-      class="flex space-x-4 sm:space-x-5 overflow-x-auto scrollbar-hide pb-1 sm:pb-2 scroll-smooth"
+      class="flex space-x-5 sm:space-x-6 overflow-x-auto scrollbar-hide pb-1 sm:pb-2 scroll-smooth"
     >
       <CasinoGameCard
         v-for="game in games"

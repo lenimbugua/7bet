@@ -57,7 +57,7 @@ const topGames = computed(() => {
   <div class="sticky z-2 w-[16rem] top-12 lg:top-16 h-[calc(100vh-4rem)] lg:h-[calc(100vh-5rem)] flex flex-col gap-3">
 
     <!-- Top Leagues + Top Games — merged card -->
-    <div class="flex-1 min-h-0 flex flex-col rounded-xl bg-white dark:bg-white/[0.02] border border-gray-200/80 dark:border-white/[0.06] shadow-sm dark:shadow-none overflow-hidden">
+    <div class="flex-1 min-h-0 flex flex-col rounded-b-xl bg-white dark:bg-white/[0.02] border border-gray-200/80 dark:border-white/[0.06] shadow-sm dark:shadow-none overflow-hidden">
       <!-- Top Leagues — scrolls internally -->
       <div class="flex-1 min-h-0">
         <SidebarTabs />

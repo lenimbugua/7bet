@@ -35,16 +35,16 @@ const { isLargeScreen } = useScreenSizes();
       <div class="sticky top-0 z-40 bg-gray-50 live-page-bg">
         <HeaderLinks hide-nav-links />
       </div>
-      <div class="max-w-[1680px] mx-auto px-3">
-        <div class="w-full pt-4 flex justify-between">
+      <div class="max-w-[1680px] mx-auto pr-3">
+        <div class="w-full flex justify-between">
+          <!-- Sidebar (no top padding so it sits flush against the header) -->
           <div class="sticky bottom-0">
             <TheSidebar />
           </div>
-          <div class="flex-1 min-w-0 flex flex-col">
-            <CategoryPills :is-sticky="false" class="mb-3 sm:mx-6" />
+          <div class="flex-1 min-w-0 flex flex-col pt-4">
             <NewLive3 />
           </div>
-          <div class="flex sticky">
+          <div class="flex sticky pt-4">
             <SportsBetslipPanel />
           </div>
         </div>

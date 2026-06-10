@@ -73,23 +73,31 @@ onBeforeUnmount(() => {
   stopAutoplay();
 });
 
-/* Desktop (xl+) two-panel 3D flip carousel */
-const pairIndex = ref(0);
-const totalPairs = computed(() => Math.ceil(items.length / 2));
-const leftItem = computed(() => items[(pairIndex.value * 2) % items.length]);
-const rightItem = computed(() => items[(pairIndex.value * 2 + 1) % items.length]);
+/* Desktop (xl+) two-panel 3D flip carousel.
+   Panels flip staggered: left first, right 3s later. Each steps by 2
+   through the items (left = even slots, right = odd) so they never
+   show the same image. */
+const rightFlipOffset = 3000;
+const leftIdx = ref(0);
+const rightIdx = ref(1);
+const leftItem = computed(() => items[leftIdx.value % items.length]);
+const rightItem = computed(() => items[rightIdx.value % items.length]);
 
 let flipTimer = null;
+let rightFlipTimer = null;
 const stopFlip = () => {
-  if (flipTimer) {
-    clearInterval(flipTimer);
-    flipTimer = null;
-  }
+  clearInterval(flipTimer);
+  flipTimer = null;
+  clearTimeout(rightFlipTimer);
+  rightFlipTimer = null;
 };
 const startFlip = () => {
   stopFlip();
   flipTimer = setInterval(() => {
-    pairIndex.value = (pairIndex.value + 1) % totalPairs.value;
+    leftIdx.value = (leftIdx.value + 2) % items.length;
+    rightFlipTimer = setTimeout(() => {
+      rightIdx.value = (rightIdx.value + 2) % items.length;
+    }, rightFlipOffset);
   }, autoplayDelay);
 };
 

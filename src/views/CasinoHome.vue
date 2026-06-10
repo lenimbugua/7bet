@@ -434,36 +434,47 @@ function playGame(game) {
 
     <div class="w-full live-page-bg">
       <div
-        class="max-w-[1680px] mx-auto px-3 md:px-5 pb-20 flex items-start gap-5"
+        class="max-w-[1680px] mx-auto pl-3 md:pl-5 xl:pl-0 pr-3 md:pr-5 pb-20 flex items-start gap-5"
       >
-        <!-- Left sidebar: Providers + settings -->
+        <!-- Left sidebar: Categories + Providers + settings (flush against the header, like the landing sidebar) -->
         <aside class="hidden xl:flex flex-col gap-3 w-60 shrink-0 sticky top-16 h-[calc(100vh-5rem)]">
-          <ProvidersSidebar class="flex-1 min-h-0" />
+          <!-- Categories + Providers merged into one continuous card -->
+          <div
+            class="flex-1 min-h-0 flex flex-col rounded-b-2xl overflow-hidden ring-1 ring-black/5 dark:ring-white/10"
+          >
+            <CategoriesSidebar
+              :items="visibleStripItems"
+              :selected="selectedCategory"
+              class="shrink-0"
+              @select="onCategorySelect"
+            />
+            <ProvidersSidebar class="flex-1 min-h-0" />
+          </div>
           <SidebarSettings class="shrink-0" />
         </aside>
 
         <div class="flex-1 min-w-0">
-          <!-- Category pills (middle section, like landing) -->
-          <!-- pt clears the sticky header overlap so the compacted pills aren't clipped -->
-          <CategoryPills class="mb-3 pt-3" />
+          <!-- Category pills (mobile only — desktop hosts them in the header).
+               mt (not pt) keeps the sticky box tight so it sticks flush below the header. -->
+          <CategoryPills rounded class="mt-3 mb-3 lg:hidden" />
 
-          <!-- Banner -->
-        <div class="rounded-xl overflow-hidden mb-3">
-          <TheBanner />
+          <!-- Banner (lg:mt-5 matches the gap-5 / pr-5 spacing around the content) -->
+        <div class="rounded-xl overflow-hidden mb-3 lg:mt-5">
+          <TheBannerTryout />
         </div>
 
-        <!-- Category strip -->
+        <!-- Category strip (hidden on xl+ where the sidebar hosts categories) -->
         <div
-          class="flex items-center justify-between rounded-xl bg-gray-100 dark:bg-card px-3 py-1 md:py-2.5 overflow-x-auto"
+          class="flex xl:hidden items-center justify-between rounded-xl bg-gray-100 dark:bg-card px-4 py-2 md:py-3 mb-3 overflow-x-auto"
         >
           <button
             v-for="item in visibleStripItems"
             :key="item.slug"
             type="button"
-            class="flex flex-col items-center gap-0 py-0.5 md:gap-1 md:py-1 shrink-0 px-2 rounded-lg transition-colors"
+            class="flex flex-col items-center gap-0 py-0.5 md:gap-1 md:py-1 shrink-0 px-4 rounded-lg transition-colors"
             :class="
               selectedCategory === item.slug
-                ? 'bg-primary/10'
+                ? 'bg-primary/25'
                 : 'hover:bg-gray-200 dark:hover:bg-surface-elevated'
             "
             @click="onCategorySelect(item.slug)"
@@ -539,7 +550,7 @@ function playGame(game) {
               @see-all="onCategorySelect(cat.slug)"
             />
             <template v-if="breakAfter(index) === 'intro'">
-              <WinnersCarousel class="lg:hidden" />
+              <WinnersCarousel />
               <BangbetJackpotSection />
             </template>
             <CasinoLeaderboard v-else-if="breakAfter(index) === 'leaderboard'" />
@@ -603,10 +614,10 @@ function playGame(game) {
         </template>
         </div>
 
-        <!-- Right sidebar: High Rollers -->
-        <aside class="hidden lg:flex flex-col w-60 shrink-0 sticky top-16 h-[calc(100vh-5rem)]">
+        <!-- Right sidebar: High Rollers (recent winners) — disabled -->
+        <!-- <aside class="hidden lg:flex flex-col w-60 shrink-0 sticky top-16 h-[calc(100vh-5rem)]">
           <HighRollers />
-        </aside>
+        </aside> -->
       </div>
     </div>
   </div>

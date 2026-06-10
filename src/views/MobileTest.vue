@@ -13,7 +13,11 @@ import TopLeaguesGrid from "../components/mobile/TopLeaguesGrid.vue";
       <!-- <HeroBanner /> -->
 
       <!-- TRYOUT: cloned banner carousel (slides don't point anywhere) -->
-      <TheBannerTryout />
+      <div class="p-3">
+        <div class="rounded-xl overflow-hidden">
+          <TheBannerTryout />
+        </div>
+      </div>
 
       <!-- Quick access: merged navigation -->
       <!-- <QuickAccessBar /> -->
