@@ -980,7 +980,7 @@ router.afterEach((to) => {
     : to.meta.robots || "index,follow";
 
   const ogImage =
-    "https://imagedelivery.net/ZY5OwFLlTE2ePHl_IE20jg/7056ec80-7903-4c44-fd42-b6d9ef8a7900/public";
+    "https://imagedelivery.net/ZY5OwFLlTE2ePHl_IE20jg/c312dbf3-55e2-4169-f6e1-9ff7f87f7500/public";
 
   // JSON-LD schema
   const { combinedSchemas } = useOrganizationSchema();
