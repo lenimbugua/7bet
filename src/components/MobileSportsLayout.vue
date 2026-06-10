@@ -38,7 +38,8 @@ defineProps({
       </template>
     </div>
 
-    <SEOMarkupContent />
+    <!-- Full-width on mobile, uniform space above and below -->
+    <SEOMarkupContent class="my-3" />
     <Footer />
     <MobileFooterV2 />
   </LazyInfinityScroll>

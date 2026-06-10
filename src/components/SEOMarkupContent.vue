@@ -31,8 +31,8 @@ const steps = [
 </script>
 
 <template>
-  <article class="mx-3">
-    <div class="rounded-xl bg-white dark:bg-white/[0.02] border border-gray-200/80 dark:border-white/[0.06] overflow-hidden">
+  <article>
+    <div class="rounded-xl bg-white dark:bg-card border border-gray-200/80 dark:border-white/[0.06] overflow-hidden">
 
       <!-- Toggle header -->
       <button

@@ -31,7 +31,7 @@ const outcomeLabels = computed(() => {
 <template>
   <div class="sticky z-40 top-27.5 md:top-30 mt-3 sports-filter-bar mx-0 rounded-t-xl">
     <!-- Row 1: Sport tabs -->
-    <div class="flex flex-col gap-1.5 px-3 pt-3 pb-1.5">
+    <div class="flex flex-col gap-1.5 px-3 pt-1 pb-1.5">
       <div class="flex items-center justify-between">
         <span class="text-base font-bold text-gray-900 dark:text-white italic shrink-0">
           Sports
@@ -46,9 +46,17 @@ const outcomeLabels = computed(() => {
           </svg>
         </button>
       </div>
-      <div class="overflow-x-auto scrollbar-hide">
+      <!-- Divider below the title — -mx-3 escapes the row padding to span the full card width -->
+      <div class="border-b border-gray-200 dark:border-white/5 -mx-3"></div>
+      <!-- -mx-2 cancels the 8px the centered tiles sit in from their item edge,
+           so the first icon aligns with the "Sports" title -->
+      <!-- -my-1.5 cancels the column gap so the items (with their own py-1.5)
+           stretch divider to divider -->
+      <div class="overflow-x-auto scrollbar-hide -mx-2.5 -my-1.5">
         <SecondaryNav />
       </div>
+      <!-- Divider below the sport icons, full card width -->
+      <div class="border-b border-gray-200 dark:border-white/5 -mx-3"></div>
     </div>
 
     <!-- Row 2: View mode + action buttons -->

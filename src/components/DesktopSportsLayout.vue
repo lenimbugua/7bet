@@ -63,7 +63,7 @@ const outcomeLabels = computed(() => {
               <!-- Sport tabs row (landing only) -->
               <div
                 v-if="showSportsTabs"
-                class="flex flex-col gap-1.5 px-3 pt-3 pb-1.5"
+                class="flex flex-col gap-1.5 px-3 pt-1 pb-1.5"
               >
                 <div class="flex items-center justify-between">
                   <span
@@ -81,9 +81,15 @@ const outcomeLabels = computed(() => {
                     </svg>
                   </button>
                 </div>
-                <div class="overflow-x-auto scrollbar-hide">
+                <!-- Divider below the title — -mx-3 escapes the row padding to span the full card width -->
+                <div class="border-b border-gray-200 dark:border-white/5 -mx-3"></div>
+                <!-- -mx-2 cancels the 8px the centered tiles sit in from their item edge;
+                     -my-1.5 cancels the column gap so items span divider to divider -->
+                <div class="overflow-x-auto scrollbar-hide -mx-2.5 -my-1.5">
                   <SecondaryNav />
                 </div>
+                <!-- Divider below the sport icons, full card width -->
+                <div class="border-b border-gray-200 dark:border-white/5 -mx-3"></div>
               </div>
 
               <!-- View mode + action buttons -->
@@ -113,7 +119,6 @@ const outcomeLabels = computed(() => {
             <InfiniteScroll />
           </div>
 
-          <SEOMarkupContent />
         </template>
       </div>
 
@@ -122,6 +127,9 @@ const outcomeLabels = computed(() => {
         <SportsBetslipPanel />
       </div>
     </div>
+
+    <!-- About soccer betting — sits just above the footer -->
+    <SEOMarkupContent v-if="!$slots.content" class="mx-3 my-4" />
   </div>
   <slot name="after-content" />
   <Footer />

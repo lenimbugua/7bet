@@ -66,7 +66,7 @@ onBeforeUnmount(() => {
               <InfinityScrollLive class="w-full" />
             </div>
           </div>
-          <SEOMarkupContent />
+          <SEOMarkupContent class="mx-3" />
         </div>
         <div class="flex sticky">
           <SportsBetslipPanel />

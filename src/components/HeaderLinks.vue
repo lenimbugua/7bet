@@ -30,8 +30,9 @@ const openSearchModal = () => openModal(search);
     <div class="hidden lg:block w-full px-3 md:px-5">
       <!-- Top row: Logo + (centered) Support/Search + Auth + Theme -->
       <div class="relative flex h-16 items-center max-w-[1680px] mx-auto">
-        <!-- Logo (nudged left, toward the viewport edge) -->
-        <div class="flex items-center shrink-0 w-64 -ml-4">
+        <!-- Logo (nudged left, toward the viewport edge; no fixed width so the
+             pills sit right after it) -->
+        <div class="flex items-center shrink-0 -ml-4 mr-3">
           <TheLogo />
         </div>
 

@@ -455,8 +455,9 @@ function playGame(game) {
 
         <div class="flex-1 min-w-0">
           <!-- Category pills (mobile only — desktop hosts them in the header).
-               mt (not pt) keeps the sticky box tight so it sticks flush below the header. -->
-          <CategoryPills rounded class="mt-3 mb-3 lg:hidden" />
+               Negative margins escape the page padding so the bar is full-bleed,
+               flush against the header. -->
+          <CategoryPills class="-mx-3 md:-mx-5 mb-3 lg:hidden" />
 
           <!-- Banner (lg:mt-5 matches the gap-5 / pr-5 spacing around the content) -->
         <div class="rounded-xl overflow-hidden mb-3 lg:mt-5">
